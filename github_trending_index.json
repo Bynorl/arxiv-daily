@@ -6688,5 +6688,173 @@
         "stars": 26203
       }
     ]
+  },
+  "20260725": {
+    "total": 18,
+    "file": "github-trending/trending_20260725.html",
+    "top_repos": [
+      {
+        "full_name": "block/buzz",
+        "url": "https://github.com/block/buzz",
+        "description": "A hive mind communication platform",
+        "description_zh": "蜂巢思维交流平台",
+        "language": "Rust",
+        "stars_today": 2506,
+        "stars": 11195
+      },
+      {
+        "full_name": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "description": "Open-source &amp; free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI &amp; Anthropic compatible.",
+        "description_zh": "开源&amp;免费——经过阿里巴巴规模的实战考验。混合架构代码审查工具：确定性管道 + LLM Agent、精确的行级注释、内置微调规则集（NPE、线程安全、XSS、SQL 注入）、OpenAI 和 SQL 注入。人类兼容。",
+        "language": "Go",
+        "stars_today": 1066,
+        "stars": 12686
+      },
+      {
+        "full_name": "citrolabs/ego-lite",
+        "url": "https://github.com/citrolabs/ego-lite",
+        "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+        "description_zh": "AI 代理运行 Web 自动化最快的浏览器，专为与您的 AI 代理（如 Codex 或 Claude Code）共享您登录的浏览器状态而构建，而不会打扰您。零成本，零配置。",
+        "language": "JavaScript",
+        "stars_today": 986,
+        "stars": 3232
+      },
+      {
+        "full_name": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+        "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+        "description_zh": "用于定制 Claude AI 工作流程的精彩 Claude 技能、资源和工具的精选列表",
+        "language": "Python",
+        "stars_today": 574,
+        "stars": 70407
+      },
+      {
+        "full_name": "anthropics/claude-cookbooks",
+        "url": "https://github.com/anthropics/claude-cookbooks",
+        "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+        "description_zh": "一系列笔记本/食谱展示了一些有趣且有效的使用克劳德的方法。",
+        "language": "Jupyter Notebook",
+        "stars_today": 144,
+        "stars": 49740
+      },
+      {
+        "full_name": "Automattic/harper",
+        "url": "https://github.com/Automattic/harper",
+        "description": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered",
+        "description_zh": "离线、隐私优先的语法检查器。快速、开源、由 Rust 驱动",
+        "language": "Rust",
+        "stars_today": 503,
+        "stars": 13262
+      },
+      {
+        "full_name": "shiyu-coder/Kronos",
+        "url": "https://github.com/shiyu-coder/Kronos",
+        "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+        "description_zh": "Kronos：金融市场语言的基础模型",
+        "language": "Python",
+        "stars_today": 319,
+        "stars": 33683
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "代理技能框架和有效的软件开发方法。",
+        "language": "Shell",
+        "stars_today": 600,
+        "stars": 260878
+      },
+      {
+        "full_name": "Pumpkin-MC/Pumpkin",
+        "url": "https://github.com/Pumpkin-MC/Pumpkin",
+        "description": "Empowering everyone to host fast and efficient Minecraft servers.",
+        "description_zh": "使每个人都能托管快速高效的 Minecraft 服务器。",
+        "language": "Rust",
+        "stars_today": 357,
+        "stars": 9562
+      },
+      {
+        "full_name": "permissionlesstech/bitchat",
+        "url": "https://github.com/permissionlesstech/bitchat",
+        "description": "bluetooth mesh chat, IRC vibes",
+        "description_zh": "蓝牙网状聊天、IRC 氛围",
+        "language": "Swift",
+        "stars_today": 1695,
+        "stars": 28269
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .agents directory.",
+        "description_zh": "真正工程师的技能。直接来自我的 .agents 目录。",
+        "language": "Shell",
+        "stars_today": 1743,
+        "stars": 187795
+      },
+      {
+        "full_name": "palmier-io/palmier-pro",
+        "url": "https://github.com/palmier-io/palmier-pro",
+        "description": "macOS video editor built for AI",
+        "description_zh": "专为 AI 打造的 macOS 视频编辑器",
+        "language": "Swift",
+        "stars_today": 731,
+        "stars": 12056
+      },
+      {
+        "full_name": "CoreBunch/Instatic",
+        "url": "https://github.com/CoreBunch/Instatic",
+        "description": "The open-source alternative to Webflow, Framer and WordPress. Agentic self-hosted visual CMS outputting clean static pages. Users, roles, plugins, content, database, it's all there.",
+        "description_zh": "Webflow、Framer 和 WordPress 的开源替代品。代理自托管可视化 CMS，输出干净的静态页面。用户、角色、插件、内容、数据库，一切都在那里。",
+        "language": "TypeScript",
+        "stars_today": 424,
+        "stars": 4661
+      },
+      {
+        "full_name": "Lordog/dive-into-llms",
+        "url": "https://github.com/Lordog/dive-into-llms",
+        "description": "《动手学大模型Dive into LLMs》系列编程实践教程",
+        "description_zh": "《动手学大模型深入LLM》系列编程实践教程",
+        "language": "Jupyter Notebook",
+        "stars_today": 405,
+        "stars": 45277
+      },
+      {
+        "full_name": "RyanCodrai/turbovec",
+        "url": "https://github.com/RyanCodrai/turbovec",
+        "description": "A vector index built on TurboQuant, written in Rust with Python bindings",
+        "description_zh": "基于 TurboQuant 构建的向量索引，使用 Rust 编写并结合 Python 绑定",
+        "language": "Python",
+        "stars_today": 89,
+        "stars": 14182
+      },
+      {
+        "full_name": "OtterMind/Chat2DB",
+        "url": "https://github.com/OtterMind/Chat2DB",
+        "description": "🔥🔥🔥 AI-driven database tool and SQL client, The hottest GUI client, supporting MySQL, Oracle, PostgreSQL, DB2, SQL Server, DB2, SQLite, H2, ClickHouse, and more.",
+        "description_zh": "🔥🔥🔥 AI驱动的数据库工具和SQL客户端，最热门的GUI客户端，支持MySQL、Oracle、PostgreSQL、DB2、SQL Server、DB2、SQLite、H2、ClickHouse等。",
+        "language": "Java",
+        "stars_today": 364,
+        "stars": 26528
+      },
+      {
+        "full_name": "andrewyng/aisuite",
+        "url": "https://github.com/andrewyng/aisuite",
+        "description": "Simple, unified interface to multiple Generative AI providers",
+        "description_zh": "与多个生成人工智能提供商的简单、统一的接口",
+        "language": "Python",
+        "stars_today": 75,
+        "stars": 15153
+      },
+      {
+        "full_name": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "description_zh": "代理利用性能优化系统。 Claude Code、Codex、Opencode、Cursor 等的技能、直觉、记忆、安全性和研究优先的开发。",
+        "language": "JavaScript",
+        "stars_today": 364,
+        "stars": 233134
+      }
+    ]
   }
 }
