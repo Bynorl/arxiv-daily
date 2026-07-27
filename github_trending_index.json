@@ -7015,5 +7015,137 @@
         "stars": 13129
       }
     ]
+  },
+  "20260727": {
+    "total": 14,
+    "file": "github-trending/trending_20260727.html",
+    "top_repos": [
+      {
+        "full_name": "permissionlesstech/bitchat",
+        "url": "https://github.com/permissionlesstech/bitchat",
+        "description": "bluetooth mesh chat, IRC vibes",
+        "description_zh": "蓝牙网状聊天、IRC 氛围",
+        "language": "Swift",
+        "stars_today": 2344,
+        "stars": 31852
+      },
+      {
+        "full_name": "amnezia-vpn/amnezia-client",
+        "url": "https://github.com/amnezia-vpn/amnezia-client",
+        "description": "Amnezia VPN Client (Desktop+Mobile)",
+        "description_zh": "Amnezia VPN 客户端（桌面+移动）",
+        "language": "C++",
+        "stars_today": 515,
+        "stars": 13665
+      },
+      {
+        "full_name": "moeru-ai/airi",
+        "url": "https://github.com/moeru-ai/airi",
+        "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+        "description_zh": "💖🧸 自托管，您拥有的 Grok Companion，一个 waifu 灵魂的容器，网络生命体，将他们带入我们的世界，希望达到 Neuro-sama 的高度。能够实时语音聊天、玩《我的世界》、《异星工厂》。支持网络/macOS/Windows。",
+        "language": "TypeScript",
+        "stars_today": 554,
+        "stars": 43851
+      },
+      {
+        "full_name": "yorukot/superfile",
+        "url": "https://github.com/yorukot/superfile",
+        "description": "Pretty fancy and modern terminal file manager",
+        "description_zh": "非常漂亮和现代的终端文件管理器",
+        "language": "Go",
+        "stars_today": 600,
+        "stars": 20701
+      },
+      {
+        "full_name": "NanmiCoder/MediaCrawler",
+        "url": "https://github.com/NanmiCoder/MediaCrawler",
+        "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+        "description_zh": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+        "language": "Python",
+        "stars_today": 349,
+        "stars": 58058
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "description": "The design language that makes your AI harness better at design.",
+        "description_zh": "使您的 AI 线束在设计上更加出色的设计语言。",
+        "language": "JavaScript",
+        "stars_today": 849,
+        "stars": 51299
+      },
+      {
+        "full_name": "shiyu-coder/Kronos",
+        "url": "https://github.com/shiyu-coder/Kronos",
+        "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+        "description_zh": "Kronos：金融市场语言的基础模型",
+        "language": "Python",
+        "stars_today": 442,
+        "stars": 34448
+      },
+      {
+        "full_name": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "description": "Open-source &amp; free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI &amp; Anthropic compatible.",
+        "description_zh": "开源&amp;免费——经过阿里巴巴规模的实战考验。混合架构代码审查工具：确定性管道 + LLM Agent、精确的行级注释、内置微调规则集（NPE、线程安全、XSS、SQL 注入）、OpenAI 和 SQL 注入。人类兼容。",
+        "language": "Go",
+        "stars_today": 980,
+        "stars": 14536
+      },
+      {
+        "full_name": "jenkinsci/jenkins",
+        "url": "https://github.com/jenkinsci/jenkins",
+        "description": "Jenkins automation server",
+        "description_zh": "Jenkins 自动化服务器",
+        "language": "Java",
+        "stars_today": 179,
+        "stars": 25832
+      },
+      {
+        "full_name": "bradautomates/claude-video",
+        "url": "https://github.com/bradautomates/claude-video",
+        "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+        "description_zh": "让克劳德能够观看任何视频。 /watch 下载、提取帧、转录，然后将其全部交给 Claude。",
+        "language": "Python",
+        "stars_today": 412,
+        "stars": 10832
+      },
+      {
+        "full_name": "vudovn/ag-kit",
+        "url": "https://github.com/vudovn/ag-kit",
+        "description": "",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 5,
+        "stars": 7888
+      },
+      {
+        "full_name": "apache/cassandra",
+        "url": "https://github.com/apache/cassandra",
+        "description": "Open source transactional distributed database. Linear scalability and proven fault-tolerance on commodity hardware or cloud infrastructure without compromising performance.",
+        "description_zh": "开源事务分布式数据库。在商用硬件或云基础设施上提供线性可扩展性和经过验证的容错能力，而不会影响性能。",
+        "language": "Java",
+        "stars_today": 34,
+        "stars": 9913
+      },
+      {
+        "full_name": "mvanhorn/last30days-skill",
+        "url": "https://github.com/mvanhorn/last30days-skill",
+        "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "description_zh": "AI 代理技能可研究 Reddit、X、YouTube、HN、Polymarket 和网络上的任何主题，然后综合得出有根据的摘要",
+        "language": "Python",
+        "stars_today": 221,
+        "stars": 54030
+      },
+      {
+        "full_name": "ocornut/imgui",
+        "url": "https://github.com/ocornut/imgui",
+        "description": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
+        "description_zh": "Dear ImGui：C++ 的无膨胀图形用户界面，具有最小的依赖性",
+        "language": "C++",
+        "stars_today": 64,
+        "stars": 75148
+      }
+    ]
   }
 }
