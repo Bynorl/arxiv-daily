@@ -7261,5 +7261,164 @@
         "stars": 11814
       }
     ]
+  },
+  "20260729": {
+    "total": 17,
+    "file": "github-trending/trending_20260729.html",
+    "top_repos": [
+      {
+        "full_name": "opengeos/GeoLibre",
+        "url": "https://github.com/opengeos/GeoLibre",
+        "description": "A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.",
+        "description_zh": "一个轻量级的云原生 GIS 平台，用于可视化、探索和分析地理空间数据。它可以在 Web 浏览器、桌面、移动设备和 Jupyter 笔记本中运行。",
+        "language": "TypeScript",
+        "stars_today": 667,
+        "stars": 3838
+      },
+      {
+        "full_name": "moeru-ai/airi",
+        "url": "https://github.com/moeru-ai/airi",
+        "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+        "description_zh": "💖🧸 自托管，您拥有的 Grok Companion，一个 waifu 灵魂的容器，网络生命体，将他们带入我们的世界，希望达到 Neuro-sama 的高度。能够实时语音聊天、玩《我的世界》、《异星工厂》。支持网络/macOS/Windows。",
+        "language": "TypeScript",
+        "stars_today": 676,
+        "stars": 45239
+      },
+      {
+        "full_name": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "description_zh": "代理利用性能优化系统。 Claude Code、Codex、Opencode、Cursor 等的技能、直觉、记忆、安全性和研究优先的开发。",
+        "language": "JavaScript",
+        "stars_today": 860,
+        "stars": 235351
+      },
+      {
+        "full_name": "huggingface/speech-to-speech",
+        "url": "https://github.com/huggingface/speech-to-speech",
+        "description": "Build local voice agents with open-source models",
+        "description_zh": "使用开源模型构建本地语音代理",
+        "language": "Python",
+        "stars_today": 837,
+        "stars": 7690
+      },
+      {
+        "full_name": "1jehuang/jcode",
+        "url": "https://github.com/1jehuang/jcode",
+        "description": "The most RAM effiecent harness",
+        "description_zh": "最高效的 RAM 线束",
+        "language": "Rust",
+        "stars_today": 652,
+        "stars": 13217
+      },
+      {
+        "full_name": "grokability/snipe-it",
+        "url": "https://github.com/grokability/snipe-it",
+        "description": "A free open source IT asset/license management system",
+        "description_zh": "免费的开源 IT 资产/许可证管理系统",
+        "language": "PHP",
+        "stars_today": 197,
+        "stars": 14324
+      },
+      {
+        "full_name": "deepfakes/faceswap",
+        "url": "https://github.com/deepfakes/faceswap",
+        "description": "Deepfakes Software For All",
+        "description_zh": "适合所有人的 Deepfakes 软件",
+        "language": "Python",
+        "stars_today": 135,
+        "stars": 56088
+      },
+      {
+        "full_name": "microsoft/VibeVoice",
+        "url": "https://github.com/microsoft/VibeVoice",
+        "description": "Open-Source Frontier Voice AI",
+        "description_zh": "开源前沿语音人工智能",
+        "language": "Python",
+        "stars_today": 332,
+        "stars": 51133
+      },
+      {
+        "full_name": "different-ai/openwork",
+        "url": "https://github.com/different-ai/openwork",
+        "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+        "description_zh": "Claude Cowork 的开源替代方案（由 opencode 提供支持）",
+        "language": "TypeScript",
+        "stars_today": 58,
+        "stars": 17587
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "代理技能框架和有效的软件开发方法。",
+        "language": "Shell",
+        "stars_today": 634,
+        "stars": 263080
+      },
+      {
+        "full_name": "MoonshotAI/FlashKDA",
+        "url": "https://github.com/MoonshotAI/FlashKDA",
+        "description": "FlashKDA: high-performance Kimi Delta Attention kernels",
+        "description_zh": "FlashKDA：高性能 Kimi Delta Attention 内核",
+        "language": "Cuda",
+        "stars_today": 216,
+        "stars": 922
+      },
+      {
+        "full_name": "NanmiCoder/MediaCrawler",
+        "url": "https://github.com/NanmiCoder/MediaCrawler",
+        "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+        "description_zh": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+        "language": "Python",
+        "stars_today": 187,
+        "stars": 58993
+      },
+      {
+        "full_name": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "description": "Open-source &amp; free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI &amp; Anthropic compatible.",
+        "description_zh": "开源&amp;免费——经过阿里巴巴规模的实战考验。混合架构代码审查工具：确定性管道 + LLM Agent、精确的行级注释、内置微调规则集（NPE、线程安全、XSS、SQL 注入）、OpenAI 和 SQL 注入。人类兼容。",
+        "language": "Go",
+        "stars_today": 386,
+        "stars": 15793
+      },
+      {
+        "full_name": "paperswithbacktest/awesome-systematic-trading",
+        "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+        "description": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+        "description_zh": "系统交易的精彩库、软件包、策略、书籍、博客、教程的精选列表。",
+        "language": "Python",
+        "stars_today": 950,
+        "stars": 10192
+      },
+      {
+        "full_name": "maderix/ANE",
+        "url": "https://github.com/maderix/ANE",
+        "description": "Training neural networks on Apple Neural Engine via reverse-engineered private APIs",
+        "description_zh": "通过逆向工程私有 API 在 Apple Neural Engine 上训练神经网络",
+        "language": "Objective-C",
+        "stars_today": 13,
+        "stars": 7095
+      },
+      {
+        "full_name": "pascalorg/editor",
+        "url": "https://github.com/pascalorg/editor",
+        "description": "Create and share 3D architectural projects.",
+        "description_zh": "创建和共享 3D 建筑项目。",
+        "language": "TypeScript",
+        "stars_today": 1026,
+        "stars": 19373
+      },
+      {
+        "full_name": "virgiliojr94/book-to-skill",
+        "url": "https://github.com/virgiliojr94/book-to-skill",
+        "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+        "description_zh": "将任何技术书籍 PDF 转换为 Claude Code 技能 — 可供您在工作时学习、参考和使用。",
+        "language": "Python",
+        "stars_today": 1428,
+        "stars": 12352
+      }
+    ]
   }
 }
