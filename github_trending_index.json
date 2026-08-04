@@ -8098,5 +8098,173 @@
         "stars": 48510
       }
     ]
+  },
+  "20260804": {
+    "total": 18,
+    "file": "github-trending/trending_20260804.html",
+    "top_repos": [
+      {
+        "full_name": "TencentCloud/TencentDB-Agent-Memory",
+        "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+        "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+        "description_zh": "TangentDB Agent Memory 是 AI Agent 的团队级内存中心，将对话、文档和代码转化为四种可重用的内存资产（聊天内存、技能、LLM-Wiki、代码图），并在代理和框架之间进行管理、共享和配备。",
+        "language": "TypeScript",
+        "stars_today": 1138,
+        "stars": 13114
+      },
+      {
+        "full_name": "zhaoxuya520/reverse-skill",
+        "url": "https://github.com/zhaoxuya520/reverse-skill",
+        "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+        "description_zh": "逆向工程/授权渗透测试/安全研究技能路由器包 人工智能路由+按需工具链引导+自进化知识库 支持Claude Code、Kiro、Cursor、Cline等AI编码客户端 逆向/渗透/安全技能路由包 - AI自动路由 + 路由自举工具链 + 自动进化经验库 | 支持Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+        "language": "PowerShell",
+        "stars_today": 2310,
+        "stars": 17479
+      },
+      {
+        "full_name": "firecrawl/pdf-inspector",
+        "url": "https://github.com/firecrawl/pdf-inspector",
+        "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "description_zh": "用于 PDF 检查、分类和文本提取的快速 Rust 库。智能检测扫描 PDF 与基于文本的 PDF，以实现智能路由决策。",
+        "language": "Rust",
+        "stars_today": 2524,
+        "stars": 9566
+      },
+      {
+        "full_name": "uber/ADR",
+        "url": "https://github.com/uber/ADR",
+        "description": "ADR secures enterprise AI agents through observability, security benchmarking, and threat detection. Deployed at Uber.",
+        "description_zh": "ADR 通过可观察性、安全基准测试和威胁检测来保护企业 AI 代理。部署在 Uber。",
+        "language": "Python",
+        "stars_today": 140,
+        "stars": 587
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "代理技能框架和有效的软件开发方法。",
+        "language": "Shell",
+        "stars_today": 617,
+        "stars": 266244
+      },
+      {
+        "full_name": "microsoft/generative-ai-for-beginners",
+        "url": "https://github.com/microsoft/generative-ai-for-beginners",
+        "description": "21 Lessons, Get Started Building with Generative AI",
+        "description_zh": "21 节课程，开始使用生成式 AI 进行构建",
+        "language": "Jupyter Notebook",
+        "stars_today": 784,
+        "stars": 116126
+      },
+      {
+        "full_name": "cypress-io/cypress",
+        "url": "https://github.com/cypress-io/cypress",
+        "description": "Fast, easy and reliable testing for anything that runs in a browser.",
+        "description_zh": "对浏览器中运行的任何内容进行快速、简单且可靠的测试。",
+        "language": "TypeScript",
+        "stars_today": 6,
+        "stars": 50713
+      },
+      {
+        "full_name": "lyogavin/airllm",
+        "url": "https://github.com/lyogavin/airllm",
+        "description": "AirLLM 70B inference with single 4GB GPU",
+        "description_zh": "使用单个 4GB GPU 进行 AirLLM 70B 推理",
+        "language": "Jupyter Notebook",
+        "stars_today": 1716,
+        "stars": 28115
+      },
+      {
+        "full_name": "webpack/webpack",
+        "url": "https://github.com/webpack/webpack",
+        "description": "A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through \"loaders\", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.",
+        "description_zh": "javascript 和朋友的捆绑器。将许多模块打包到一些捆绑资产中。代码分割允许按需加载应用程序的某些部分。通过“加载器”，模块可以是 CommonJs、A​​MD、ES6 模块、CSS、图像、JSON、Coffeescript、LESS ……以及您的自定义内容。",
+        "language": "JavaScript",
+        "stars_today": 8,
+        "stars": 65900
+      },
+      {
+        "full_name": "gabime/spdlog",
+        "url": "https://github.com/gabime/spdlog",
+        "description": "Fast C++ logging library.",
+        "description_zh": "快速 C++ 日志库。",
+        "language": "C++",
+        "stars_today": 9,
+        "stars": 29353
+      },
+      {
+        "full_name": "denoland/deno",
+        "url": "https://github.com/denoland/deno",
+        "description": "A modern runtime for JavaScript and TypeScript.",
+        "description_zh": "JavaScript 和 TypeScript 的现代运行时。",
+        "language": "Rust",
+        "stars_today": 27,
+        "stars": 108010
+      },
+      {
+        "full_name": "usekaneo/kaneo",
+        "url": "https://github.com/usekaneo/kaneo",
+        "description": "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+        "description_zh": "🎯 你所需要的一切。没有什么是你不知道的。开源项目管理适合您，而不是对您不利。",
+        "language": "TypeScript",
+        "stars_today": 565,
+        "stars": 7169
+      },
+      {
+        "full_name": "livekit/agents",
+        "url": "https://github.com/livekit/agents",
+        "description": "A framework for building realtime voice AI agents 🤖🎙️📹",
+        "description_zh": "用于构建实时语音 AI 代理的框架🤖🎙️📹",
+        "language": "Python",
+        "stars_today": 432,
+        "stars": 12284
+      },
+      {
+        "full_name": "angular/angular",
+        "url": "https://github.com/angular/angular",
+        "description": "Deliver web apps with confidence 🚀",
+        "description_zh": "充满信心地交付 Web 应用程序 🚀",
+        "language": "TypeScript",
+        "stars_today": 8,
+        "stars": 100757
+      },
+      {
+        "full_name": "tailwindlabs/tailwindcss",
+        "url": "https://github.com/tailwindlabs/tailwindcss",
+        "description": "A utility-first CSS framework for rapid UI development.",
+        "description_zh": "用于快速 UI 开发的实用程序优先 CSS 框架。",
+        "language": "TypeScript",
+        "stars_today": 30,
+        "stars": 96333
+      },
+      {
+        "full_name": "browser-use/video-use",
+        "url": "https://github.com/browser-use/video-use",
+        "description": "Edit videos with coding agents",
+        "description_zh": "使用编码代理编辑视频",
+        "language": "Python",
+        "stars_today": 306,
+        "stars": 19109
+      },
+      {
+        "full_name": "esengine/DeepSeek-Reasonix",
+        "url": "https://github.com/esengine/DeepSeek-Reasonix",
+        "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+        "description_zh": "DeepSeek-适用于您终端的原生 AI 编码代理。围绕前缀缓存稳定性进行设计 - 让它运行。",
+        "language": "Go",
+        "stars_today": 924,
+        "stars": 30637
+      },
+      {
+        "full_name": "EveryInc/compound-engineering-plugin",
+        "url": "https://github.com/EveryInc/compound-engineering-plugin",
+        "description": "Official Compound Engineering plugin for Claude Code, Codex, Cursor, and more",
+        "description_zh": "适用于 Claude Code、Codex、Cursor 等的官方复合工程插件",
+        "language": "TypeScript",
+        "stars_today": 33,
+        "stars": 23804
+      }
+    ]
   }
 }
