@@ -8389,5 +8389,164 @@
         "stars": 28906
       }
     ]
+  },
+  "20260807": {
+    "total": 17,
+    "file": "github-trending/trending_20260807.html",
+    "top_repos": [
+      {
+        "full_name": "PrimeIntellect-ai/prime-agent",
+        "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+        "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "description_zh": "用于编码工作流程和长时间运行的自主任务的自我改进 RLM 代理。",
+        "language": "TypeScript",
+        "stars_today": 2271,
+        "stars": 5537
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "AI 编码代理的生产级工程技能。",
+        "language": "JavaScript",
+        "stars_today": 1131,
+        "stars": 83550
+      },
+      {
+        "full_name": "cloudflare/computer",
+        "url": "https://github.com/cloudflare/computer",
+        "description": "Give your agent a computer 👾",
+        "description_zh": "给你的代理人一台电脑👾",
+        "language": "TypeScript",
+        "stars_today": 894,
+        "stars": 5309
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .agents directory.",
+        "description_zh": "真正工程师的技能。直接来自我的 .agents 目录。",
+        "language": "Shell",
+        "stars_today": 2180,
+        "stars": 208294
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "代理技能框架和有效的软件开发方法。",
+        "language": "Shell",
+        "stars_today": 794,
+        "stars": 268556
+      },
+      {
+        "full_name": "goauthentik/authentik",
+        "url": "https://github.com/goauthentik/authentik",
+        "description": "The authentication glue you need.",
+        "description_zh": "您需要的认证胶水。",
+        "language": "Python",
+        "stars_today": 544,
+        "stars": 23400
+      },
+      {
+        "full_name": "semantica-agi/semantica",
+        "url": "https://github.com/semantica-agi/semantica",
+        "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+        "description_zh": "用于上下文和负责任的人工智能系统的图本机基础设施",
+        "language": "Python",
+        "stars_today": 118,
+        "stars": 2207
+      },
+      {
+        "full_name": "666ghj/MiroFish",
+        "url": "https://github.com/666ghj/MiroFish",
+        "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+        "description_zh": "一个简单且通用的群体智能引擎，可以预测任何事情。 简洁通用的群体智能引擎，预测万物",
+        "language": "Python",
+        "stars_today": 126,
+        "stars": 70319
+      },
+      {
+        "full_name": "chenyme/grok2api",
+        "url": "https://github.com/chenyme/grok2api",
+        "description": "Multi-account API gateway for Grok Build, Grok Web, and Grok Console",
+        "description_zh": "适用于 Grok Build、Grok Web 和 Grok Console 的多帐户 API 网关",
+        "language": "Go",
+        "stars_today": 43,
+        "stars": 7093
+      },
+      {
+        "full_name": "jdx/mise",
+        "url": "https://github.com/jdx/mise",
+        "description": "dev tools, env vars, task runner",
+        "description_zh": "开发工具、环境变量、任务运行程序",
+        "language": "Rust",
+        "stars_today": 258,
+        "stars": 31988
+      },
+      {
+        "full_name": "Significant-Gravitas/AutoGPT",
+        "url": "https://github.com/Significant-Gravitas/AutoGPT",
+        "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+        "description_zh": "AutoGPT 的愿景是为每个人提供易于使用和构建的人工智能。我们的使命是提供工具，以便您可以专注于重要的事情。",
+        "language": "Python",
+        "stars_today": 363,
+        "stars": 186228
+      },
+      {
+        "full_name": "google/guava",
+        "url": "https://github.com/google/guava",
+        "description": "Google core libraries for Java",
+        "description_zh": "Google Java 核心库",
+        "language": "Java",
+        "stars_today": 156,
+        "stars": 51718
+      },
+      {
+        "full_name": "unclebob/swarm-forge",
+        "url": "https://github.com/unclebob/swarm-forge",
+        "description": "A simple tool for coordinating several AI agents.",
+        "description_zh": "一个用于协调多个人工智能代理的简单工具。",
+        "language": "Clojure",
+        "stars_today": 85,
+        "stars": 1732
+      },
+      {
+        "full_name": "denoland/celld",
+        "url": "https://github.com/denoland/celld",
+        "description": "self-hosted, distributed Durable Objects",
+        "description_zh": "自托管、分布式持久对象",
+        "language": "Rust",
+        "stars_today": 546,
+        "stars": 2005
+      },
+      {
+        "full_name": "K2SOsint/Legendary_OSINT",
+        "url": "https://github.com/K2SOsint/Legendary_OSINT",
+        "description": "A list of OSINT tools &amp; resources for (fraud-)investigators, CTI-analysts, KYC, AML and more.",
+        "description_zh": "OSINT 工具和列表为（欺诈）调查人员、CTI 分析师、KYC、AML 等提供资源。",
+        "language": "",
+        "stars_today": 64,
+        "stars": 1209
+      },
+      {
+        "full_name": "pranshuparmar/witr",
+        "url": "https://github.com/pranshuparmar/witr",
+        "description": "Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI.",
+        "description_zh": "这是为什么运行？跟踪任何进程、端口、容器或文件到启动它的地方 - CLI + TUI。",
+        "language": "Go",
+        "stars_today": 427,
+        "stars": 19454
+      },
+      {
+        "full_name": "google/skills",
+        "url": "https://github.com/google/skills",
+        "description": "Agent Skills for Google products and technologies",
+        "description_zh": "Google 产品和技术的代理技能",
+        "language": "Python",
+        "stars_today": 305,
+        "stars": 16035
+      }
+    ]
   }
 }
