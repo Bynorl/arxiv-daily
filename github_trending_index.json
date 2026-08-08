@@ -8548,5 +8548,119 @@
         "stars": 16035
       }
     ]
+  },
+  "20260808": {
+    "total": 12,
+    "file": "github-trending/trending_20260808.html",
+    "top_repos": [
+      {
+        "full_name": "PrimeIntellect-ai/prime-agent",
+        "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+        "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "description_zh": "用于编码工作流程和长时间运行的自主任务的自我改进 RLM 代理。",
+        "language": "TypeScript",
+        "stars_today": 2483,
+        "stars": 7911
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "AI 编码代理的生产级工程技能。",
+        "language": "JavaScript",
+        "stars_today": 778,
+        "stars": 84269
+      },
+      {
+        "full_name": "TapXWorld/ChinaTextbook",
+        "url": "https://github.com/TapXWorld/ChinaTextbook",
+        "description": "所有小初高、大学PDF教材。",
+        "description_zh": "",
+        "language": "Roff",
+        "stars_today": 591,
+        "stars": 77731
+      },
+      {
+        "full_name": "google/skills",
+        "url": "https://github.com/google/skills",
+        "description": "Agent Skills for Google products and technologies",
+        "description_zh": "Google 产品和技术的代理技能",
+        "language": "Python",
+        "stars_today": 481,
+        "stars": 16505
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .agents directory.",
+        "description_zh": "真正工程师的技能。直接来自我的 .agents 目录。",
+        "language": "Shell",
+        "stars_today": 1354,
+        "stars": 209576
+      },
+      {
+        "full_name": "goauthentik/authentik",
+        "url": "https://github.com/goauthentik/authentik",
+        "description": "The authentication glue you need.",
+        "description_zh": "您需要的认证胶水。",
+        "language": "Python",
+        "stars_today": 467,
+        "stars": 23843
+      },
+      {
+        "full_name": "TauricResearch/TradingAgents",
+        "url": "https://github.com/TauricResearch/TradingAgents",
+        "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "description_zh": "TradingAgents：多代理LLM金融交易框架",
+        "language": "Python",
+        "stars_today": 126,
+        "stars": 96199
+      },
+      {
+        "full_name": "google/guava",
+        "url": "https://github.com/google/guava",
+        "description": "Google core libraries for Java",
+        "description_zh": "Google Java 核心库",
+        "language": "Java",
+        "stars_today": 93,
+        "stars": 51804
+      },
+      {
+        "full_name": "LadybirdBrowser/ladybird",
+        "url": "https://github.com/LadybirdBrowser/ladybird",
+        "description": "Truly independent web browser",
+        "description_zh": "真正独立的网络浏览器",
+        "language": "C++",
+        "stars_today": 42,
+        "stars": 64879
+      },
+      {
+        "full_name": "denoland/celld",
+        "url": "https://github.com/denoland/celld",
+        "description": "self-hosted, distributed Durable Objects",
+        "description_zh": "自托管、分布式持久对象",
+        "language": "Rust",
+        "stars_today": 432,
+        "stars": 2409
+      },
+      {
+        "full_name": "litu54/DevOps-Interview-Guide",
+        "url": "https://github.com/litu54/DevOps-Interview-Guide",
+        "description": "DevOps Interview Guide",
+        "description_zh": "DevOps 面试指南",
+        "language": "",
+        "stars_today": 59,
+        "stars": 609
+      },
+      {
+        "full_name": "bannedbook/fanqiang",
+        "url": "https://github.com/bannedbook/fanqiang",
+        "description": "翻墙-科学上网",
+        "description_zh": "",
+        "language": "Kotlin",
+        "stars_today": 140,
+        "stars": 49747
+      }
+    ]
   }
 }
