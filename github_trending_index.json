@@ -8662,5 +8662,119 @@
         "stars": 49747
       }
     ]
+  },
+  "20260809": {
+    "total": 12,
+    "file": "github-trending/trending_20260809.html",
+    "top_repos": [
+      {
+        "full_name": "PrimeIntellect-ai/prime-agent",
+        "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+        "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "description_zh": "用于编码工作流程和长时间运行的自主任务的自我改进 RLM 代理。",
+        "language": "TypeScript",
+        "stars_today": 2319,
+        "stars": 10179
+      },
+      {
+        "full_name": "vitali87/code-graph-rag",
+        "url": "https://github.com/vitali87/code-graph-rag",
+        "description": "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+        "description_zh": "适合您的单一存储库的终极 RAG。借助人工智能和知识图的力量查询、理解和编辑多语言代码库",
+        "language": "Python",
+        "stars_today": 59,
+        "stars": 2741
+      },
+      {
+        "full_name": "msitarzewski/agency-agents",
+        "url": "https://github.com/msitarzewski/agency-agents",
+        "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "description_zh": "触手可及的完整人工智能机构 - 从前端向导到 Reddit 社区忍者，从奇思妙想的注入者到现实检查者。每个代理都是一位具有个性、流程和经过验证的可交付成果的专业专家。",
+        "language": "Shell",
+        "stars_today": 446,
+        "stars": 140221
+      },
+      {
+        "full_name": "pranshuparmar/witr",
+        "url": "https://github.com/pranshuparmar/witr",
+        "description": "Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI.",
+        "description_zh": "这是为什么运行？跟踪任何进程、端口、容器或文件到启动它的地方 - CLI + TUI。",
+        "language": "Go",
+        "stars_today": 556,
+        "stars": 20322
+      },
+      {
+        "full_name": "google-deepmind/weathernext",
+        "url": "https://github.com/google-deepmind/weathernext",
+        "description": "",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 55,
+        "stars": 6941
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "AI 编码代理的生产级工程技能。",
+        "language": "JavaScript",
+        "stars_today": 670,
+        "stars": 84907
+      },
+      {
+        "full_name": "ZhuLinsen/daily_stock_analysis",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+        "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "description_zh": "LLM驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动自主，支持零定时运行。LLM驱动的多市场股票智能分析系统，具有多源市场数据、实时新闻、决策仪表板、自动通知和免费计划运行。",
+        "language": "Python",
+        "stars_today": 287,
+        "stars": 60967
+      },
+      {
+        "full_name": "goauthentik/authentik",
+        "url": "https://github.com/goauthentik/authentik",
+        "description": "The authentication glue you need.",
+        "description_zh": "您需要的认证胶水。",
+        "language": "Python",
+        "stars_today": 312,
+        "stars": 24154
+      },
+      {
+        "full_name": "google/skills",
+        "url": "https://github.com/google/skills",
+        "description": "Agent Skills for Google products and technologies",
+        "description_zh": "Google 产品和技术的代理技能",
+        "language": "Python",
+        "stars_today": 532,
+        "stars": 17037
+      },
+      {
+        "full_name": "Comfy-Org/ComfyUI",
+        "url": "https://github.com/Comfy-Org/ComfyUI",
+        "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+        "description_zh": "最强大的模块化扩散模型 GUI、API 和带有图形/节点接口的后端。",
+        "language": "Python",
+        "stars_today": 333,
+        "stars": 125219
+      },
+      {
+        "full_name": "harveyai/harvey-labs",
+        "url": "https://github.com/harveyai/harvey-labs",
+        "description": "A benchmark built to evaluate and improve agent capabilities for supporting legal work.",
+        "description_zh": "旨在评估和提高代理人支持法律工作的能力而建立的基准。",
+        "language": "Python",
+        "stars_today": 47,
+        "stars": 717
+      },
+      {
+        "full_name": "pingdotgg/t3code",
+        "url": "https://github.com/pingdotgg/t3code",
+        "description": "",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 182,
+        "stars": 17519
+      }
+    ]
   }
 }

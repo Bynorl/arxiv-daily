@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub Trending · 2026年08月09日</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  background:#f6f8fa;color:#1f2328;font-size:15px;min-height:100vh;
+}
+
+/* ── 顶栏 ── */
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 24px;background:#fff;
+  border-bottom:1px solid #d0d7de;
+  position:sticky;top:0;z-index:99;
+}
+.nav-home{
+  color:#0969da;font-size:13px;text-decoration:none;font-weight:500;
+  padding:5px 12px;border-radius:6px;border:1px solid #d0d7de;
+  background:#fff;transition:background .15s,border-color .15s;
+}
+.nav-home:hover{background:#f3f4f6;border-color:#0969da;}
+.nav-date{font-size:12px;color:#656d76;}
+
+/* ── 页头 ── */
+.hd{
+  background:#fff;border-bottom:1px solid #d0d7de;
+  padding:40px 24px 30px;text-align:center;
+}
+.hd-title{
+  font-size:28px;font-weight:700;color:#1f2328;letter-spacing:.5px;
+}
+.hd-title em{font-style:normal;color:#0969da;}
+.hd-sub{margin-top:6px;font-size:12px;color:#656d76;letter-spacing:1.5px;}
+.hd-chip{
+  display:inline-block;margin-top:14px;
+  padding:4px 16px;border-radius:20px;
+  background:#ddf4ff;border:1px solid #54aeff;
+  color:#0969da;font-size:12px;font-weight:500;
+}
+.author{margin-top:10px;font-size:11px;color:#c6c6c6;letter-spacing:1px;}
+
+/* ── 搜索 ── */
+.search-wrap{max-width:760px;margin:20px auto 0;padding:0 20px;}
+.search{
+  width:100%;padding:9px 16px;
+  background:#fff;border:1px solid #d0d7de;border-radius:6px;
+  color:#1f2328;font-size:14px;outline:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+.search::placeholder{color:#9ba1aa;}
+.search:focus{border-color:#0969da;box-shadow:0 0 0 3px rgba(9,105,218,0.08);}
+
+/* ── 标签页 ── */
+.tabs-wrap{max-width:760px;margin:16px auto 0;padding:0 20px;}
+.tabs{
+  display:flex;gap:0;
+  border-bottom:2px solid #d0d7de;
+}
+.tab-btn{
+  padding:9px 24px;font-size:14px;font-weight:500;
+  background:transparent;border:none;cursor:pointer;
+  color:#656d76;border-bottom:2px solid transparent;margin-bottom:-2px;
+  transition:color .15s,border-color .15s;white-space:nowrap;
+}
+.tab-btn.active{color:#1f2328;border-bottom-color:#0969da;}
+.tab-btn:hover:not(.active){color:#1f2328;}
+
+/* ── 列表区 ── */
+.main{max-width:760px;margin:12px auto 0;padding:0 20px 60px;}
+.list-meta{
+  font-size:12px;color:#9ba1aa;margin-bottom:10px;
+  display:flex;justify-content:space-between;
+}
+
+/* ── 卡片 ── */
+.card{
+  display:flex;align-items:stretch;gap:0;
+  background:#fff;border:1px solid #d0d7de;border-radius:8px;
+  margin-bottom:8px;overflow:hidden;
+  transition:box-shadow .15s,border-color .15s;
+}
+.card:hover{
+  border-color:#0969da;
+  box-shadow:0 1px 6px rgba(9,105,218,0.12);
+}
+.card.hidden{display:none;}
+
+/* 序号竖条 */
+.rank-col{
+  flex-shrink:0;width:48px;
+  display:flex;align-items:center;justify-content:center;
+  background:#f6f8fa;border-right:1px solid #d0d7de;
+}
+.rank-num{
+  font-size:16px;font-weight:700;color:#b0b8c2;
+  font-variant-numeric:tabular-nums;
+}
+
+/* 内容区 */
+.card-body{flex:1;min-width:0;padding:15px 18px;}
+
+.repo-line{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:6px;}
+.repo-name{
+  font-size:15px;font-weight:600;text-decoration:none;color:#1f2328;
+  transition:color .15s;
+}
+.repo-name:hover{color:#0969da;}
+.repo-author{color:#656d76;font-weight:400;}
+.repo-sep{color:#c6c6c6;}
+.repo-title{color:#0969da;}
+
+.badge-today{
+  font-size:11px;font-weight:600;white-space:nowrap;
+  padding:2px 8px;border-radius:12px;
+  background:#fff8c5;border:1px solid #d4a72c;color:#9a6700;
+}
+
+.desc-en{font-size:13px;color:#656d76;line-height:1.65;margin-bottom:3px;}
+.desc-zh{font-size:13px;color:#1f2328;line-height:1.65;margin-bottom:10px;}
+.no-desc{color:#c6c6c6;font-style:italic;}
+
+/* 操作行 */
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px;}
+.btn{
+  padding:4px 12px;border-radius:6px;font-size:12px;font-weight:500;
+  text-decoration:none;border:1px solid;transition:all .15s;white-space:nowrap;
+}
+.btn-gh{background:#fff;color:#0969da;border-color:#0969da;}
+.btn-gh:hover{background:#0969da;color:#fff;}
+.btn-readme{background:#fff;color:#1a7f37;border-color:#1a7f37;}
+.btn-readme:hover{background:#1a7f37;color:#fff;}
+.btn-issues{background:#fff;color:#9a6700;border-color:#bf8700;}
+.btn-issues:hover{background:#9a6700;color:#fff;}
+.stat-sep{flex:1;}
+.stat-item{font-size:12px;color:#656d76;}
+.lang-chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#656d76;}
+.lang-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;display:inline-block;}
+.readme-preview{
+  margin:10px 0 6px;padding:10px 14px;
+  background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;
+}
+.readme-label{
+  display:inline-block;font-size:10px;font-weight:600;letter-spacing:.5px;
+  color:#9ba1aa;text-transform:uppercase;margin-bottom:5px;
+}
+.readme-text{font-size:13px;color:#1f2328;line-height:1.7;}
+.topics{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0;}
+.topic-tag{
+  font-size:11px;padding:2px 9px;border-radius:12px;
+  background:#ddf4ff;color:#0969da;text-decoration:none;
+  border:1px solid #54aeff4d;transition:background .15s;
+}
+.topic-tag:hover{background:#b6e3ff;}
+
+.no-result{text-align:center;padding:60px 20px;color:#9ba1aa;font-size:14px;display:none;}
+
+@media(max-width:600px){
+  .hd-title{font-size:22px;}
+  .nav{padding:10px 14px;}
+  .tab-btn{padding:8px 16px;font-size:13px;}
+  .rank-col{width:36px;}
+  .rank-num{font-size:13px;}
+  .card-body{padding:12px 13px;}
+  .repo-name{font-size:14px;}
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="../trending/" class="nav-home">← 返回归档</a>
+  <span class="nav-date">2026年08月09日 · 周日</span>
+</div>
+
+<div class="hd">
+  <div class="hd-title">GitHub <em>Trending</em></div>
+  <div class="hd-sub">MOST POPULAR OPEN SOURCE PROJECTS</div>
+  <div class="hd-chip">Top 20 · 2026年08月09日</div>
+  <div class="author">curated by binbinyang</div>
+</div>
+
+<div class="search-wrap">
+  <input class="search" type="text" placeholder="⌕  搜索项目名称或描述…" oninput="onSearch(this.value)">
+</div>
+
+<div class="tabs-wrap">
+  <div class="tabs">
+    <button class="tab-btn active" data-period="daily"   onclick="switchTab('daily')">日榜</button>
+    <button class="tab-btn"        data-period="weekly"  onclick="switchTab('weekly')">周榜</button>
+    <button class="tab-btn"        data-period="monthly" onclick="switchTab('monthly')">月榜</button>
+  </div>
+</div>
+
+<div class="main">
+  <div class="list-meta">
+    <span id="cnt">共 12 个项目</span>
+    <span id="period-label">今日热榜</span>
+  </div>
+
+  <div id="panel-daily"   class="panel"><div class="card">
+  <div class="rank-col"><span class="rank-num">01</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank">
+        <span class="repo-author">PrimeIntellect-ai</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">prime-agent</span>
+      </a>
+      <span class="badge-today">▲ 2.3k stars today</span>
+    </div>
+    <p class="desc-en">A self-improving RLM agent for coding workflows and long-running autonomous tasks.</p><p class="desc-zh">用于编码工作流程和长时间运行的自主任务的自我改进 RLM 代理。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Prime Agent：自我改进的 RLM Agent Prime Agent 是一个开源编码和研究代理，适用于一般和长期运行的工作。它是围绕两个核心抽象设计的： - **递归语言模型 (RLM)** 将上下文视为变量（*提示作为变量*），将递归子代理等工具视为持久 REPL 内的函数调用（*编程工具/子代理调用*）。 - **持续利用**将补充提示、记忆、技能描述和可重复使用的子代理规范存储为持久状态，Prime Agent 可以通过默认情况下在会话本地进行的小型、有证据支持的更新进行优化。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/PrimeIntellect-ai/prime-agent/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/PrimeIntellect-ai/prime-agent/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 10.2k</span>
+      <span class="stat-item">⑂ 1.0k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">02</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/vitali87/code-graph-rag" target="_blank">
+        <span class="repo-author">vitali87</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">code-graph-rag</span>
+      </a>
+      <span class="badge-today">▲ 59 stars today</span>
+    </div>
+    <p class="desc-en">The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs</p><p class="desc-zh">适合您的单一存储库的终极 RAG。借助人工智能和知识图的力量查询、理解和编辑多语言代码库</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">/ 标签，所以我们使用单一的 light-mode 。当 GitHub 帐户恢复时，恢复下面的主题感知块：Code-Graph-RAG 使用 Tree-sitter 解析多语言代码库，在 Memgraph 中构建其结构的知识图，并允许您用简单的英语查询、编辑和优化该代码。它在一个统一的图形模式下跨混合语言的单一存储库工作。 - **Ruby 支持**：Ruby 通过新的可插入 ast-grep 层加入图表，该层从单个 YAML 模式文件添加语言，发出 、 和 节点以及导入边，而无需手写解析器。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/vitali87/code-graph-rag" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/vitali87/code-graph-rag/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/vitali87/code-graph-rag/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 2.7k</span>
+      <span class="stat-item">⑂ 471</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">03</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/msitarzewski/agency-agents" target="_blank">
+        <span class="repo-author">msitarzewski</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">agency-agents</span>
+      </a>
+      <span class="badge-today">▲ 446 stars today</span>
+    </div>
+    <p class="desc-en">A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.</p><p class="desc-zh">触手可及的完整人工智能机构 - 从前端向导到 Reddit 社区忍者，从奇思妙想的注入者到现实检查者。每个代理都是一位具有个性、流程和经过验证的可交付成果的专业专家。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">🎭 机构：AI 专家准备好改变您的工作流程 &gt; **触手可及的完整 AI 机构** - 从前端向导到 Reddit 社区忍者，从奇思妙想的注入者到现实检查者。每个代理都是一位具有个性、流程和经过验证的可交付成果的专业专家。 &gt; **Agency Agents** 是一款适用于 **macOS、Linux 和 Windows** 的本机应用程序，只需单击一下即可浏览整个花名册并将其安装到 Claude Code、Cursor、Codex、Gemini、Osaurus 等中。无需克隆，无需脚本，并且会自动更新。 &gt; **→ 下载最新版本·agencyagents.app** 诞生于 Reddit 帖子和数月的迭代，**The Agency** 是一个不断增长的精心制作的 AI 特工个性集合。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/msitarzewski/agency-agents" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/msitarzewski/agency-agents/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/msitarzewski/agency-agents/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 140.2k</span>
+      <span class="stat-item">⑂ 22.9k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#89e051"></span><span class="lang-name">Shell</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">04</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/pranshuparmar/witr" target="_blank">
+        <span class="repo-author">pranshuparmar</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">witr</span>
+      </a>
+      <span class="badge-today">▲ 556 stars today</span>
+    </div>
+    <p class="desc-en">Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI.</p><p class="desc-zh">这是为什么运行？跟踪任何进程、端口、容器或文件到启动它的地方 - CLI + TUI。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">跟踪任何进程、端口、容器或文件到启动它的确切链——一条命令、机器可读的 JSON 或交互式 TUI。 🎮 **在浏览器中尝试 witr →** *研究模拟 Linux 盒子 - 指导教程和免费沙箱，无需安装。* **目的** • **安装** • **TUI** • **标志** • **核心概念** • **示例** **输出行为** • **平台** • **成功标准** • **赞助商** **witr** 的存在是为了回答一个问题：当某些东西在系统中，无论是进程、服务还是绑定到端口的东西，总有一个原因。该原因通常是间接的、不明显的，或者分布在多个层（例如管理程序、容器、服务或 shell）中。现有工具（、、、、、、）公开状态和元数据。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/pranshuparmar/witr" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/pranshuparmar/witr/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/pranshuparmar/witr/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 20.3k</span>
+      <span class="stat-item">⑂ 688</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#00ADD8"></span><span class="lang-name">Go</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">05</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/google-deepmind/weathernext" target="_blank">
+        <span class="repo-author">google-deepmind</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">weathernext</span>
+      </a>
+      <span class="badge-today">▲ 55 stars today</span>
+    </div>
+    <p class="desc-en"><span class="no-desc">暂无描述</span></p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">此存储库包含 WeatherNext 2 (WN2) 的代码，WeatherNext 2 (WN2) 是由 Google DeepMind 开发的全球中期大气和气旋预报模型，并且还包含上一代模型的代码。如果您有兴趣直接访问 WN2 模型输出的每日数据源而不是自己运行模型，我们可以跨多个（包括 Earth Engine、BigQuery 和 Vertex AI）提供它们。 * WeatherLab（包括气旋轨迹）。 * OpenMeteo（包括 API 和交互式构建器）。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/google-deepmind/weathernext" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/google-deepmind/weathernext/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/google-deepmind/weathernext/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 6.9k</span>
+      <span class="stat-item">⑂ 919</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">06</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/addyosmani/agent-skills" target="_blank">
+        <span class="repo-author">addyosmani</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">agent-skills</span>
+      </a>
+      <span class="badge-today">▲ 670 stars today</span>
+    </div>
+    <p class="desc-en">Production-grade engineering skills for AI coding agents.</p><p class="desc-zh">AI 编码代理的生产级工程技能。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**人工智能编码代理的生产级工程技能。** 技能对高级工程师在构建软件时使用的工作流程、质量关卡和最佳实践进行编码。这些内容经过打包，以便人工智能代理在开发的每个阶段都能一致地遵循它们。映射到开发生命周期的 8 个斜线命令。每一项都会自动激活正确的技能。 |你在做什么 |命令 |关键原理| |--------------------|---------|---------------| |定义要构建的内容 | |代码前的规格 | |计划如何构建它 | |小型原子任务 | |增量构建 | |一次一片 | |证明它有效 | |测试就是证明| |合并前审查 | |改善代码健康 | |审核网络性能 | |优化之前先进行测量 | |简化代码 | |清晰度结束</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/addyosmani/agent-skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/addyosmani/agent-skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/addyosmani/agent-skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 84.9k</span>
+      <span class="stat-item">⑂ 9.1k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">07</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/ZhuLinsen/daily_stock_analysis" target="_blank">
+        <span class="repo-author">ZhuLinsen</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">daily_stock_analysis</span>
+      </a>
+      <span class="badge-today">▲ 287 stars today</span>
+    </div>
+    <p class="desc-en">LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.</p><p class="desc-zh">LLM驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动自主，支持零定时运行。LLM驱动的多市场股票智能分析系统，具有多源市场数据、实时新闻、决策仪表板、自动通知和免费计划运行。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">&gt; 🤖基于AI大模型的A股/港股/美股/日股/韩股/台股自选股智能分析系统，每日自动分析并主动「决策仪表盘」到企业微信/飞书/Telegram/Discord/Slack/邮箱 **产品预览** · **功能特性** · **开始** · **效果** · **文档中心** · **完整指南** |人工智能决策报告 | 核心结论、评分、趋势、买卖点位、风险警报、催化因素、操作检查清单 | | 多市场聚合数据| 覆盖A股、港股、美股、日股、韩股、台股和ETF，支持行情、K线、技术指标、新闻、公告、基本面报告与辅助数据；不同市场的数据源和能力边界见市场支持边界 | | Web / 桌面工作台 | 手动分析、任务文档、历史报告、完整 Markdown 配置、回测、持仓、管理、浅色 / 深度挖掘主题 | |代理问策略股 | 多轮追问，支持均线、缠论、波浪、趋势、热点、事件、成长、预期等15种内置策略，覆盖Web/Bot/API | | 智能导入与补全 | 图片、CSV/Excel、名称板导入；股票代码//拼音/别名补全 | | 自动化与自动化 | GitHub Actions、Docker、本地定时任务、FastAPI 服务和企业微信/飞书/Telegram/Discord/Slack/邮件主动 | &gt; 功能细节、字段约定、基本面P0超时、交易纪律、数据源优先级、Web/API行为请查看完整配置与部署指南。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/ZhuLinsen/daily_stock_analysis" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/ZhuLinsen/daily_stock_analysis/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/ZhuLinsen/daily_stock_analysis/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 61.0k</span>
+      <span class="stat-item">⑂ 51.9k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">08</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/goauthentik/authentik" target="_blank">
+        <span class="repo-author">goauthentik</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">authentik</span>
+      </a>
+      <span class="badge-today">▲ 312 stars today</span>
+    </div>
+    <p class="desc-en">The authentication glue you need.</p><p class="desc-zh">您需要的认证胶水。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">authentik 是现代 SSO 的开源身份提供商 (IdP)。它支持 SAML、OAuth2/OIDC、LDAP、RADIUS 等，专为从小型实验室到大型生产集群的自托管而设计。我们的企业产品可供组织安全地替换现有的 IdP，例如 Okta、Auth0、Entra ID 和 Ping Identity，以实现强大的大规模身份管理。 - Docker Compose：推荐用于小型/测试设置。请参阅文档。 - Kubernetes（Helm Chart）：推荐用于大型设置。请参阅文档和 Helm 图表存储库。 - AWS CloudFormation：使用我们的官方模板在 AWS 上部署。请参阅文档。 - DigitalOcean Marketplace：通过官方 Marketplace 应用程序进行一键部署。查看应用程序列表。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/goauthentik/authentik" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/goauthentik/authentik/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/goauthentik/authentik/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 24.2k</span>
+      <span class="stat-item">⑂ 1.8k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">09</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/google/skills" target="_blank">
+        <span class="repo-author">google</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">skills</span>
+      </a>
+      <span class="badge-today">▲ 532 stars today</span>
+    </div>
+    <p class="desc-en">Agent Skills for Google products and technologies</p><p class="desc-zh">Google 产品和技术的代理技能</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">此存储库包含 Google 产品和技术（包括 Google Cloud）的代理技能。 &gt; 该存储库正在积极开发中。从命令中，您可以从中选择特定技能 - **Google Cloud 入门** - **向 Google Cloud 进行身份验证** - **Google Cloud 配方：Foundation Builder** - **加入 Google Cloud** - **多产品解决方案技能** - **Google Cloud 解决方案架构工作流程** - **跨云提供商和数据类型的代理分析** - **无边界开放数据 Lakehouse 代理 AI 系统** - **在 Google Cloud 上构建和部署 AI 代理** - **使用 AI 代理解决方案的数据科学工作流程** - **实时双向多模式流代理 AI 解决方案** - **将 AI 工作负载迁移到 GKE Inference** - **适用于企业的 RAG</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/google/skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/google/skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/google/skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 17.0k</span>
+      <span class="stat-item">⑂ 1.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">10</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/Comfy-Org/ComfyUI" target="_blank">
+        <span class="repo-author">Comfy-Org</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">ComfyUI</span>
+      </a>
+      <span class="badge-today">▲ 333 stars today</span>
+    </div>
+    <p class="desc-en">The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.</p><p class="desc-zh">最强大的模块化扩散模型 GUI、API 和带有图形/节点接口的后端。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**用于内容创建的最强大、模块化的 AI 引擎。** ComfyUI 是面向需要控制每个模型、每个参数和每个输出的视觉专业人士的 AI 创建引擎。其强大的模块化节点图形界面使创意人员能够生成图像、视频、3D 模型、音频等... - ComfyUI 本身支持最新的开源最先进模型。 - API 节点提供对最佳闭源模型的访问，例如 Nano Banana、Seedance、Hunyuan3D 等。 - 它可在 Windows、Linux 和 macOS 上使用，可以在本地使用我们的桌面应用程序、便携式安装或在我们的云上使用。 - 借助应用程序模式，可以通过简单的 UI 展示最复杂的工作流程。 - 它通过我们的 API 端点无缝集成到生产管道中。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/Comfy-Org/ComfyUI" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/Comfy-Org/ComfyUI/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/Comfy-Org/ComfyUI/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 125.2k</span>
+      <span class="stat-item">⑂ 14.8k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">11</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/harveyai/harvey-labs" target="_blank">
+        <span class="repo-author">harveyai</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">harvey-labs</span>
+      </a>
+      <span class="badge-today">▲ 47 stars today</span>
+    </div>
+    <p class="desc-en">A benchmark built to evaluate and improve agent capabilities for supporting legal work.</p><p class="desc-zh">旨在评估和提高代理人支持法律工作的能力而建立的基准。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">法律代理人基准 (LAB)：用于评估代理人实际法律工作的开源基准。 Harvey LAB 是一个开源项目，旨在对法学硕士代理人在现实环境中执行法律工作的能力进行基准测试。 LAB 由两部分组成：包含代理指令、文档和量规的“任务”数据集，以及用于针对这些任务运行和评估代理的“执行工具”。 LAB 是一个正在进行的项目，我们希望不断地添加和完善任务集和执行工具。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/harveyai/harvey-labs" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/harveyai/harvey-labs/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/harveyai/harvey-labs/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 717</span>
+      <span class="stat-item">⑂ 170</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">12</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/pingdotgg/t3code" target="_blank">
+        <span class="repo-author">pingdotgg</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">t3code</span>
+      </a>
+      <span class="badge-today">▲ 182 stars today</span>
+    </div>
+    <p class="desc-en"><span class="no-desc">暂无描述</span></p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">T3 Code 是一个“代理线束控制界面”。它可以通过一流的移动应用程序（iOS、Android）、Web 应用程序和基于 Electron 的桌面应用程序来控制机器上的代理。适用于您订阅的 Claude Code、Codex、Cursor、Grok Build 和 OpenCode。如果它们设置在您的计算机上，T3 Code 可以控制它们。 “等等，你要卖给我什么？”没有什么。我们构建 T3 Code 是因为我们希望获得尽可能最佳的代理开发体验。我们受到 Codex 桌面应用程序、Conductor、Claude Desktop 和 Cursor Glass 等现有解决方案的启发，但没有一个达到我们的标准。我们想要一些高性能、远程就绪且真正开放的东西。如果我们走错了方向，我们希望您拥有分叉和构建您想要的编辑器所需的一切。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/pingdotgg/t3code" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/pingdotgg/t3code/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/pingdotgg/t3code/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 17.5k</span>
+      <span class="stat-item">⑂ 4.0k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div></div>
+  <div id="panel-weekly"  class="panel" style="display:none"><div class="card">
+  <div class="rank-col"><span class="rank-num">01</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/firecrawl/pdf-inspector" target="_blank">
+        <span class="repo-author">firecrawl</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">pdf-inspector</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.</p><p class="desc-zh">用于 PDF 检查、分类和文本提取的快速 Rust 库。智能检测扫描 PDF 与基于文本的 PDF，以实现智能路由决策。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">用于 PDF 分类和文本提取的快速 Rust 库。检测 PDF 是基于文本的还是扫描的，通过位置感知提取文本，并转换为干净的 Markdown — 所有这些都无需 OCR。包括 Python、Node.js 和浏览器 WebAssembly 的绑定。由 Firecrawl 构建，可在 200 毫秒内本地处理基于文本的 PDF，为约 54% 不需要的 PDF 跳过昂贵的 OCR 服务。 - **智能分类** — 通过对内容流进行采样，在大约 10-50 毫秒内检测基于文本、扫描、基于图像或混合的 PDF。返回置信度分数 (0.0-1.0) 和每页 OCR 路由。 - **文本提取** — 通过字体信息、X/Y 坐标和自动多列阅读顺序进行位置感知提取。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/firecrawl/pdf-inspector" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/firecrawl/pdf-inspector/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/firecrawl/pdf-inspector/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 13.7k</span>
+      <span class="stat-item">⑂ 938</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#dea584"></span><span class="lang-name">Rust</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">02</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/zhaoxuya520/reverse-skill" target="_blank">
+        <span class="repo-author">zhaoxuya520</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">reverse-skill</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端</p><p class="desc-zh">逆向工程/授权渗透测试/安全研究技能路由器包 人工智能路由+按需工具链引导+自进化知识库 支持Claude Code、Kiro、Cursor、Cline等AI编码客户端 逆向/渗透/安全技能路由包 - AI自动路由 + 路由自举工具链 + 自动进化经验库 | 支持Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">网络安全技能路由器·逆向技能路由包 黑暗水域航行，逆流而上。 &gt; **如果您是 AI 代理，请跳转到 README_AI.md 并严格按照说明进行操作。** 当 AI 代理（Claude Code、Codex、Cursor、OpenCode 或其他兼容客户端）遇到 APK、二进制、前端 JS 加密、CTF 挑战或渗透测试目标时，此包会将其路由到正确的方法，检查可用工具，并执行可重复的工作流程而不是猜测命令。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/zhaoxuya520/reverse-skill" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/zhaoxuya520/reverse-skill/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/zhaoxuya520/reverse-skill/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 22.2k</span>
+      <span class="stat-item">⑂ 3.0k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#012456"></span><span class="lang-name">PowerShell</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">03</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank">
+        <span class="repo-author">TencentCloud</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">TencentDB-Agent-Memory</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.</p><p class="desc-zh">TangentDB Agent Memory 是 AI Agent 的团队级内存中心，将对话、文档和代码转化为四种可重用的内存资产（聊天内存、技能、LLM-Wiki、代码图），并在代理和框架之间进行管理、共享和配备。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">特工们记住了。人类不断创新。安装 · 它是什么？ · 团队游戏 · 技术实施 · 基准 &gt; **最新：** Team Memory Beta 正在快速发展 - 安装它并在几分钟内开始探索。一次性启动所有三个服务（++）：打开面板：http://localhost:8125。完整的安装文档（独立 Memory Hub 部署、Proxy + Claude Code / CodeBuddy 使用、停止和清理、端口引用等）可在 **INSTALL.md**（中文：INSTALL_CN.md）中找到。从旧版本迁移数据 如果您已经使用旧版本 (v1.x / v0.x) 并且希望将现有数据迁移到 v2.0.0+，我们提供了一个迁移工具：请参阅**数据迁移工具 (v2 → v3)** 了解完整用法和标志。新安装可以跳过此步骤。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/TencentCloud/TencentDB-Agent-Memory/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/TencentCloud/TencentDB-Agent-Memory/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 18.6k</span>
+      <span class="stat-item">⑂ 1.7k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">04</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/lyogavin/airllm" target="_blank">
+        <span class="repo-author">lyogavin</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">airllm</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">AirLLM 70B inference with single 4GB GPU</p><p class="desc-zh">使用单个 4GB GPU 进行 AirLLM 70B 推理</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**AirLLM** 极大地减少了推理内存的使用，让 70B 大型语言模型在单个 4GB GPU 卡上运行 - 无需量化、蒸馏或修剪。您甚至可以在 **8GB** 上运行 **405B Llama 3.1**，在 **~12GB** 上运行 **DeepSeek-V3 (671B)**，以及在 **低于 4GB** 上运行 **Kimi K3 (2.8T)**（迄今为止发布的最大开源模型），因为稀疏 MoE 模型一次传输一位专家而不是整个层。 ![Discord](https://discord.gg/2xffU5sn) * 最佳 AI 游戏精灵生成器 * 最佳 AI 面部表情编辑器 * Bloome — 在云端构建和运行 AI 代理团队，零设置 首先，安装 airllm pip 软件包。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/lyogavin/airllm" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/lyogavin/airllm/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/lyogavin/airllm/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 30.3k</span>
+      <span class="stat-item">⑂ 3.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#DA5B0B"></span><span class="lang-name">Jupyter Notebook</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">05</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/esengine/DeepSeek-Reasonix" target="_blank">
+        <span class="repo-author">esengine</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">DeepSeek-Reasonix</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.</p><p class="desc-zh">DeepSeek-适用于您终端的原生 AI 编码代理。围绕前缀缓存稳定性进行设计 - 让它运行。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">开源 · MIT · 单个 Go 二进制文件 可以保持运行的编码代理。一个本地引擎，四种方式进入——终端、桌面应用程序、浏览器或通过 ACP 的编辑器。计划模式、权限、工作区沙箱和每回合检查点可保持长时间的自主运行，您仍然可以读取和撤消这些内容。 &gt; **社区·加入社区** — 双语 Discord，用于设置帮助 ( / )、工作流程展示和功能创意。 → ** ** - **配置驱动。** 提供者、代理、启用的工具和插件都在 .没有硬编码模型。 - **多模型和可组合。** DeepSeek 作为预设提供；任何与 OpenAI 兼容的端点都是配置条目，而不是新代码。可以选择在单独的缓存稳定会话中一起运行两个模型（执行器 + 规划器）。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/esengine/DeepSeek-Reasonix" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/esengine/DeepSeek-Reasonix/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/esengine/DeepSeek-Reasonix/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 33.4k</span>
+      <span class="stat-item">⑂ 2.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#00ADD8"></span><span class="lang-name">Go</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">06</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/microsoft/AI-For-Beginners" target="_blank">
+        <span class="repo-author">microsoft</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">AI-For-Beginners</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">12 Weeks, 24 Lessons, AI for All!</p><p class="desc-zh">12 周，24 节课，全民人工智能！</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">人工智能初学者 - 课程 | AI 初学者 - _Sketchnote by @girlie_mac_ |通过我们为期 12 周、24 课时的课程探索 **人工智能** (AI) 的世界！它包括实践课程、测验和实验室。该课程适合初学者，涵盖 TensorFlow 和 PyTorch 等工具，以及通过 GitHub Action 支持的人工智能伦理（自动化且始终最新）孟加拉语 |保加利亚语 |缅甸语（缅甸） |中文（简体）|中文（繁体，香港）|中文（繁体，澳门）|中文（繁体，台湾）|克罗地亚语 |捷克语 |丹麦语 |荷兰语 |爱沙尼亚语 |芬兰语 |法语 |德语 |希腊语 |希伯来语 |印地语 |匈牙利语 |印度尼西亚语 |意大利语 |日语 |卡纳达语 |高棉语 |韩语 |立陶宛语 |马来语 |马拉雅拉姆语 |马拉地语</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/microsoft/AI-For-Beginners" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/microsoft/AI-For-Beginners/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/microsoft/AI-For-Beginners/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 63.9k</span>
+      <span class="stat-item">⑂ 12.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#DA5B0B"></span><span class="lang-name">Jupyter Notebook</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">07</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/usekaneo/kaneo" target="_blank">
+        <span class="repo-author">usekaneo</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">kaneo</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.</p><p class="desc-zh">🎯 你所需要的一切。没有什么是你不知道的。开源项目管理适合您，而不是对您不利。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">经过多年使用臃肿、过于复杂、分散实际工作注意力的项目管理平台，我们打造了与众不同的 Kaneo。大多数工具的问题不是它们缺乏功能，而是它们有**太多**。每个通知、每个不必要的按钮、每个复杂的工作流程都会让您的团队偏离重要的事情：**构建出色的产品**。我们相信最好的工具是**看不见的**。他们应该扩大您团队的自然工作流程，而不是强迫您适应他们的工作流程。 Kaneo 的构建原则是**少即是多**：每个功能的存在都是因为它解决了实际问题，而不是因为它在演示中看起来令人印象深刻。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/usekaneo/kaneo" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/usekaneo/kaneo/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/usekaneo/kaneo/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 7.8k</span>
+      <span class="stat-item">⑂ 623</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">08</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/virgiliojr94/book-to-skill" target="_blank">
+        <span class="repo-author">virgiliojr94</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">book-to-skill</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.</p><p class="desc-zh">将任何 PDF 技术书籍转化为 Claude Code 技能 — 可供您在工作时学习、参考和使用。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">将任何技术书籍、文档文件夹或源集合转变为统一的代理技能 - 在您使用 GitHub Copilot CLI、Amp 或 Claude Code 时可以学习、参考和使用。在真实的书籍上测量（如何测量），比将书放入上下文中回答一个问题要少 24×–51× 的标记。 1. **将**指向文件、文件夹或 glob — 2. **它将本书提炼**为一项技能 — 框架、决策规则、反模式和每章文件。结构，而不是摘要。 3. **您的代理按需加载它** - 询问，它会从真实内容中读取正确的章节和答案，没有幻觉。你买了一本很棒的技术书。你读过一次。三个月后你就不记得第七章的存在了。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/virgiliojr94/book-to-skill" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/virgiliojr94/book-to-skill/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/virgiliojr94/book-to-skill/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 19.3k</span>
+      <span class="stat-item">⑂ 2.1k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">09</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/google/skills" target="_blank">
+        <span class="repo-author">google</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">skills</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Agent Skills for Google products and technologies</p><p class="desc-zh">Google 产品和技术的代理技能</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">此存储库包含 Google 产品和技术（包括 Google Cloud）的代理技能。 &gt; 该存储库正在积极开发中。从命令中，您可以从中选择特定技能 - **Google Cloud 入门** - **向 Google Cloud 进行身份验证** - **Google Cloud 配方：Foundation Builder** - **加入 Google Cloud** - **多产品解决方案技能** - **Google Cloud 解决方案架构工作流程** - **跨云提供商和数据类型的代理分析** - **无边界开放数据 Lakehouse 代理 AI 系统** - **在 Google Cloud 上构建和部署 AI 代理** - **使用 AI 代理解决方案的数据科学工作流程** - **实时双向多模式流代理 AI 解决方案** - **将 AI 工作负载迁移到 GKE Inference** - **适用于企业的 RAG</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/google/skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/google/skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/google/skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 17.0k</span>
+      <span class="stat-item">⑂ 1.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">10</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/unclebob/swarm-forge" target="_blank">
+        <span class="repo-author">unclebob</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">swarm-forge</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">A simple tool for coordinating several AI agents.</p><p class="desc-zh">一个用于协调多个人工智能代理的简单工具。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">不要在 Bankrbot SWARM 代币上花任何钱。 **一个基于 tmux 的规范的代理编排平台，可将大量 AI 代理转变为可靠、专业的软件工程师。** 该分支是纪录片：它解释了系统并携带共享的操作脚本和默认构成文章。可运行的工作流分支携带面向项目的配置、角色提示和定义特定工作流的本地构成文章。 SwarmForge 是一个代理协调系统，可促进在不同 git 工作树中工作的代理之间的通信。它为特定于角色的提示、工作树分配、tmux 会话和消息传递提供了共享结构，因此多个代理可以在同一项目上进行协作，而无需互相干扰。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/unclebob/swarm-forge" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/unclebob/swarm-forge/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/unclebob/swarm-forge/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 2.0k</span>
+      <span class="stat-item">⑂ 214</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#db5855"></span><span class="lang-name">Clojure</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">11</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/iv-org/invidious" target="_blank">
+        <span class="repo-author">iv-org</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">invidious</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Invidious is an alternative front-end to YouTube</p><p class="desc-zh">Invidious 是 YouTube 的替代前端</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">YouTube 的开源替代前端 |玩家|偏好 |订阅 | |------------------------------------------------|----------------------------------------------------|----------------------------------------------------| - 独立于 Google 的订阅 - 所有订阅频道的通知 - 纯音频模式（可在移动设备上后台播放） - 得益于我们的翻译，支持多种语言 - 从 YouTube、NewPipe 和 FreeTube 导入订阅 - 从 YouTube 和 NewPipe 导入观看历史记录 - 将订阅导出到 NewPipe 和 FreeTube - 导入/导出不良用户数据 - 不使用官方 YouTube API - 无贡献者许可协议 (CLA) - 从列表中选择一个公共实例并开始观看视频现在！</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/iv-org/invidious" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/iv-org/invidious/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/iv-org/invidious/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 22.5k</span>
+      <span class="stat-item">⑂ 2.5k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#000100"></span><span class="lang-name">Crystal</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">12</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/goauthentik/authentik" target="_blank">
+        <span class="repo-author">goauthentik</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">authentik</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">The authentication glue you need.</p><p class="desc-zh">您需要的认证胶水。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">authentik 是现代 SSO 的开源身份提供商 (IdP)。它支持 SAML、OAuth2/OIDC、LDAP、RADIUS 等，专为从小型实验室到大型生产集群的自托管而设计。我们的企业产品可供组织安全地替换现有的 IdP，例如 Okta、Auth0、Entra ID 和 Ping Identity，以实现强大的大规模身份管理。 - Docker Compose：推荐用于小型/测试设置。请参阅文档。 - Kubernetes（Helm Chart）：推荐用于大型设置。请参阅文档和 Helm 图表存储库。 - AWS CloudFormation：使用我们的官方模板在 AWS 上部署。请参阅文档。 - DigitalOcean Marketplace：通过官方 Marketplace 应用程序进行一键部署。查看应用程序列表。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/goauthentik/authentik" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/goauthentik/authentik/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/goauthentik/authentik/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 24.2k</span>
+      <span class="stat-item">⑂ 1.8k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">13</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/Comfy-Org/ComfyUI" target="_blank">
+        <span class="repo-author">Comfy-Org</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">ComfyUI</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.</p><p class="desc-zh">最强大的模块化扩散模型 GUI、API 和带有图形/节点接口的后端。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**用于内容创建的最强大、模块化的 AI 引擎。** ComfyUI 是面向需要控制每个模型、每个参数和每个输出的视觉专业人士的 AI 创建引擎。其强大的模块化节点图形界面使创意人员能够生成图像、视频、3D 模型、音频等... - ComfyUI 本身支持最新的开源最先进模型。 - API 节点提供对最佳闭源模型的访问，例如 Nano Banana、Seedance、Hunyuan3D 等。 - 它可在 Windows、Linux 和 macOS 上使用，可以在本地使用我们的桌面应用程序、便携式安装或在我们的云上使用。 - 借助应用程序模式，可以通过简单的 UI 展示最复杂的工作流程。 - 它通过我们的 API 端点无缝集成到生产管道中。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/Comfy-Org/ComfyUI" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/Comfy-Org/ComfyUI/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/Comfy-Org/ComfyUI/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 125.2k</span>
+      <span class="stat-item">⑂ 14.8k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">14</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/drawdb-io/drawdb" target="_blank">
+        <span class="repo-author">drawdb-io</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">drawdb</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Free, simple, and intuitive online database diagram editor and SQL generator.</p><p class="desc-zh">免费、简单、直观的在线数据库图表编辑器和 SQL 生成器。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">适用于所有平台的下一代人工智能智能终端 免费、简单、直观的数据库模式编辑器和 SQL 生成器。 DrawDB 是浏览器中强大且用户友好的数据库实体关系图 (ERD) 编辑器。只需点击几下即可构建图表、导出和导入 SQL 脚本、生成迁移、自定义编辑器等等，而无需创建帐户。请在此处查看完整的功能集。如果要启用共享，请根据 来设置服务器和环境变量。除非您需要共享文件，否则这是可选的。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/drawdb-io/drawdb" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/drawdb-io/drawdb/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/drawdb-io/drawdb/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 38.6k</span>
+      <span class="stat-item">⑂ 3.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">15</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/vitali87/code-graph-rag" target="_blank">
+        <span class="repo-author">vitali87</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">code-graph-rag</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs</p><p class="desc-zh">适合您的单一存储库的终极 RAG。借助人工智能和知识图的力量查询、理解和编辑多语言代码库</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">/ 标签，所以我们使用单一的 light-mode 。当 GitHub 帐户恢复时，恢复下面的主题感知块：Code-Graph-RAG 使用 Tree-sitter 解析多语言代码库，在 Memgraph 中构建其结构的知识图，并允许您用简单的英语查询、编辑和优化该代码。它在一个统一的图形模式下跨混合语言的单一存储库工作。 - **Ruby 支持**：Ruby 通过新的可插入 ast-grep 层加入图表，该层从单个 YAML 模式文件添加语言，发出 、 和 节点以及导入边，而无需手写解析器。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/vitali87/code-graph-rag" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/vitali87/code-graph-rag/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/vitali87/code-graph-rag/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 2.7k</span>
+      <span class="stat-item">⑂ 471</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">16</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/livekit/agents" target="_blank">
+        <span class="repo-author">livekit</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">agents</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">A framework for building realtime voice AI agents 🤖🎙️📹</p><p class="desc-zh">用于构建实时语音 AI 代理的框架🤖🎙️📹</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">正在寻找 JS/TS 库？查看 AgentsJS 代理框架旨在构建在服务器上运行的实时、可编程参与者。使用它来创建可以看到、听到和理解的会话式多模式语音代理。 - **灵活的集成**：一个全面的生态系统，可混合和匹配正确的 STT、LLM、TTS 和实时 API，以满足您的使用案例。 - **集成作业调度**：内置任务调度和分配，通过调度 API 将最终用户连接到代理。 - **广泛的 WebRTC 客户端**：使用 LiveKit 的开源 SDK 生态系统构建客户端应用程序，支持所有主要平台。 - **电话集成**：与 LiveKit 的电话堆栈无缝协作，允许您的代理拨打电话或从电话接听电话。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/livekit/agents" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/livekit/agents/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/livekit/agents/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 12.8k</span>
+      <span class="stat-item">⑂ 3.5k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">17</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/embabel/embabel-agent" target="_blank">
+        <span class="repo-author">embabel</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">embabel-agent</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Agent framework for the JVM. Pronounced Em-BAY-bel /ɛmˈbeɪbəl/</p><p class="desc-zh">JVM 的代理框架。发音为 Em-BAY-bel /ɛmˈbeɪbəl/</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Embabel (Em-BAY-bel) 是一个用于在 JVM 上编写代理流的框架，可将 LLM 提示的交互与代码和域模型无缝混合。支持实现目标的智能路径查找。用 Kotlin 编写 有疑问吗？通过 Embabel 支持的中心与文档进行交流，该中心是一个 Embabel 代理，可以用自然语言回答您有关框架的问题。根据以下方面对代理流进行建模： - **操作**：代理采取的步骤 - **目标**：代理试图实现的目标 - **条件**：在执行操作或确定目标已实现之前评估的条件。执行每个操作后都会重新评估条件。 - **域模型**：支持流程并通知操作、目标和条件的对象。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/embabel/embabel-agent" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/embabel/embabel-agent/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/embabel/embabel-agent/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 4.1k</span>
+      <span class="stat-item">⑂ 401</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#A97BFF"></span><span class="lang-name">Kotlin</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">18</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/donnemartin/system-design-primer" target="_blank">
+        <span class="repo-author">donnemartin</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">system-design-primer</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.</p><p class="desc-zh">了解如何设计大型系统。准备系统设计面试。包括 Anki 抽认卡。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">*English ∙ 日本语 ∙ 简体中文 ∙ 繁体中文 | ‎ ∙ বাংলা ∙ 巴西葡萄牙语 ∙ 德语 ∙ ελληνικά ∙ עברйת ∙ 意大利语 ∙ 한국어 ∙ فר׌ ∙ 波兰语 ∙ русский язык ∙ 西班牙语 ∙ ภาษาไทย ∙ 土耳其语 ∙ tiếng 越南语 ∙ 法语 |添加翻译* &gt; 了解如何设计大型系统。 &gt; 准备系统设计面试。学习如何设计大型系统学习如何设计可扩展系统将帮助您成为一名更好的工程师。系统设计是一个广泛的话题。 **大量资源分散在网络上**有关系统设计原理的资源。该存储库是一个**有组织的资源集合**，可帮助您学习如何大规模构建系统。向开源社区学习这是一个不断更新的开源项目。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/donnemartin/system-design-primer" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/donnemartin/system-design-primer/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/donnemartin/system-design-primer/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 362.6k</span>
+      <span class="stat-item">⑂ 57.7k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div></div>
+  <div id="panel-monthly" class="panel" style="display:none"><div class="card">
+  <div class="rank-col"><span class="rank-num">01</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/diegosouzapw/OmniRoute" target="_blank">
+        <span class="repo-author">diegosouzapw</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">OmniRoute</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline &amp;amp; Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors</p><p class="desc-zh">永远不要停止编码。免费 MIT AI 网关：一个端点、290 多个提供商（90 多个免费）、500 多个模型 — Kimi、Claude、GPT、OpenAI、Gemini、GLM、DeepSeek、MiniMax。适用于 Claude Code、Codex、Cursor、OpenCode、Cline 和 Claude Code。副驾驶。配额感知自动回退、RTK+Caveman 压缩可节省 15-95% 的令牌、MCP/A2A、桌面/PWA。由 500 多名贡献者构建</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">🚀 OmniRoute — 免费 AI 网关 &gt; 手动堆叠免费层级非常痛苦 — 数十个 SDK、数十个速率限制，而且不知道您实际拥有多少。 OmniRoute 将 **43 个提供商池/516 个模型** 的 **记录** 免费层聚合为一个诚实的数字，并在仪表板上实时显示 ()。 &gt; 实时页面的动画摘要。完整的方法（池重复数据删除、信用等级、提供商条款）：**docs/reference/FREE_TIERS.md**。 &gt; 这些数字每两周根据实时目录重新审核一次，并且**双向移动** - 提供商结束免费套餐，数字下降；一个新的着陆并爬升。我们发布目录实际计算的内容，而不是汇总的最佳情况。 ⭐ 如果 OMNIROUTE 帮助您省钱并让您的工作更轻松，请给存储库加注星标。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/diegosouzapw/OmniRoute" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/diegosouzapw/OmniRoute/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/diegosouzapw/OmniRoute/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 43.9k</span>
+      <span class="stat-item">⑂ 5.9k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">02</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/Nutlope/hallmark" target="_blank">
+        <span class="repo-author">Nutlope</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">hallmark</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Anti-AI-slop design skill for Claude Code, Cursor, and Codex.</p><p class="desc-zh">Claude Code、Cursor、Codex 的防 AI 设计技巧。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**Claude Code、Cursor 和 Codex 的设计技巧，看起来不像是 AI 生成的。** 现场演示 → &amp;nbsp;·&amp;nbsp;二十一个主题 &amp;nbsp;·&amp;nbsp;四个动词 &amp;nbsp;·&amp;nbsp;按循环。 Hallmark 为简报选择了一个宏观结构，将其设计为二十一个主题之一，运行了 57 个倾斜测试门以及发布前的自我批评，并拒绝每个法学硕士接受过的分发默认设置。 Hallmark 为两个不同的内裤设计的两个页面感觉像是不同的网站，而不是同一模板的颜色交换。 | *（默认）* |构建新的用户界面。选择宏观结构，应用规则集，在交还之前运行倾斜测试。 | | |根据反模式对现有代码进行评分。打孔清单，无编辑。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/Nutlope/hallmark" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/Nutlope/hallmark/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/Nutlope/hallmark/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 22.9k</span>
+      <span class="stat-item">⑂ 1.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#663399"></span><span class="lang-name">CSS</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">03</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/koala73/worldmonitor" target="_blank">
+        <span class="repo-author">koala73</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">worldmonitor</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface</p><p class="desc-zh">实时全球情报仪表板。在统一的态势感知界面中进行人工智能驱动的新闻聚合、地缘政治监控和基础设施跟踪</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**实时全球情报仪表板** — 在统一的态势感知界面中进行人工智能驱动的新闻聚合、地缘政治监控和基础设施跟踪。 - **跨 15 个类别的 500 多个精选新闻源**，人工智能合成简报 - **双地图引擎** — 3D 地球 (globe.gl) 和 WebGL 平面地图 (deck.gl)，具有 56 种地图图层类型 - **跨流关联** — 军事、经济、灾难和升级信号融合 - **国家不稳定指数 (CII)** — 服务器权威 CII v8 压力评分 31一级国家 - **金融雷达** - 29 个证券交易所、大宗商品、加密货币和 7 种信号市场组合 - **本地 AI** - 使用 Ollama 运行所有内容，无需 API 密钥 - **6 个站点变体** 来自单个代码库（世界、科技、金融、商品、快乐、电子）</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/koala73/worldmonitor" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/koala73/worldmonitor/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/koala73/worldmonitor/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 80.1k</span>
+      <span class="stat-item">⑂ 12.0k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">04</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/emilkowalski/skills" target="_blank">
+        <span class="repo-author">emilkowalski</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">skills</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Skills for Designers and Engineers.</p><p class="desc-zh">设计师和工程师的技能。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">设计师和工程师的技能 帮助设计师和工程师构建更好的用户界面。知道在动画或一般设计方面您是否做出了正确的选择是很困难的。这些技能旨在帮助您更快地做出正确的决定。它们基于我在 Vercel 和 Linear 等公司多年的工作经验。这里的所有技能都是领域专业知识的副作用。人工智能不会取代此类专业知识，它会放大你可以从中获得的东西，并使你相对于其他人更好。因此，学习编码、设计或开发任何其他领域的专业知识。这是非常有价值的。您可以在这里了解我的最新技能：我见过很多次特工没有为动画选择正确的成分。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/emilkowalski/skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/emilkowalski/skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/emilkowalski/skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 27.6k</span>
+      <span class="stat-item">⑂ 1.5k</span>
+      
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">05</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/1jehuang/jcode" target="_blank">
+        <span class="repo-author">1jehuang</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">jcode</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">The most RAM efficient harness</p><p class="desc-zh">RAM 效率最高的线束</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">最智能的工具 网站 · 文档 · SDK · 基准 · 功能 · 安装 · 快速入门 · 进一步阅读 · 贡献 需要 Homebrew、源代码构建、提供商设置，还是想要代理为您设置？性能和资源效率 jcode 旨在尽可能提高性能和资源效率。每个指标都针对骨骼进行了优化，这对于扩展多会话工作流程非常重要。在这里，我们采样了一些指标来显示差异：RAM 使用情况和启动情况。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/1jehuang/jcode" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/1jehuang/jcode/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/1jehuang/jcode/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 16.6k</span>
+      <span class="stat-item">⑂ 1.9k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#dea584"></span><span class="lang-name">Rust</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">06</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/stablyai/orca" target="_blank">
+        <span class="repo-author">stablyai</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">orca</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.</p><p class="desc-zh">Orca 是与一组并行代理一起工作的 ADE。使用您自己的订阅运行任何编码代理。可在桌面、移动和 VPS 上使用。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">中文 · 日本语 · 한국어 · 西班牙语 · 法语 · 葡萄牙语 面向 100x 构建者的 AI Orchestrator。并行运行 Codex、ClaudeCode、OpenCode 或 Pi — 每个都在自己的工作树中，在一个位置进行跟踪。通过手机监控和指导您的客服人员 - 当客服人员完成时收到通知并从任何地方发送后续信息。 iOS App Store · TestFlight · Android APK 0.0.37 · 文档 → 在五个代理之间展开一个提示，每个代理都在自己独立的 git 工作树中 — 比较结果并合并获胜者。幽灵级终端，具有 WebGL 渲染、无限分割和重新启动后仍可回滚的功能。单击真实 Chromium 窗口中的任何 UI 元素，将其 HTML、CSS 和裁剪后的屏幕截图直接发送到代理的提示中。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/stablyai/orca" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/stablyai/orca/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/stablyai/orca/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 40.6k</span>
+      <span class="stat-item">⑂ 2.8k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">07</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/pingdotgg/t3code" target="_blank">
+        <span class="repo-author">pingdotgg</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">t3code</span>
+      </a>
+      
+    </div>
+    <p class="desc-en"><span class="no-desc">暂无描述</span></p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">T3 Code 是一个“代理线束控制界面”。它可以通过一流的移动应用程序（iOS、Android）、Web 应用程序和基于 Electron 的桌面应用程序来控制机器上的代理。适用于您订阅的 Claude Code、Codex、Cursor、Grok Build 和 OpenCode。如果它们设置在您的计算机上，T3 Code 可以控制它们。 “等等，你要卖给我什么？”没有什么。我们构建 T3 Code 是因为我们希望获得尽可能最佳的代理开发体验。我们受到 Codex 桌面应用程序、Conductor、Claude Desktop 和 Cursor Glass 等现有解决方案的启发，但没有一个达到我们的标准。我们想要一些高性能、远程就绪且真正开放的东西。如果我们走错了方向，我们希望您拥有分叉和构建您想要的编辑器所需的一切。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/pingdotgg/t3code" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/pingdotgg/t3code/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/pingdotgg/t3code/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 17.5k</span>
+      <span class="stat-item">⑂ 4.0k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">08</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/HKUDS/DeepTutor" target="_blank">
+        <span class="repo-author">HKUDS</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">DeepTutor</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.</p><p class="desc-zh">DeepTutor：终身个性化辅导。 https://deeptutor.info/。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">DeepTutor：终身个性化辅导功能 · 入门 · 探索 · CLI · 生态系统 · 社区 &gt; 🤝 **我们欢迎任何形式的贡献！** 在 上对路线图项目进行投票或提出新项目，并查看我们的贡献指南，了解分支策略、编码标准以及如何开始。 &gt; **[2026.8.7]** v1.5.10 — 每个帐户都登录到自己的 **Codex**，模型输出语言成为自己的设置，空工具调用将被拒绝而不是重试，上传将停止阻塞循环。 &gt; **[2026.8.4]** v1.5.9 — Gemini **在其本机端点上嵌入 2**、每个模型 **推理工作** 控制、 **Novita AI** 网关、查询检索角色以及保留所有 .</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/HKUDS/DeepTutor" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/HKUDS/DeepTutor/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/HKUDS/DeepTutor/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 33.3k</span>
+      <span class="stat-item">⑂ 4.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">09</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/zhaoxuya520/reverse-skill" target="_blank">
+        <span class="repo-author">zhaoxuya520</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">reverse-skill</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端</p><p class="desc-zh">逆向工程/授权渗透测试/安全研究技能路由器包 人工智能路由+按需工具链引导+自进化知识库 支持Claude Code、Kiro、Cursor、Cline等AI编码客户端 逆向/渗透/安全技能路由包 - AI自动路由 + 路由自举工具链 + 自动进化经验库 | 支持Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">网络安全技能路由器·逆向技能路由包 黑暗水域航行，逆流而上。 &gt; **如果您是 AI 代理，请跳转到 README_AI.md 并严格按照说明进行操作。** 当 AI 代理（Claude Code、Codex、Cursor、OpenCode 或其他兼容客户端）遇到 APK、二进制、前端 JS 加密、CTF 挑战或渗透测试目标时，此包会将其路由到正确的方法，检查可用工具，并执行可重复的工作流程而不是猜测命令。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/zhaoxuya520/reverse-skill" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/zhaoxuya520/reverse-skill/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/zhaoxuya520/reverse-skill/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 22.2k</span>
+      <span class="stat-item">⑂ 3.0k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#012456"></span><span class="lang-name">PowerShell</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">10</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/microsoft/AI-For-Beginners" target="_blank">
+        <span class="repo-author">microsoft</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">AI-For-Beginners</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">12 Weeks, 24 Lessons, AI for All!</p><p class="desc-zh">12 周，24 节课，全民人工智能！</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">人工智能初学者 - 课程 | AI 初学者 - _Sketchnote by @girlie_mac_ |通过我们为期 12 周、24 课时的课程探索 **人工智能** (AI) 的世界！它包括实践课程、测验和实验室。该课程适合初学者，涵盖 TensorFlow 和 PyTorch 等工具，以及通过 GitHub Action 支持的人工智能伦理（自动化且始终最新）孟加拉语 |保加利亚语 |缅甸语（缅甸） |中文（简体）|中文（繁体，香港）|中文（繁体，澳门）|中文（繁体，台湾）|克罗地亚语 |捷克语 |丹麦语 |荷兰语 |爱沙尼亚语 |芬兰语 |法语 |德语 |希腊语 |希伯来语 |印地语 |匈牙利语 |印度尼西亚语 |意大利语 |日语 |卡纳达语 |高棉语 |韩语 |立陶宛语 |马来语 |马拉雅拉姆语 |马拉地语</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/microsoft/AI-For-Beginners" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/microsoft/AI-For-Beginners/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/microsoft/AI-For-Beginners/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 63.9k</span>
+      <span class="stat-item">⑂ 12.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#DA5B0B"></span><span class="lang-name">Jupyter Notebook</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">11</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/OpenCut-app/OpenCut" target="_blank">
+        <span class="repo-author">OpenCut-app</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">OpenCut</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">The open-source CapCut alternative</p><p class="desc-zh">开源 CapCut 替代方案</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">适用于网络、桌面和移动设备的免费开源视频编辑器。 **OpenCut 正在从头开始重写。** 即将推出的内容： - 一流的第三方插件（通过插件优先架构实现） - 来自一个代码库的桌面、移动设备和浏览器（Rust 核心） - 无头模式（自动化、批量渲染） - 直接在编辑器中的脚本选项卡 您仍然可以在 opencut-app/opencut-classic 找到以前的版本，这是今天要达到的版本。 opencut.app 仍然运行经典版本。重写将一直存在于 new.opencut.app 中，直到它准备好接管为止。如果您还没有安装 proto，请安装：如果 shims 无法运行，请允许您的用户使用本地脚本：在设计架构时，我们尚未准备好接受外部贡献。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/OpenCut-app/OpenCut" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/OpenCut-app/OpenCut/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/OpenCut-app/OpenCut/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 81.8k</span>
+      <span class="stat-item">⑂ 8.1k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">12</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/every-app/open-seo" target="_blank">
+        <span class="repo-author">every-app</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">open-seo</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Open source alternative to Semrush and Ahrefs</p><p class="desc-zh">Semrush 和 Ahrefs 的开源替代品</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">&gt; Semrush 和 Ahrefs 的开源替代品 OpenSEO 是一款为_人民_服务的 SEO 工具。如果像 Semrush 或 Ahrefs 这样的工具太贵或太臃肿，OpenSEO 是一种由您实际控制的即用即付的替代方案。 &gt; 为您和您的 AI 代理提供的一体化 SEO 工具。与 Claude Code、OpenClaw 或 Hermes 等任何代理联系。我们有预先构建的技能，但您可以构建自己的技能，根据您的需求定制 OpenSEO。在我们的网站上免费试用 OpenSEO。如果您想支持该项目，托管订阅价格为 10 美元/月。 - 一流的 MCP 和 AI 技能。 - 集中的工作流程，而不是臃肿、复杂的 SEO 套件。 - 携带您自己的 DataForSEO API 密钥，并只需为您使用的内容付费。 - Fork 和 Vibe 编码您自己的自定义工具。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/every-app/open-seo" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/every-app/open-seo/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/every-app/open-seo/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 11.0k</span>
+      <span class="stat-item">⑂ 1.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">13</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/mattpocock/skills" target="_blank">
+        <span class="repo-author">mattpocock</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">skills</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Skills for Real Engineers. Straight from my .agents directory.</p><p class="desc-zh">真正工程师的技能。直接来自我的 .agents 目录。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">我每天用我的代理技能来做真正的工程——而不是氛围编码。开发真正的应用程序很困难。 GSD、BMAD 和 Spec-Kit 等方法试图通过拥有流程来提供帮助。但这样做时，它们会夺走您的控制权，并使流程中的错误难以解决。这些技能被设计得很小、易于适应且可组合。它们适用于任何模型。它们基于数十年的工程经验。和他们一起玩。让它们成为你自己的。享受。如果您想跟上这些技能的变化以及我创建的任何新技能，您可以在我的时事通讯上加入约 60,000 名其他开发人员的行列：两种方法，两种哲学。 **Claude Code 插件** 将整个集合安装为托管的只读捆绑包，该捆绑包会在我发货时更新 - 您订阅而不是分叉。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/mattpocock/skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/mattpocock/skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/mattpocock/skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 210.7k</span>
+      <span class="stat-item">⑂ 18.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#89e051"></span><span class="lang-name">Shell</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">14</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/tt-a1i/archify" target="_blank">
+        <span class="repo-author">tt-a1i</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">archify</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.</p><p class="desc-zh">具有漂亮、可验证的架构、工作流程、序列、数据流和生命周期图的代理技能——具有动态和清晰导出功能的独立 HTML。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**直接在聊天中将代码库或系统描述转变为精美的交互式系统图。** Archify 是 Raven、Cursor、Claude Code、Codex CLI 和 OpenCode 的代理技能。给它一个系统描述或存储库；获取交互式、可共享的技术地图。 - **打开它并呈现** - 五种技术图表类型、四种视觉预设、深色/浅色主题和可选的有限运动 - **在合并之前查看架构更改** - 将两个经过验证的快照作为之前/增量/之后进行比较，并提供准确的添加、删除、更改、移动和重新路由的事实 - **每次交互都保持接地** - 搜索节点，可选择打开经过修订验证的源，跟踪上游/下游创作的范围和确切的路线，比较角色，并在不发明拓扑的情况下播放引导故事 - **一个 ​​f</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/tt-a1i/archify" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/tt-a1i/archify/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/tt-a1i/archify/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 10.8k</span>
+      <span class="stat-item">⑂ 835</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#e34c26"></span><span class="lang-name">HTML</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">15</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank">
+        <span class="repo-author">TencentCloud</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">TencentDB-Agent-Memory</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.</p><p class="desc-zh">TangentDB Agent Memory 是 AI Agent 的团队级内存中心，将对话、文档和代码转化为四种可重用的内存资产（聊天内存、技能、LLM-Wiki、代码图），并在代理和框架之间进行管理、共享和配备。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">特工们记住了。人类不断创新。安装 · 它是什么？ · 团队游戏 · 技术实施 · 基准 &gt; **最新：** Team Memory Beta 正在快速发展 - 安装它并在几分钟内开始探索。一次性启动所有三个服务（++）：打开面板：http://localhost:8125。完整的安装文档（独立 Memory Hub 部署、Proxy + Claude Code / CodeBuddy 使用、停止和清理、端口引用等）可在 **INSTALL.md**（中文：INSTALL_CN.md）中找到。从旧版本迁移数据 如果您已经使用旧版本 (v1.x / v0.x) 并且希望将现有数据迁移到 v2.0.0+，我们提供了一个迁移工具：请参阅**数据迁移工具 (v2 → v3)** 了解完整用法和标志。新安装可以跳过此步骤。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/TencentCloud/TencentDB-Agent-Memory/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/TencentCloud/TencentDB-Agent-Memory/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 18.6k</span>
+      <span class="stat-item">⑂ 1.7k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">16</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank">
+        <span class="repo-author">Shubhamsaboo</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">awesome-llm-apps</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.</p><p class="desc-zh">100 多个 AI 代理、代理技能和 RAG 应用程序 - 免费且开源。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**100 多个开源 AI 代理、代理技能和 RAG 应用程序。手工构建、端到端测试、Apache-2.0。** 克隆、运输、销售 - 100% 免费和开源 适用于 Claude、Gemini、GPT、DeepSeek、Llama、Qwen 和其他开源模型。 **关于 Unwind AI 的分步教程** · **快速入门** · **浏览所有模板** 保险索赔实时代理团队 在 10 秒内为您的编码代理提供新技能：然后问它：*“为什么我从来没有完成我的副项目？”* 或者在 30 秒内克隆并运行任何代理：&gt; 📬 每周都会发布新模板。将它们放入 Unwind AI 的收件箱中。 *赋予您的编码代理新的能力。一条命令即可安装，简单的英语即可使用。每项技能都会提供真实的代码并通过安全+评估 CI 门。与 Claude Code、Codex、Cursor 和其他编码代理配合使用。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/Shubhamsaboo/awesome-llm-apps/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/Shubhamsaboo/awesome-llm-apps/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 131.7k</span>
+      <span class="stat-item">⑂ 19.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">17</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/earendil-works/pi" target="_blank">
+        <span class="repo-author">earendil-works</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">pi</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI</p><p class="desc-zh">AI代理工具包：统一LLM API、代理循环、TUI、编码代理CLI</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">&gt; 默认情况下，来自新贡献者的新问题和 PR 会自动关闭。维护人员每天都会审查自动关闭的问题。请参阅 CONTRIBUTING.md。这是 Pi 代理工具项目的所在地，包括我们的自扩展编码代理。 * **@earendil-works/pi-coding-agent**：交互式编码代理 CLI * **@earendil-works/pi-agent-core**：具有工具调用和状态管理的代理运行时 * **@earendil-works/pi-ai**：统一的多提供商 LLM API（OpenAI、Anthropic、Google 等） * 访问 pi.dev，带有演示的项目网站 * 阅读文档，但您也可以要求代理自我解释 | **@earendil-works/pi-遥测** |供应商中立的遥测合同、参考适配器、一致性测试和类型化模式 | | **@earendil-works/pi-ai** |统一的多提供商LLM API（OpenAI</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/earendil-works/pi" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/earendil-works/pi/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/earendil-works/pi/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 85.9k</span>
+      <span class="stat-item">⑂ 10.7k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">18</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/tirth8205/code-review-graph" target="_blank">
+        <span class="repo-author">tirth8205</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">code-review-graph</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.</p><p class="desc-zh">MCP 和 CLI 的本地优先代码智能图。构建代码库的持久映射，以便 AI 编码工具仅读取重要内容，并在评论和大型存储库工作流程上进行基准上下文缩减。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">停止燃烧代币。开始更聪明地复习。人工智能编码工具最终可能会在审查任务中重新读取代码库的大部分内容。解决这个问题。它使用 Tree-sitter 构建代码的结构图，增量跟踪更改，并通过 MCP 为您的 AI 助手提供精确的上下文，以便它只读取重要的内容。一个命令即可设置一切。检测您拥有哪些 AI 编码工具，为每个工具编写正确的 MCP 配置，在支持的情况下安装平台本机挂钩/技能，并将图形感知指令注入您的平台规则中。它会自动检测您是否通过 或 / 安装并生成正确的配置。安装后重新启动编辑器/工具。需要 Python 3.10+。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/tirth8205/code-review-graph" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/tirth8205/code-review-graph/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/tirth8205/code-review-graph/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 29.5k</span>
+      <span class="stat-item">⑂ 2.7k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">19</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/virgiliojr94/book-to-skill" target="_blank">
+        <span class="repo-author">virgiliojr94</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">book-to-skill</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.</p><p class="desc-zh">将任何 PDF 技术书籍转化为 Claude Code 技能 — 可供您在工作时学习、参考和使用。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">将任何技术书籍、文档文件夹或源集合转变为统一的代理技能 - 在您使用 GitHub Copilot CLI、Amp 或 Claude Code 时可以学习、参考和使用。在真实的书籍上测量（如何测量），比将书放入上下文中回答一个问题要少 24×–51× 的标记。 1. **将**指向文件、文件夹或 glob — 2. **它将本书提炼**为一项技能 — 框架、决策规则、反模式和每章文件。结构，而不是摘要。 3. **您的代理按需加载它** - 询问，它会从真实内容中读取正确的章节和答案，没有幻觉。你买了一本很棒的技术书。你读过一次。三个月后你就不记得第七章的存在了。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/virgiliojr94/book-to-skill" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/virgiliojr94/book-to-skill/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/virgiliojr94/book-to-skill/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 19.3k</span>
+      <span class="stat-item">⑂ 2.1k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">20</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/huggingface/speech-to-speech" target="_blank">
+        <span class="repo-author">huggingface</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">speech-to-speech</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Build local voice agents with open-source models</p><p class="desc-zh">使用开源模型构建本地语音代理</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">语音到语音：使用开源模型构建语音代理低延迟、完全模块化的语音代理管道：**VAD -&gt; STT -&gt; LLM -&gt; TTS**，通过 **OpenAI Realtime 兼容的 WebSocket API** 公开。每个组件都是可更换的。 LLM 插槽采用 OpenAI 兼容协议，因此您可以将其指向托管提供商、HF 推理提供商或您自己硬件上的 vLLM 或 llama.cpp 服务器，以获得完全本地、完全开放的堆栈。该管道在生产环境中作为数千个 Reachy Mini 机器人的对话后端运行。这将启动一个与 OpenAI Realtime 兼容的服务器，使用 Parakeet TDT 进行本地 STT、与 OpenAI 兼容的 LLM 和 Qwen3-TTS 进行本地语音输出。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/huggingface/speech-to-speech" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/huggingface/speech-to-speech/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/huggingface/speech-to-speech/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 11.8k</span>
+      <span class="stat-item">⑂ 1.5k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div></div>
+
+  <div class="no-result" id="empty">没有找到匹配的项目</div>
+</div>
+
+<script>
+var COUNTS={"daily":12,"weekly":18,"monthly":20};
+var LABELS={"daily":"今日热榜","weekly":"本周热榜","monthly":"本月热榜"};
+var currentPeriod="daily";
+
+function switchTab(period){
+  if(period===currentPeriod)return;
+  currentPeriod=period;
+  ["daily","weekly","monthly"].forEach(function(p){
+    document.getElementById("panel-"+p).style.display=p===period?"":"none";
+    document.querySelector("[data-period="+p+"]").classList.toggle("active",p===period);
+  });
+  var inp=document.querySelector(".search");
+  inp.value="";
+  document.getElementById("cnt").textContent="共 "+COUNTS[period]+" 个项目";
+  document.getElementById("period-label").textContent=LABELS[period];
+  document.getElementById("empty").style.display="none";
+  document.querySelectorAll("#panel-"+period+" .card").forEach(function(c){c.classList.remove("hidden");});
+}
+
+function onSearch(q){
+  q=q.trim().toLowerCase();
+  var cards=document.querySelectorAll("#panel-"+currentPeriod+" .card"),shown=0;
+  cards.forEach(function(c){
+    var show=!q||c.textContent.toLowerCase().indexOf(q)>=0;
+    c.classList.toggle("hidden",!show);
+    if(show)shown++;
+  });
+  document.getElementById("cnt").textContent="共 "+shown+" 个项目";
+  document.getElementById("empty").style.display=shown?"none":"block";
+}
+</script>
+</body>
+</html>
