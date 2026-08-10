@@ -8776,5 +8776,155 @@
         "stars": 17519
       }
     ]
+  },
+  "20260810": {
+    "total": 16,
+    "file": "github-trending/trending_20260810.html",
+    "top_repos": [
+      {
+        "full_name": "semantica-agi/semantica",
+        "url": "https://github.com/semantica-agi/semantica",
+        "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+        "description_zh": "用于上下文和负责任的人工智能系统的图本机基础设施",
+        "language": "Python",
+        "stars_today": 967,
+        "stars": 3819
+      },
+      {
+        "full_name": "msitarzewski/agency-agents",
+        "url": "https://github.com/msitarzewski/agency-agents",
+        "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "description_zh": "触手可及的完整人工智能机构 - 从前端向导到 Reddit 社区忍者，从奇思妙想的注入者到现实检查者。每个代理都是一位具有个性、流程和经过验证的可交付成果的专业专家。",
+        "language": "Shell",
+        "stars_today": 1352,
+        "stars": 141521
+      },
+      {
+        "full_name": "NanmiCoder/MediaCrawler",
+        "url": "https://github.com/NanmiCoder/MediaCrawler",
+        "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+        "description_zh": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+        "language": "Python",
+        "stars_today": 215,
+        "stars": 60827
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "AI 编码代理的生产级工程技能。",
+        "language": "JavaScript",
+        "stars_today": 659,
+        "stars": 85565
+      },
+      {
+        "full_name": "paperclipai/paperclip",
+        "url": "https://github.com/paperclipai/paperclip",
+        "description": "The open-source app everyone uses to manage agents at work",
+        "description_zh": "每个人都用它来管理工作中的座席的开源应用程序",
+        "language": "TypeScript",
+        "stars_today": 167,
+        "stars": 76257
+      },
+      {
+        "full_name": "PrimeIntellect-ai/prime-agent",
+        "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+        "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "description_zh": "一个自我改进的 RLM 代理，用于编码工作流程和长时间运行的自主任务。",
+        "language": "TypeScript",
+        "stars_today": 2655,
+        "stars": 12677
+      },
+      {
+        "full_name": "LadybirdBrowser/ladybird",
+        "url": "https://github.com/LadybirdBrowser/ladybird",
+        "description": "Truly independent web browser",
+        "description_zh": "真正独立的网络浏览器",
+        "language": "C++",
+        "stars_today": 190,
+        "stars": 65171
+      },
+      {
+        "full_name": "ruvnet/RuView",
+        "url": "https://github.com/ruvnet/RuView",
+        "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+        "description_zh": "π RuView 将商用 WiFi 信号转化为实时空间智能、生命体征监测和存在检测 - 所有这些都无需视频像素。",
+        "language": "Rust",
+        "stars_today": 156,
+        "stars": 89222
+      },
+      {
+        "full_name": "danielmiessler/LifeOS",
+        "url": "https://github.com/danielmiessler/LifeOS",
+        "description": "⛰️A General Hill-climbing AI harness that helps you move from Current State to Ideal State in both Life and Work.",
+        "description_zh": "⛰️一款通用爬山AI安全带，帮助您从生活和工作的现状迈向理想状态。",
+        "language": "TypeScript",
+        "stars_today": 143,
+        "stars": 17722
+      },
+      {
+        "full_name": "firecrawl/firecrawl",
+        "url": "https://github.com/firecrawl/firecrawl",
+        "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+        "description_zh": "用于大规模搜索、抓取和与网络交互的上下文 API。 🔥",
+        "language": "TypeScript",
+        "stars_today": 815,
+        "stars": 164729
+      },
+      {
+        "full_name": "TauricResearch/TradingAgents",
+        "url": "https://github.com/TauricResearch/TradingAgents",
+        "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "description_zh": "TradingAgents：多代理LLM金融交易框架",
+        "language": "Python",
+        "stars_today": 598,
+        "stars": 97022
+      },
+      {
+        "full_name": "google-deepmind/weathernext",
+        "url": "https://github.com/google-deepmind/weathernext",
+        "description": "",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 327,
+        "stars": 7268
+      },
+      {
+        "full_name": "vitali87/code-graph-rag",
+        "url": "https://github.com/vitali87/code-graph-rag",
+        "description": "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+        "description_zh": "适合您的单一存储库的终极 RAG。借助人工智能和知识图的力量查询、理解和编辑多语言代码库",
+        "language": "Python",
+        "stars_today": 682,
+        "stars": 3405
+      },
+      {
+        "full_name": "pingdotgg/t3code",
+        "url": "https://github.com/pingdotgg/t3code",
+        "description": "",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 388,
+        "stars": 17892
+      },
+      {
+        "full_name": "Comfy-Org/ComfyUI",
+        "url": "https://github.com/Comfy-Org/ComfyUI",
+        "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+        "description_zh": "最强大的模块化扩散模型 GUI、API 和带有图形/节点接口的后端。",
+        "language": "Python",
+        "stars_today": 921,
+        "stars": 126092
+      },
+      {
+        "full_name": "opa334/Dopamine",
+        "url": "https://github.com/opa334/Dopamine",
+        "description": "Dopamine is a semi-untethered jailbreak for iOS 15 to 26(.0.1)",
+        "description_zh": "Dopamine 是一款针对 iOS 15 至 26(.0.1) 的半自由越狱工具",
+        "language": "C",
+        "stars_today": 95,
+        "stars": 5934
+      }
+    ]
   }
 }
