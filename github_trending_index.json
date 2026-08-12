@@ -9085,5 +9085,164 @@
         "stars": 13772
       }
     ]
+  },
+  "20260812": {
+    "total": 17,
+    "file": "github-trending/trending_20260812.html",
+    "top_repos": [
+      {
+        "full_name": "cathrynlavery/diagram-design",
+        "url": "https://github.com/cathrynlavery/diagram-design",
+        "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+        "description_zh": "Claude Code 的 29 种编辑图表类型。独立的 HTML + SVG。没有阴影，没有美人鱼的污迹。",
+        "language": "HTML",
+        "stars_today": 1616,
+        "stars": 8763
+      },
+      {
+        "full_name": "macro-inc/macro",
+        "url": "https://github.com/macro-inc/macro",
+        "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+        "description_zh": "Macro 是一个面向团队的统一工作空间：电子邮件、聊天、文档、任务、代理、呼叫和 CRM — 通过共享 AI 内存 @ 链接在一起。",
+        "language": "Rust",
+        "stars_today": 248,
+        "stars": 1338
+      },
+      {
+        "full_name": "semantica-agi/semantica",
+        "url": "https://github.com/semantica-agi/semantica",
+        "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+        "description_zh": "用于上下文和负责任的人工智能系统的图本机基础设施",
+        "language": "Python",
+        "stars_today": 834,
+        "stars": 5490
+      },
+      {
+        "full_name": "stablyai/orca",
+        "url": "https://github.com/stablyai/orca",
+        "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+        "description_zh": "Orca 是与一组并行代理一起工作的 ADE。使用您自己的订阅运行任何编码代理。可在桌面、移动和 VPS 上使用。",
+        "language": "TypeScript",
+        "stars_today": 1215,
+        "stars": 43527
+      },
+      {
+        "full_name": "msitarzewski/agency-agents",
+        "url": "https://github.com/msitarzewski/agency-agents",
+        "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "description_zh": "触手可及的完整人工智能机构 - 从前端向导到 Reddit 社区忍者，从奇思妙想的注入者到现实检查者。每个代理都是一位具有个性、流程和经过验证的可交付成果的专业专家。",
+        "language": "Shell",
+        "stars_today": 1969,
+        "stars": 144336
+      },
+      {
+        "full_name": "shiyu-coder/Kronos",
+        "url": "https://github.com/shiyu-coder/Kronos",
+        "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+        "description_zh": "Kronos：金融市场语言的基础模型",
+        "language": "Python",
+        "stars_today": 238,
+        "stars": 36858
+      },
+      {
+        "full_name": "NanmiCoder/MediaCrawler",
+        "url": "https://github.com/NanmiCoder/MediaCrawler",
+        "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+        "description_zh": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫",
+        "language": "Python",
+        "stars_today": 855,
+        "stars": 61889
+      },
+      {
+        "full_name": "hugohe3/ppt-master",
+        "url": "https://github.com/hugohe3/ppt-master",
+        "description": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
+        "description_zh": "AI 将文档或主题转化为真实的原生 PowerPoint 演示文稿 - 具有原生形状、过渡和动画、按需提供数据支持的图表和表格、演讲者笔记的音频旁白以及对您自己的 .pptx 模板的支持。 ·何雨果",
+        "language": "Python",
+        "stars_today": 364,
+        "stars": 45316
+      },
+      {
+        "full_name": "infiniflow/ragflow",
+        "url": "https://github.com/infiniflow/ragflow",
+        "description": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+        "description_zh": "RAGFlow 是一款领先的开源检索增强生成 (RAG) 引擎，它将尖端的 RAG 与代理功能相融合，为法学硕士创建卓越的上下文层",
+        "language": "Go",
+        "stars_today": 85,
+        "stars": 87422
+      },
+      {
+        "full_name": "paperclipai/paperclip",
+        "url": "https://github.com/paperclipai/paperclip",
+        "description": "The open-source app everyone uses to manage agents at work",
+        "description_zh": "每个人都用它来管理工作中的座席的开源应用程序",
+        "language": "TypeScript",
+        "stars_today": 573,
+        "stars": 77529
+      },
+      {
+        "full_name": "NVIDIA-NeMo/Switchyard",
+        "url": "https://github.com/NVIDIA-NeMo/Switchyard",
+        "description": "",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 370,
+        "stars": 659
+      },
+      {
+        "full_name": "ZuodaoTech/everyone-can-use-english",
+        "url": "https://github.com/ZuodaoTech/everyone-can-use-english",
+        "description": "人人都能用英语",
+        "description_zh": "人人用英语",
+        "language": "TypeScript",
+        "stars_today": 53,
+        "stars": 35983
+      },
+      {
+        "full_name": "smicallef/spiderfoot",
+        "url": "https://github.com/smicallef/spiderfoot",
+        "description": "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
+        "description_zh": "SpiderFoot 自动化 OSINT 以获取威胁情报并绘制攻击面图。",
+        "language": "Python",
+        "stars_today": 40,
+        "stars": 20254
+      },
+      {
+        "full_name": "localsend/localsend",
+        "url": "https://github.com/localsend/localsend",
+        "description": "An open-source cross-platform alternative to AirDrop",
+        "description_zh": "AirDrop 的开源跨平台替代品",
+        "language": "Dart",
+        "stars_today": 159,
+        "stars": 87583
+      },
+      {
+        "full_name": "Lightricks/LTX-2",
+        "url": "https://github.com/Lightricks/LTX-2",
+        "description": "Official Python inference and LoRA trainer package for the LTX-2 audio–video generative model.",
+        "description_zh": "LTX-2 音视频生成模型的官方 Python 推理和 LoRA 训练包。",
+        "language": "Python",
+        "stars_today": 40,
+        "stars": 8630
+      },
+      {
+        "full_name": "embabel/embabel-agent",
+        "url": "https://github.com/embabel/embabel-agent",
+        "description": "Agent framework for the JVM. Pronounced Em-BAY-bel /ɛmˈbeɪbəl/",
+        "description_zh": "JVM 的代理框架。发音为 Em-BAY-bel /ɛmˈbeɪbəl/",
+        "language": "Kotlin",
+        "stars_today": 29,
+        "stars": 4177
+      },
+      {
+        "full_name": "cactus-compute/needle",
+        "url": "https://github.com/cactus-compute/needle",
+        "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+        "description_zh": "适用于微型设备的 14MB 基础模型；手机、可穿戴设备、智能家居和机器人。",
+        "language": "Python",
+        "stars_today": 248,
+        "stars": 3978
+      }
+    ]
   }
 }
