@@ -9562,5 +9562,128 @@
         "stars": 38850
       }
     ]
+  },
+  "20260815": {
+    "total": 13,
+    "file": "github-trending/trending_20260815.html",
+    "top_repos": [
+      {
+        "full_name": "cordiverse/cordis",
+        "url": "https://github.com/cordiverse/cordis",
+        "description": "Meta-Framework of Spatiotemporal Composability",
+        "description_zh": "时空可组合性元框架",
+        "language": "TypeScript",
+        "stars_today": 616,
+        "stars": 3802
+      },
+      {
+        "full_name": "cathrynlavery/diagram-design",
+        "url": "https://github.com/cathrynlavery/diagram-design",
+        "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+        "description_zh": "Claude Code 的 29 种编辑图表类型。独立的 HTML + SVG。没有阴影，没有美人鱼的污迹。",
+        "language": "HTML",
+        "stars_today": 1619,
+        "stars": 18120
+      },
+      {
+        "full_name": "cursor/plugins",
+        "url": "https://github.com/cursor/plugins",
+        "description": "Cursor plugin specification and official plugins",
+        "description_zh": "光标插件规范和官方插件",
+        "language": "TypeScript",
+        "stars_today": 152,
+        "stars": 2878
+      },
+      {
+        "full_name": "cactus-compute/needle",
+        "url": "https://github.com/cactus-compute/needle",
+        "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+        "description_zh": "适用于微型设备的 14MB 基础模型；手机、可穿戴设备、智能家居和机器人。",
+        "language": "Python",
+        "stars_today": 551,
+        "stars": 5887
+      },
+      {
+        "full_name": "unslothai/unsloth",
+        "url": "https://github.com/unslothai/unsloth",
+        "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+        "description_zh": "用于运行和训练 LLM 和扩散模型的本地 UI，包括 Qwen3.8、Kimi K3、MiniMax-H3、Gemma 4、DeepSeek-V4、FLUX 等。",
+        "language": "Python",
+        "stars_today": 435,
+        "stars": 71758
+      },
+      {
+        "full_name": "public-apis/public-apis",
+        "url": "https://github.com/public-apis/public-apis",
+        "description": "A collective list of free APIs",
+        "description_zh": "免费 API 集合列表",
+        "language": "Python",
+        "stars_today": 2476,
+        "stars": 459487
+      },
+      {
+        "full_name": "MakazhanAlpamys/Soup",
+        "url": "https://github.com/MakazhanAlpamys/Soup",
+        "description": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
+        "description_zh": "从一个 YAML 微调 LLM。层流在 4 GB 笔记本电脑 GPU 上训练 8B 模型。",
+        "language": "Python",
+        "stars_today": 303,
+        "stars": 1463
+      },
+      {
+        "full_name": "github/spec-kit",
+        "url": "https://github.com/github/spec-kit",
+        "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+        "description_zh": "💫 帮助您开始规范驱动开发的工具包",
+        "language": "Python",
+        "stars_today": 901,
+        "stars": 128908
+      },
+      {
+        "full_name": "megadose/holehe",
+        "url": "https://github.com/megadose/holehe",
+        "description": "holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.",
+        "description_zh": "holehe 允许您检查邮件是否在 Twitter、Instagram 等不同网站上使用，并且会通过忘记密码功能检索网站上的信息。",
+        "language": "Python",
+        "stars_today": 389,
+        "stars": 13004
+      },
+      {
+        "full_name": "altic-dev/FluidVoice",
+        "url": "https://github.com/altic-dev/FluidVoice",
+        "description": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. A local Wispr Flow alternative. ⭐ helps a ton :) Windows &amp; iOS waitlist open. Linux soon.",
+        "description_zh": "最快且唯一具有设备上 STT 和自定义训练的 AI 增强模型的 macOS 听写应用程序。本地 Wispr Flow 替代方案。 ⭐ 有很大帮助 :) Windows 和 Windows iOS 候补名单开放。很快就会有Linux了。",
+        "language": "Swift",
+        "stars_today": 311,
+        "stars": 10178
+      },
+      {
+        "full_name": "ToolJet/ToolJet",
+        "url": "https://github.com/ToolJet/ToolJet",
+        "description": "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
+        "description_zh": "ToolJet 是 ToolJet AI 的开源基础 - ToolJet AI 是用于构建内部工具、仪表板、业务应用程序、工作流程和 AI 代理的企业应用程序生成平台 🚀",
+        "language": "JavaScript",
+        "stars_today": 553,
+        "stars": 39339
+      },
+      {
+        "full_name": "HKUDS/CLI-Anything",
+        "url": "https://github.com/HKUDS/CLI-Anything",
+        "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+        "description_zh": "“CLI-Anything：使所有软件代理原生”--CLI-Hub：https://clianything.cc/",
+        "language": "Python",
+        "stars_today": 100,
+        "stars": 47192
+      },
+      {
+        "full_name": "citrolabs/ego-lite",
+        "url": "https://github.com/citrolabs/ego-lite",
+        "description": "The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+        "description_zh": "AI 代理运行浏览器自动化的最快浏览器，专为与您的 AI 代理（如 Codex 或 Claude Code）共享您登录的浏览器状态而构建，而不会打扰您。零成本，零配置。",
+        "language": "JavaScript",
+        "stars_today": 546,
+        "stars": 10669
+      }
+    ]
   }
 }
