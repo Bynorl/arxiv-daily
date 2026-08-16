@@ -9685,5 +9685,83 @@
         "stars": 10669
       }
     ]
+  },
+  "20260816": {
+    "total": 8,
+    "file": "github-trending/trending_20260816.html",
+    "top_repos": [
+      {
+        "full_name": "cordiverse/cordis",
+        "url": "https://github.com/cordiverse/cordis",
+        "description": "Meta-Framework of Spatiotemporal Composability",
+        "description_zh": "时空可组合性元框架",
+        "language": "TypeScript",
+        "stars_today": 719,
+        "stars": 4494
+      },
+      {
+        "full_name": "basecamp/omarchy",
+        "url": "https://github.com/basecamp/omarchy",
+        "description": "Beautiful, Modern &amp; Opinionated Linux",
+        "description_zh": "美丽、现代、时尚固执己见的Linux",
+        "language": "Shell",
+        "stars_today": 225,
+        "stars": 25148
+      },
+      {
+        "full_name": "unslothai/unsloth",
+        "url": "https://github.com/unslothai/unsloth",
+        "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+        "description_zh": "用于运行和训练 LLM 和扩散模型的本地 UI，包括 Qwen3.8、Kimi K3、MiniMax-H3、Gemma 4、DeepSeek-V4、FLUX 等。",
+        "language": "Python",
+        "stars_today": 580,
+        "stars": 72304
+      },
+      {
+        "full_name": "OpenCut-app/OpenCut",
+        "url": "https://github.com/OpenCut-app/OpenCut",
+        "description": "The open-source CapCut alternative",
+        "description_zh": "开源 CapCut 替代方案",
+        "language": "TypeScript",
+        "stars_today": 134,
+        "stars": 83599
+      },
+      {
+        "full_name": "akitaonrails/ai-memory",
+        "url": "https://github.com/akitaonrails/ai-memory",
+        "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+        "description_zh": "用于代理编码 CLI 的长期记忆解决方案，并促进不同代理供应商之间的切换",
+        "language": "Rust",
+        "stars_today": 41,
+        "stars": 1600
+      },
+      {
+        "full_name": "public-apis/public-apis",
+        "url": "https://github.com/public-apis/public-apis",
+        "description": "A collective list of free APIs",
+        "description_zh": "免费 API 集合列表",
+        "language": "Python",
+        "stars_today": 1583,
+        "stars": 460996
+      },
+      {
+        "full_name": "ToolJet/ToolJet",
+        "url": "https://github.com/ToolJet/ToolJet",
+        "description": "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
+        "description_zh": "ToolJet 是 ToolJet AI 的开源基础 - ToolJet AI 是用于构建内部工具、仪表板、业务应用程序、工作流程和 AI 代理的企业应用程序生成平台 🚀",
+        "language": "JavaScript",
+        "stars_today": 446,
+        "stars": 39798
+      },
+      {
+        "full_name": "cactus-compute/needle",
+        "url": "https://github.com/cactus-compute/needle",
+        "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+        "description_zh": "适用于微型设备的 14MB 基础模型；手机、可穿戴设备、智能家居和机器人。",
+        "language": "Python",
+        "stars_today": 447,
+        "stars": 6340
+      }
+    ]
   }
 }
