@@ -9859,5 +9859,119 @@
         "stars": 52882
       }
     ]
+  },
+  "20260818": {
+    "total": 12,
+    "file": "github-trending/trending_20260818.html",
+    "top_repos": [
+      {
+        "full_name": "harry0703/MoneyPrinterTurbo",
+        "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+        "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+        "description_zh": "利用AI大模型和自动化工作流程，根据主题或关键词一键生成高清短视频。通过自动化AI工作流程从主题或关键词生成高清短视频。",
+        "language": "Python",
+        "stars_today": 2306,
+        "stars": 107804
+      },
+      {
+        "full_name": "chaitanyagiri/munder-difflin",
+        "url": "https://github.com/chaitanyagiri/munder-difflin",
+        "description": "local multi-agent harness",
+        "description_zh": "本地多智能体利用",
+        "language": "TypeScript",
+        "stars_today": 256,
+        "stars": 1748
+      },
+      {
+        "full_name": "akitaonrails/ai-memory",
+        "url": "https://github.com/akitaonrails/ai-memory",
+        "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+        "description_zh": "用于代理编码 CLI 的长期记忆解决方案，并促进不同代理供应商之间的切换",
+        "language": "Rust",
+        "stars_today": 207,
+        "stars": 2517
+      },
+      {
+        "full_name": "volcengine/OpenViking",
+        "url": "https://github.com/volcengine/OpenViking",
+        "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+        "description_zh": "人工智能代理的自我进化上下文数据库。统一代理记忆、知识 RAG 和技能。",
+        "language": "Python",
+        "stars_today": 239,
+        "stars": 29118
+      },
+      {
+        "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
+        "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+        "description": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&amp;CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF &amp; MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI &amp; 20+ platforms · 29 security domains · Apache 2.0",
+        "description_zh": "817 项针对 AI 代理的结构化网络安全技能 · 映射到 6 个框架：MITRE ATT&CK、NIST CSF 2.0、MITRE ATLAS、D3FEND、NIST AI RMF 和MITRE F3（打击欺诈）·agentskills.io 标准·适用于 Claude Code、GitHub Copilot、Codex CLI、Cursor、Gemini CLI 和20+ 平台 · 29 个安全域 · Apache 2.0",
+        "language": "Python",
+        "stars_today": 726,
+        "stars": 28878
+      },
+      {
+        "full_name": "public-apis/public-apis",
+        "url": "https://github.com/public-apis/public-apis",
+        "description": "A collective list of free APIs",
+        "description_zh": "免费 API 集合列表",
+        "language": "Python",
+        "stars_today": 1907,
+        "stars": 463921
+      },
+      {
+        "full_name": "basecamp/omarchy",
+        "url": "https://github.com/basecamp/omarchy",
+        "description": "Beautiful, Modern &amp; Opinionated Linux",
+        "description_zh": "美丽、现代、时尚固执己见的Linux",
+        "language": "Shell",
+        "stars_today": 710,
+        "stars": 26231
+      },
+      {
+        "full_name": "agalwood/Motrix",
+        "url": "https://github.com/agalwood/Motrix",
+        "description": "A full-featured download manager.",
+        "description_zh": "功能齐全的下载管理器。",
+        "language": "TypeScript",
+        "stars_today": 607,
+        "stars": 53470
+      },
+      {
+        "full_name": "NawfalMotii79/PLFM_RADAR",
+        "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
+        "description": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
+        "description_zh": "开源、低成本 10.5 GHz PLFM 相控阵雷达系统",
+        "language": "PLSQL",
+        "stars_today": 204,
+        "stars": 24186
+      },
+      {
+        "full_name": "jundot/omlx",
+        "url": "https://github.com/jundot/omlx",
+        "description": "LLM inference server with continuous batching &amp; SSD caching for Apple Silicon — managed from the macOS menu bar",
+        "description_zh": "具有连续批处理和连续批处理功能的 LLM 推理服务器Apple Silicon 的 SSD 缓存 — 从 macOS 菜单栏管理",
+        "language": "Python",
+        "stars_today": 366,
+        "stars": 19244
+      },
+      {
+        "full_name": "genlayerlabs/genlayer-project-boilerplate",
+        "url": "https://github.com/genlayerlabs/genlayer-project-boilerplate",
+        "description": "",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 543,
+        "stars": 15823
+      },
+      {
+        "full_name": "OpenCut-app/OpenCut",
+        "url": "https://github.com/OpenCut-app/OpenCut",
+        "description": "The open-source CapCut alternative",
+        "description_zh": "开源 CapCut 替代方案",
+        "language": "TypeScript",
+        "stars_today": 682,
+        "stars": 84544
+      }
+    ]
   }
 }
