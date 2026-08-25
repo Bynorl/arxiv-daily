@@ -10936,5 +10936,155 @@
         "stars": 37067
       }
     ]
+  },
+  "20260825": {
+    "total": 16,
+    "file": "github-trending/trending_20260825.html",
+    "top_repos": [
+      {
+        "full_name": "freestylefly/awesome-gpt-image-2",
+        "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 1698,
+        "stars": 16819
+      },
+      {
+        "full_name": "anthropics/claude-plugins-community",
+        "url": "https://github.com/anthropics/claude-plugins-community",
+        "description": "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 350,
+        "stars": 1580
+      },
+      {
+        "full_name": "MadsLorentzen/ai-job-search",
+        "url": "https://github.com/MadsLorentzen/ai-job-search",
+        "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 1266,
+        "stars": 34881
+      },
+      {
+        "full_name": "apache/maka",
+        "url": "https://github.com/apache/maka",
+        "description": "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 538,
+        "stars": 3172
+      },
+      {
+        "full_name": "TauricResearch/TradingAgents",
+        "url": "https://github.com/TauricResearch/TradingAgents",
+        "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 191,
+        "stars": 99937
+      },
+      {
+        "full_name": "AgriciDaniel/claude-obsidian",
+        "url": "https://github.com/AgriciDaniel/claude-obsidian",
+        "description": "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 810,
+        "stars": 12406
+      },
+      {
+        "full_name": "rohitg00/ai-engineering-from-scratch",
+        "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+        "description": "Learn it. Build it. Ship it for others.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 572,
+        "stars": 48689
+      },
+      {
+        "full_name": "tinyhumansai/openhuman",
+        "url": "https://github.com/tinyhumansai/openhuman",
+        "description": "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 541,
+        "stars": 37585
+      },
+      {
+        "full_name": "basecamp/omarchy",
+        "url": "https://github.com/basecamp/omarchy",
+        "description": "Beautiful, Modern &amp; Opinionated Linux",
+        "description_zh": "",
+        "language": "Shell",
+        "stars_today": 1080,
+        "stars": 30857
+      },
+      {
+        "full_name": "Shubhamsaboo/awesome-llm-apps",
+        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+        "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+        "description_zh": "100 多个 AI 代理、代理技能和 RAG 应用程序 - 免费且开源。",
+        "language": "Python",
+        "stars_today": 161,
+        "stars": 134053
+      },
+      {
+        "full_name": "multica-ai/andrej-karpathy-skills",
+        "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+        "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+        "description_zh": "用于改进 Claude 代码行为的单个 CLAUDE.md 文件，源自 Andrej Karpathy 对 LLM 编码陷阱的观察。",
+        "language": "",
+        "stars_today": 828,
+        "stars": 206978
+      },
+      {
+        "full_name": "openai/codex",
+        "url": "https://github.com/openai/codex",
+        "description": "Lightweight coding agent that runs in your terminal",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 1183,
+        "stars": 117882
+      },
+      {
+        "full_name": "marin-community/marin",
+        "url": "https://github.com/marin-community/marin",
+        "description": "Open-source framework for the research and development of foundation models.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 214,
+        "stars": 1967
+      },
+      {
+        "full_name": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 944,
+        "stars": 110485
+      },
+      {
+        "full_name": "anthropics/claude-plugins-official",
+        "url": "https://github.com/anthropics/claude-plugins-official",
+        "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "description_zh": "由 Anthropic 管理的官方高品质 Claude 代码插件目录。",
+        "language": "Python",
+        "stars_today": 47,
+        "stars": 33972
+      },
+      {
+        "full_name": "asciimoo/hister",
+        "url": "https://github.com/asciimoo/hister",
+        "description": "Your own search engine",
+        "description_zh": "您自己的搜索引擎",
+        "language": "Go",
+        "stars_today": 142,
+        "stars": 2621
+      }
+    ]
   }
 }
