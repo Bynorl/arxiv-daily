@@ -11086,5 +11086,155 @@
         "stars": 2621
       }
     ]
+  },
+  "20260826": {
+    "total": 16,
+    "file": "github-trending/trending_20260826.html",
+    "top_repos": [
+      {
+        "full_name": "tt-a1i/archify",
+        "url": "https://github.com/tt-a1i/archify",
+        "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+        "description_zh": "具有漂亮、可验证的架构、工作流程、序列、数据流和生命周期图的代理技能——具有动态和清晰导出功能的独立 HTML。",
+        "language": "HTML",
+        "stars_today": 1002,
+        "stars": 17104
+      },
+      {
+        "full_name": "freestylefly/awesome-gpt-image-2",
+        "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+        "description_zh": "提示作为代码 | GPT-Image2工业级提示词引擎与模板库，530+个逆向案例向工程，20+套工业级模板，并提炼出技能，持续更新中",
+        "language": "JavaScript",
+        "stars_today": 4044,
+        "stars": 20782
+      },
+      {
+        "full_name": "anthropics/claude-plugins-official",
+        "url": "https://github.com/anthropics/claude-plugins-official",
+        "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "description_zh": "由 Anthropic 管理的官方高品质 Claude 代码插件目录。",
+        "language": "Python",
+        "stars_today": 307,
+        "stars": 34267
+      },
+      {
+        "full_name": "Alishahryar1/free-claude-code",
+        "url": "https://github.com/Alishahryar1/free-claude-code",
+        "description": "Use Claude Code, Codex, Pi, and OpenCode for free (1.3B+ free tokens) from your terminal, app, IDE, or phone like OpenClaw (voice supported + ToS friendly)",
+        "description_zh": "从您的终端、应用程序、IDE 或 OpenClaw 等手机（支持语音 + ToS 友好）免费使用 Claude Code、Codex、Pi 和 OpenCode（1.3B+ 免费代币）",
+        "language": "Python",
+        "stars_today": 1047,
+        "stars": 50144
+      },
+      {
+        "full_name": "MadsLorentzen/ai-job-search",
+        "url": "https://github.com/MadsLorentzen/ai-job-search",
+        "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "description_zh": "在您的计算机上运行的职位搜索。基于 Claude Code 构建的人工智能职位申请框架：评估职位、定制简历、撰写求职信、准备面试。分叉并拥有它。",
+        "language": "Python",
+        "stars_today": 1299,
+        "stars": 36099
+      },
+      {
+        "full_name": "AgriciDaniel/claude-obsidian",
+        "url": "https://github.com/AgriciDaniel/claude-obsidian",
+        "description": "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+        "description_zh": "Obsidian + Claude Code 的自组织 AI 第二大脑。放下任何源代码，Claude 就会读取、链接并将其归档到您拥有的纯 Markdown 的连接知识图中。 AI 笔记、个人知识管理 (PKM) 和开源 Notion 替代方案。基于 Karpathy 的 LLM Wiki 模式。",
+        "language": "Python",
+        "stars_today": 812,
+        "stars": 13179
+      },
+      {
+        "full_name": "basecamp/omarchy",
+        "url": "https://github.com/basecamp/omarchy",
+        "description": "Beautiful, Modern &amp; Opinionated Linux",
+        "description_zh": "",
+        "language": "Shell",
+        "stars_today": 1021,
+        "stars": 31773
+      },
+      {
+        "full_name": "rohitg00/ai-engineering-from-scratch",
+        "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+        "description": "Learn it. Build it. Ship it for others.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 837,
+        "stars": 49443
+      },
+      {
+        "full_name": "tinyhumansai/openhuman",
+        "url": "https://github.com/tinyhumansai/openhuman",
+        "description": "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
+        "description_zh": "您的个人人工智能超级智能。一个为你的生活建立本地优先记忆的大脑，一个代理舰队和工作流程的出色协调者，以及一个深入的研究人员。",
+        "language": "Rust",
+        "stars_today": 522,
+        "stars": 38072
+      },
+      {
+        "full_name": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "description_zh": "让你的人工智能代理像房间里最懒的高级开发人员一样思考。最好的代码是你从未编写过的代码。",
+        "language": "JavaScript",
+        "stars_today": 1598,
+        "stars": 112032
+      },
+      {
+        "full_name": "anthropics/claude-plugins-community",
+        "url": "https://github.com/anthropics/claude-plugins-community",
+        "description": "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
+        "description_zh": "Claude Cowork 和 Claude Code 的社区插件市场。只读镜像 — 在 clau.de/plugin-directory-submission 提交插件。",
+        "language": "Python",
+        "stars_today": 537,
+        "stars": 2071
+      },
+      {
+        "full_name": "ConardLi/garden-skills",
+        "url": "https://github.com/ConardLi/garden-skills",
+        "description": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
+        "description_zh": "ConardLi 的开源技能集合，包括网页设计、知识检索、图像生成等。",
+        "language": "CSS",
+        "stars_today": 136,
+        "stars": 10793
+      },
+      {
+        "full_name": "browser-use/browser-use",
+        "url": "https://github.com/browser-use/browser-use",
+        "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+        "description_zh": "🌐 让 AI 代理可以访问网站。轻松在线自动化任务。",
+        "language": "Python",
+        "stars_today": 135,
+        "stars": 110687
+      },
+      {
+        "full_name": "K-Dense-AI/scientific-agent-skills",
+        "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+        "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "description_zh": "将任何人工智能代理变成人工智能科学家。排名第一的科学代理技能库，全球有 175,000 多名科学家使用。 163 种经过验证的现成技能以及 100 多个涵盖生物学、化学、医学和药物发现的科学数据库。与 Cursor、Claude Code、Codex、Pi、Antigravity 和开放代理技能标准兼容。",
+        "language": "Python",
+        "stars_today": 130,
+        "stars": 34575
+      },
+      {
+        "full_name": "marin-community/marin",
+        "url": "https://github.com/marin-community/marin",
+        "description": "Open-source framework for the research and development of foundation models.",
+        "description_zh": "用于基础模型研究和开发的开源框架。",
+        "language": "Python",
+        "stars_today": 443,
+        "stars": 2370
+      },
+      {
+        "full_name": "VoltAgent/awesome-agent-skills",
+        "url": "https://github.com/VoltAgent/awesome-agent-skills",
+        "description": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+        "description_zh": "来自官方开发团队和社区的 1000 多种代理技能精选集合，与 Claude Code、Codex、Gemini CLI、Cursor 等兼容。",
+        "language": "",
+        "stars_today": 488,
+        "stars": 32455
+      }
+    ]
   }
 }
