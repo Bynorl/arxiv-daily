@@ -11413,5 +11413,191 @@
         "stars": 101195
       }
     ]
+  },
+  "20260828": {
+    "total": 20,
+    "file": "github-trending/trending_20260828.html",
+    "top_repos": [
+      {
+        "full_name": "tt-a1i/archify",
+        "url": "https://github.com/tt-a1i/archify",
+        "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 4561,
+        "stars": 27239
+      },
+      {
+        "full_name": "K-Dense-AI/scientific-agent-skills",
+        "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+        "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 720,
+        "stars": 36540
+      },
+      {
+        "full_name": "anthropics/claude-plugins-official",
+        "url": "https://github.com/anthropics/claude-plugins-official",
+        "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 457,
+        "stars": 35009
+      },
+      {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "url": "https://github.com/bilawalsidhu/gods-eye-view",
+        "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 3398,
+        "stars": 11015
+      },
+      {
+        "full_name": "abhigyanpatwari/GitNexus",
+        "url": "https://github.com/abhigyanpatwari/GitNexus",
+        "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a git repository (Github, Gitlab, Azure, Local) or ZIP file, and get an interactive knowledge graph with a built in Graph RAG Agent. Perfect for code exploration",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 189,
+        "stars": 46151
+      },
+      {
+        "full_name": "JetBrains/go-modern-guidelines",
+        "url": "https://github.com/JetBrains/go-modern-guidelines",
+        "description": "Help AI coding agents write modern Go",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 574,
+        "stars": 2581
+      },
+      {
+        "full_name": "calesthio/OpenMontage",
+        "url": "https://github.com/calesthio/OpenMontage",
+        "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 1144,
+        "stars": 53277
+      },
+      {
+        "full_name": "abi/screenshot-to-code",
+        "url": "https://github.com/abi/screenshot-to-code",
+        "description": "Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue)",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 309,
+        "stars": 75532
+      },
+      {
+        "full_name": "cursor/plugins",
+        "url": "https://github.com/cursor/plugins",
+        "description": "Cursor plugin specification and official plugins",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 257,
+        "stars": 5942
+      },
+      {
+        "full_name": "freestylefly/awesome-gpt-image-2",
+        "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 1687,
+        "stars": 24219
+      },
+      {
+        "full_name": "tailscale/tailcat",
+        "url": "https://github.com/tailscale/tailcat",
+        "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 986,
+        "stars": 2640
+      },
+      {
+        "full_name": "NationalSecurityAgency/ghidra",
+        "url": "https://github.com/NationalSecurityAgency/ghidra",
+        "description": "Ghidra is a software reverse engineering (SRE) framework",
+        "description_zh": "",
+        "language": "Java",
+        "stars_today": 205,
+        "stars": 73320
+      },
+      {
+        "full_name": "swoole/typephp",
+        "url": "https://github.com/swoole/typephp",
+        "description": "Compile PHP to Native Binaries",
+        "description_zh": "",
+        "language": "PHP",
+        "stars_today": 188,
+        "stars": 804
+      },
+      {
+        "full_name": "marin-community/marin",
+        "url": "https://github.com/marin-community/marin",
+        "description": "Open-source framework for the research and development of foundation models.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 236,
+        "stars": 2889
+      },
+      {
+        "full_name": "tashfeenahmed/freellmapi",
+        "url": "https://github.com/tashfeenahmed/freellmapi",
+        "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 477,
+        "stars": 21593
+      },
+      {
+        "full_name": "ChromeDevTools/chrome-devtools-mcp",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "description": "Chrome DevTools for coding agents",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 61,
+        "stars": 49961
+      },
+      {
+        "full_name": "rohitg00/ai-engineering-from-scratch",
+        "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+        "description": "Learn it. Build it. Ship it for others.",
+        "description_zh": "学习它。建造它。寄给别人。",
+        "language": "Python",
+        "stars_today": 703,
+        "stars": 50604
+      },
+      {
+        "full_name": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "description_zh": "让你的人工智能代理像房间里最懒的高级开发人员一样思考。最好的代码是你从未编写过的代码。",
+        "language": "JavaScript",
+        "stars_today": 1396,
+        "stars": 115321
+      },
+      {
+        "full_name": "google/googletest",
+        "url": "https://github.com/google/googletest",
+        "description": "GoogleTest - Google Testing and Mocking Framework",
+        "description_zh": "",
+        "language": "C++",
+        "stars_today": 156,
+        "stars": 39170
+      },
+      {
+        "full_name": "livekit/agents",
+        "url": "https://github.com/livekit/agents",
+        "description": "A framework for building realtime voice AI agents 🤖🎙️📹",
+        "description_zh": "用于构建实时语音 AI 代理的框架🤖🎙️📹",
+        "language": "Python",
+        "stars_today": 14,
+        "stars": 13324
+      }
+    ]
   }
 }
