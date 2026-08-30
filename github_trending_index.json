@@ -11785,5 +11785,182 @@
         "stars": 13524
       }
     ]
+  },
+  "20260830": {
+    "total": 19,
+    "file": "github-trending/trending_20260830.html",
+    "top_repos": [
+      {
+        "full_name": "THU-MAIC/OpenMAIC",
+        "url": "https://github.com/THU-MAIC/OpenMAIC",
+        "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+        "description_zh": "开放式多智能体互动课堂——一键获得沉浸式多智能体学习体验",
+        "language": "TypeScript",
+        "stars_today": 907,
+        "stars": 23565
+      },
+      {
+        "full_name": "K-Dense-AI/scientific-agent-skills",
+        "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+        "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+        "description_zh": "将任何人工智能代理变成人工智能科学家。排名第一的科学代理技能库，全球有 190,000 多名科学家使用。 165 种经过验证的现成技能以及 100 多个涵盖生物学、化学、医学和药物发现的科学数据库。与 Cursor、Claude Code、Codex、Pi、Antigravity 和开放代理技能标准兼容。",
+        "language": "Python",
+        "stars_today": 1113,
+        "stars": 38874
+      },
+      {
+        "full_name": "Lakr233/vphone-cli",
+        "url": "https://github.com/Lakr233/vphone-cli",
+        "description": "",
+        "description_zh": "",
+        "language": "Swift",
+        "stars_today": 341,
+        "stars": 9494
+      },
+      {
+        "full_name": "tt-a1i/archify",
+        "url": "https://github.com/tt-a1i/archify",
+        "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+        "description_zh": "具有漂亮、可验证的架构、工作流程、序列、数据流和生命周期图的代理技能——具有动态和清晰导出功能的独立 HTML。",
+        "language": "JavaScript",
+        "stars_today": 3730,
+        "stars": 33864
+      },
+      {
+        "full_name": "p-e-w/heretic",
+        "url": "https://github.com/p-e-w/heretic",
+        "description": "Fully automatic censorship removal for language models",
+        "description_zh": "全自动消除语言模型审查",
+        "language": "Python",
+        "stars_today": 150,
+        "stars": 29040
+      },
+      {
+        "full_name": "unclecode/crawl4ai",
+        "url": "https://github.com/unclecode/crawl4ai",
+        "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler &amp; Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
+        "description_zh": "🚀🤖 Crawl4AI：开源 LLM 友好的网络爬虫和网络爬虫刮刀。不要害羞，加入这里：https://discord.gg/jP8KfhDhyN",
+        "language": "Python",
+        "stars_today": 229,
+        "stars": 80123
+      },
+      {
+        "full_name": "mvanhorn/last30days-skill",
+        "url": "https://github.com/mvanhorn/last30days-skill",
+        "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "description_zh": "AI 代理技能可研究 Reddit、X、YouTube、HN、Polymarket 和网络上的任何主题，然后综合得出有根据的摘要",
+        "language": "Python",
+        "stars_today": 271,
+        "stars": 60415
+      },
+      {
+        "full_name": "majd/ipatool",
+        "url": "https://github.com/majd/ipatool",
+        "description": "Command-line tool that allows searching and downloading app packages (known as ipa files) for iOS, iPadOS, tvOS, and visionOS from the App Store.",
+        "description_zh": "命令行工具，允许从 App Store 搜索和下载 iOS、iPadOS、tvOS 和 VisionOS 的应用程序包（称为 ipa 文件）。",
+        "language": "Go",
+        "stars_today": 56,
+        "stars": 10121
+      },
+      {
+        "full_name": "punkpeye/awesome-mcp-servers",
+        "url": "https://github.com/punkpeye/awesome-mcp-servers",
+        "description": "A collection of MCP servers.",
+        "description_zh": "MCP 服务器的集合。",
+        "language": "",
+        "stars_today": 65,
+        "stars": 93220
+      },
+      {
+        "full_name": "checkstyle/checkstyle",
+        "url": "https://github.com/checkstyle/checkstyle",
+        "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
+        "description_zh": "Checkstyle 是一种开发工具，可帮助程序员编写符合编码标准的 Java 代码。默认情况下，它支持 Google Java 样式指南和 Sun 代码约定，但可高度配置。可以使用 ANT 任务和命令行程序来调用它。",
+        "language": "Java",
+        "stars_today": 78,
+        "stars": 9153
+      },
+      {
+        "full_name": "NationalSecurityAgency/ghidra",
+        "url": "https://github.com/NationalSecurityAgency/ghidra",
+        "description": "Ghidra is a software reverse engineering (SRE) framework",
+        "description_zh": "Ghidra 是一个软件逆向工程 (SRE) 框架",
+        "language": "Java",
+        "stars_today": 196,
+        "stars": 73780
+      },
+      {
+        "full_name": "pollen-robotics/microduck_rl",
+        "url": "https://github.com/pollen-robotics/microduck_rl",
+        "description": "RL training environments for Microduck (mjlab)",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 147,
+        "stars": 735
+      },
+      {
+        "full_name": "handsomestWei/patent-disclosure-skill",
+        "url": "https://github.com/handsomestWei/patent-disclosure-skill",
+        "description": "中国专利.skill：专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 38,
+        "stars": 5600
+      },
+      {
+        "full_name": "corsairdev/corsair",
+        "url": "https://github.com/corsairdev/corsair",
+        "description": "Connect your users to their apps",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 99,
+        "stars": 10875
+      },
+      {
+        "full_name": "every-app/open-seo",
+        "url": "https://github.com/every-app/open-seo",
+        "description": "Open source alternative to Semrush and Ahrefs",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 517,
+        "stars": 15018
+      },
+      {
+        "full_name": "colinhacks/zod",
+        "url": "https://github.com/colinhacks/zod",
+        "description": "TypeScript-first schema validation with static type inference",
+        "description_zh": "使用静态类型推断进行 TypeScript 优先模式验证",
+        "language": "TypeScript",
+        "stars_today": 17,
+        "stars": 43617
+      },
+      {
+        "full_name": "tashfeenahmed/freellmapi",
+        "url": "https://github.com/tashfeenahmed/freellmapi",
+        "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 505,
+        "stars": 22602
+      },
+      {
+        "full_name": "livekit/agents",
+        "url": "https://github.com/livekit/agents",
+        "description": "A framework for building realtime voice AI agents 🤖🎙️📹",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 131,
+        "stars": 13671
+      },
+      {
+        "full_name": "abhigyanpatwari/GitNexus",
+        "url": "https://github.com/abhigyanpatwari/GitNexus",
+        "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a git repository (Github, Gitlab, Azure, Local) or ZIP file, and get an interactive knowledge graph with a built in Graph RAG Agent. Perfect for code exploration",
+        "description_zh": "GitNexus：零服务器代码智能引擎 - GitNexus 是一个完全在浏览器中运行的客户端知识图创建器。放入 git 存储库（Github、Gitlab、Azure、本地）或 ZIP 文件，并获取带有内置 Graph RAG 代理的交互式知识图。非常适合代码探索",
+        "language": "TypeScript",
+        "stars_today": 181,
+        "stars": 46500
+      }
+    ]
   }
 }
