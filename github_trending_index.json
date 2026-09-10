@@ -13489,5 +13489,155 @@
         "stars": 254952
       }
     ]
+  },
+  "20260910": {
+    "total": 16,
+    "file": "github-trending/trending_20260910.html",
+    "top_repos": [
+      {
+        "full_name": "ayghri/i-have-adhd",
+        "url": "https://github.com/ayghri/i-have-adhd",
+        "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+        "description_zh": "阻止编码代理隐藏答案的技能。多动症友好的输出。",
+        "language": "Python",
+        "stars_today": 3854,
+        "stars": 37508
+      },
+      {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "url": "https://github.com/bilawalsidhu/gods-eye-view",
+        "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "description_zh": "浏览器中的间谍卫星模拟器，只不过数据是真实的。在逼真的 3D 地球仪上实时呈现开源空间智能。",
+        "language": "JavaScript",
+        "stars_today": 1588,
+        "stars": 23250
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "代理技能框架和有效的软件开发方法。",
+        "language": "Shell",
+        "stars_today": 731,
+        "stars": 284559
+      },
+      {
+        "full_name": "alsk1992/CloddsBot",
+        "url": "https://github.com/alsk1992/CloddsBot",
+        "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+        "description_zh": "开源人工智能交易代理，在 1000 多个市场中自主运营 - Polymarket、Kalshi、Binance、Hyperliquid、Solana DEX、5 个 EVM 链。扫描边缘，立即执行，在您睡觉时管理风险。用于机器对机器支付的代理商务协议。自托管。建立在克劳德.",
+        "language": "TypeScript",
+        "stars_today": 299,
+        "stars": 1471
+      },
+      {
+        "full_name": "Tencent/teamai-cli",
+        "url": "https://github.com/Tencent/teamai-cli",
+        "description": "Make Every Team AI Native",
+        "description_zh": "让每个团队的 AI 都原生化",
+        "language": "TypeScript",
+        "stars_today": 837,
+        "stars": 3652
+      },
+      {
+        "full_name": "AlexsJones/llmfit",
+        "url": "https://github.com/AlexsJones/llmfit",
+        "description": "Hundreds of models &amp; providers. One command to find what runs on your hardware.",
+        "description_zh": "数百种模型和提供商。一个命令即可查找您的硬件上运行的内容。",
+        "language": "Rust",
+        "stars_today": 247,
+        "stars": 35616
+      },
+      {
+        "full_name": "liquidslr/system-design-notes",
+        "url": "https://github.com/liquidslr/system-design-notes",
+        "description": "Notes of the book System Desgin Interview - An Insider's Guide",
+        "description_zh": "《系统设计访谈 - 业内人士指南》一书的注释",
+        "language": "",
+        "stars_today": 891,
+        "stars": 18585
+      },
+      {
+        "full_name": "cathrynlavery/diagram-design",
+        "url": "https://github.com/cathrynlavery/diagram-design",
+        "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "description_zh": "Claude Code、Codex 和 Pi 的 38 种编辑图表类型。独立的 HTML + SVG。没有阴影。没有美人鱼污水。",
+        "language": "HTML",
+        "stars_today": 1287,
+        "stars": 37515
+      },
+      {
+        "full_name": "freestylefly/awesome-gpt-image-2",
+        "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+        "description": "Prompt as Code | GPT Image 2 / 2.5 提示词与案例库，530+ 个案例、20+ 套工业级模板与可复用 Skills，新增 2.5 同提示词对比专区，附完整提示词与生成记录，持续更新。",
+        "description_zh": "提示作为代码 | GPT Image 2 / 2.5提示词与案例库，530+个案例、20+套工业级模板与可复用技能，新增2.5同提示词对比专区，附完整提示词与生成记录，持续更新。",
+        "language": "JavaScript",
+        "stars_today": 957,
+        "stars": 30751
+      },
+      {
+        "full_name": "armory3d/armorpaint",
+        "url": "https://github.com/armory3d/armorpaint",
+        "description": "Graphics Creation Tools",
+        "description_zh": "图形创建工具",
+        "language": "C",
+        "stars_today": 87,
+        "stars": 4319
+      },
+      {
+        "full_name": "diegosouzapw/OmniRoute",
+        "url": "https://github.com/diegosouzapw/OmniRoute",
+        "description": "Never stop coding. Free MIT AI gateway: one endpoint, 352 providers (150+ free), 1200+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline &amp; Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 550+ contributors",
+        "description_zh": "永远不要停止编码。免费 MIT AI 网关：一个端点、352 个提供商（150 多个免费）、1200 多个模型 Kimi、Claude、GPT、Gemini、GLM、DeepSeek、MiniMax。适用于 Claude Code、Codex、Cursor、OpenCode、Cline 和 Claude Code。副驾驶。配额感知自动回退、RTK+Caveman 压缩可节省 15-95% 的令牌、MCP/A2A、桌面/PWA。由 550 多名贡献者构建",
+        "language": "TypeScript",
+        "stars_today": 591,
+        "stars": 64026
+      },
+      {
+        "full_name": "JustVugg/colibri",
+        "url": "https://github.com/JustVugg/colibri",
+        "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "description_zh": "在您已经拥有的硬件上运行前沿 MoE 模型 - 纯 C、零依赖、从磁盘流式传输的专家。微小的发动机，巨大的模型。 🐦",
+        "language": "C",
+        "stars_today": 130,
+        "stars": 27358
+      },
+      {
+        "full_name": "THU-MAIC/OpenMAIC",
+        "url": "https://github.com/THU-MAIC/OpenMAIC",
+        "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+        "description_zh": "开放式多智能体互动课堂——一键获得沉浸式多智能体学习体验",
+        "language": "TypeScript",
+        "stars_today": 806,
+        "stars": 35131
+      },
+      {
+        "full_name": "nashsu/llm_wiki",
+        "url": "https://github.com/nashsu/llm_wiki",
+        "description": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
+        "description_zh": "LLM Wiki 是一个跨平台桌面应用程序，可自动将您的文档转变为有组织的、相互关联的知识库。法学硕士不是传统的 RAG（每次从头开始检索并回答），而是从您的来源逐步构建和维护持久的 wiki。",
+        "language": "TypeScript",
+        "stars_today": 94,
+        "stars": 17943
+      },
+      {
+        "full_name": "vercel-labs/skills",
+        "url": "https://github.com/vercel-labs/skills",
+        "description": "The open agent skills tool - npx skills",
+        "description_zh": "开放代理技能工具——npx技能",
+        "language": "TypeScript",
+        "stars_today": 175,
+        "stars": 31014
+      },
+      {
+        "full_name": "vastsa/PI-Desktop",
+        "url": "https://github.com/vastsa/PI-Desktop",
+        "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+        "description_zh": "本地优先的 AI 编码代理桌面：Electron + Rust 主机核心 + pi Agent Harness + 用户可安装的插件",
+        "language": "TypeScript",
+        "stars_today": 636,
+        "stars": 2186
+      }
+    ]
   }
 }
