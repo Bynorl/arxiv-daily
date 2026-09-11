@@ -13639,5 +13639,155 @@
         "stars": 2186
       }
     ]
+  },
+  "20260911": {
+    "total": 16,
+    "file": "github-trending/trending_20260911.html",
+    "top_repos": [
+      {
+        "full_name": "ayghri/i-have-adhd",
+        "url": "https://github.com/ayghri/i-have-adhd",
+        "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+        "description_zh": "阻止编码代理隐藏答案的技能。多动症友好的输出。",
+        "language": "Python",
+        "stars_today": 3440,
+        "stars": 40928
+      },
+      {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "url": "https://github.com/bilawalsidhu/gods-eye-view",
+        "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "description_zh": "浏览器中的间谍卫星模拟器，只不过数据是真实的。在逼真的 3D 地球仪上实时呈现开源空间智能。",
+        "language": "JavaScript",
+        "stars_today": 3642,
+        "stars": 26484
+      },
+      {
+        "full_name": "nab138/iloader",
+        "url": "https://github.com/nab138/iloader",
+        "description": "User friendly sideloader",
+        "description_zh": "用户友好的侧装载机",
+        "language": "TypeScript",
+        "stars_today": 36,
+        "stars": 2853
+      },
+      {
+        "full_name": "melgarafael/DeskcommCRM",
+        "url": "https://github.com/melgarafael/DeskcommCRM",
+        "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk &amp; Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 126,
+        "stars": 1213
+      },
+      {
+        "full_name": "vastsa/PI-Desktop",
+        "url": "https://github.com/vastsa/PI-Desktop",
+        "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 545,
+        "stars": 2708
+      },
+      {
+        "full_name": "armory3d/armorpaint",
+        "url": "https://github.com/armory3d/armorpaint",
+        "description": "Graphics Creation Tools",
+        "description_zh": "",
+        "language": "C",
+        "stars_today": 354,
+        "stars": 4664
+      },
+      {
+        "full_name": "alsk1992/CloddsBot",
+        "url": "https://github.com/alsk1992/CloddsBot",
+        "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 627,
+        "stars": 2041
+      },
+      {
+        "full_name": "nashsu/llm_wiki",
+        "url": "https://github.com/nashsu/llm_wiki",
+        "description": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
+        "description_zh": "LLM Wiki 是一个跨平台桌面应用程序，可自动将您的文档转变为有组织的、相互关联的知识库。法学硕士不是传统的 RAG（每次从头开始检索并回答），而是从您的来源逐步构建和维护持久的 wiki。",
+        "language": "TypeScript",
+        "stars_today": 640,
+        "stars": 18604
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "代理技能框架和有效的软件开发方法。",
+        "language": "Shell",
+        "stars_today": 731,
+        "stars": 285228
+      },
+      {
+        "full_name": "Sonarr/Sonarr",
+        "url": "https://github.com/Sonarr/Sonarr",
+        "description": "Smart PVR for newsgroup and bittorrent users.",
+        "description_zh": "适用于新闻组和 BitTorrent 用户的智能 PVR。",
+        "language": "C#",
+        "stars_today": 174,
+        "stars": 15678
+      },
+      {
+        "full_name": "jihe520/MathModelAgent",
+        "url": "https://github.com/jihe520/MathModelAgent",
+        "description": "🤖📐专为数学建模设计的 Agent &amp; skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+        "description_zh": "🤖📐专为数学建模设计的Agent &amp;技能，自动完成数学建模，生成一份完整的可以直接提交的论文。 专为数学建模而设计的代理，自动完成数学模型并生成完整的论文以供提交。",
+        "language": "Python",
+        "stars_today": 132,
+        "stars": 4804
+      },
+      {
+        "full_name": "p1neappleXpress/OpenFlux",
+        "url": "https://github.com/p1neappleXpress/OpenFlux",
+        "description": "Network stack research tool. TCP tunnel with pluggable transports.",
+        "description_zh": "网络堆栈研究工具。具有可插拔传输的 TCP 隧道。",
+        "language": "Go",
+        "stars_today": 201,
+        "stars": 1003
+      },
+      {
+        "full_name": "jordan-gibbs/hyperresearch",
+        "url": "https://github.com/jordan-gibbs/hyperresearch",
+        "description": "Agent-driven research knowledge base. Agents collect, search, and synthesize web research into a persistent, searchable wiki.",
+        "description_zh": "代理驱动的研究知识库。代理收集、搜索网络研究并将其综合到持久的、可搜索的维基百科中。",
+        "language": "Python",
+        "stars_today": 118,
+        "stars": 2418
+      },
+      {
+        "full_name": "alphaXiv/OpenResearch",
+        "url": "https://github.com/alphaXiv/OpenResearch",
+        "description": "Run parallel research agents with any model",
+        "description_zh": "使用任何模型运行并行研究代理",
+        "language": "Rust",
+        "stars_today": 156,
+        "stars": 1165
+      },
+      {
+        "full_name": "github/spec-kit",
+        "url": "https://github.com/github/spec-kit",
+        "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+        "description_zh": "💫 帮助您开始规范驱动开发的工具包",
+        "language": "Python",
+        "stars_today": 985,
+        "stars": 135651
+      },
+      {
+        "full_name": "pascalorg/editor",
+        "url": "https://github.com/pascalorg/editor",
+        "description": "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
+        "description_zh": "开源 3D 建筑编辑器，具有本地 CLI、MCP 工具以及适用于人类和 AI 代理的实用工作流程。",
+        "language": "TypeScript",
+        "stars_today": 83,
+        "stars": 23455
+      }
+    ]
   }
 }
