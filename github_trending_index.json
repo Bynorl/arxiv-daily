@@ -14116,5 +14116,191 @@
         "stars": 165382
       }
     ]
+  },
+  "20260914": {
+    "total": 20,
+    "file": "github-trending/trending_20260914.html",
+    "top_repos": [
+      {
+        "full_name": "JustVugg/colibri",
+        "url": "https://github.com/JustVugg/colibri",
+        "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "description_zh": "",
+        "language": "C",
+        "stars_today": 2233,
+        "stars": 31709
+      },
+      {
+        "full_name": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI &amp; Anthropic compatible.",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 1796,
+        "stars": 25313
+      },
+      {
+        "full_name": "multimodal-art-projection/YuE",
+        "url": "https://github.com/multimodal-art-projection/YuE",
+        "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 578,
+        "stars": 8243
+      },
+      {
+        "full_name": "debpalash/VoiceStudio",
+        "url": "https://github.com/debpalash/VoiceStudio",
+        "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription &amp; audiobook creation in 646 languages.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 2774,
+        "stars": 28845
+      },
+      {
+        "full_name": "666ghj/MiroFish",
+        "url": "https://github.com/666ghj/MiroFish",
+        "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 524,
+        "stars": 73033
+      },
+      {
+        "full_name": "Panniantong/Agent-Reach",
+        "url": "https://github.com/Panniantong/Agent-Reach",
+        "description": "Give your AI agent eyes to see the entire internet. Read &amp; search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 640,
+        "stars": 81077
+      },
+      {
+        "full_name": "asgeirtj/system_prompts_leaks",
+        "url": "https://github.com/asgeirtj/system_prompts_leaks",
+        "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 770,
+        "stars": 66664
+      },
+      {
+        "full_name": "rlaope/oh-my-hermes",
+        "url": "https://github.com/rlaope/oh-my-hermes",
+        "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 52,
+        "stars": 1932
+      },
+      {
+        "full_name": "localsend/localsend",
+        "url": "https://github.com/localsend/localsend",
+        "description": "An open-source cross-platform alternative to AirDrop",
+        "description_zh": "",
+        "language": "Dart",
+        "stars_today": 311,
+        "stars": 91196
+      },
+      {
+        "full_name": "dani-garcia/vaultwarden",
+        "url": "https://github.com/dani-garcia/vaultwarden",
+        "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 110,
+        "stars": 67483
+      },
+      {
+        "full_name": "TauricResearch/TradingAgents",
+        "url": "https://github.com/TauricResearch/TradingAgents",
+        "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 756,
+        "stars": 105947
+      },
+      {
+        "full_name": "ruvnet/RuView",
+        "url": "https://github.com/ruvnet/RuView",
+        "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 370,
+        "stars": 93752
+      },
+      {
+        "full_name": "tech-leads-club/agent-skills",
+        "url": "https://github.com/tech-leads-club/agent-skills",
+        "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 506,
+        "stars": 5983
+      },
+      {
+        "full_name": "OpenBMB/VoxCPM",
+        "url": "https://github.com/OpenBMB/VoxCPM",
+        "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 204,
+        "stars": 37301
+      },
+      {
+        "full_name": "huggingface/transformers",
+        "url": "https://github.com/huggingface/transformers",
+        "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 528,
+        "stars": 165898
+      },
+      {
+        "full_name": "ever-co/ever-gauzy",
+        "url": "https://github.com/ever-co/ever-gauzy",
+        "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 1095,
+        "stars": 5847
+      },
+      {
+        "full_name": "Crosstalk-Solutions/project-nomad",
+        "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+        "description": "Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps, and optional local AI, all running on hardware you own with no internet required.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 26,
+        "stars": 36836
+      },
+      {
+        "full_name": "reconurge/flowsint",
+        "url": "https://github.com/reconurge/flowsint",
+        "description": "A modern platform for visual, flexible, and extensible graph-based investigations. For cybersecurity analysts and investigators.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 279,
+        "stars": 8266
+      },
+      {
+        "full_name": "peetzweg/opendisplay",
+        "url": "https://github.com/peetzweg/opendisplay",
+        "description": "Free, open-source Sidecar/Duet alternative — use your iPhone or iPad as a true second monitor for your Mac over USB or WiFi. Low latency H.264, Retina HiDPI, touch input.",
+        "description_zh": "",
+        "language": "Swift",
+        "stars_today": 258,
+        "stars": 3482
+      },
+      {
+        "full_name": "SnailSploit/Claude-Red",
+        "url": "https://github.com/SnailSploit/Claude-Red",
+        "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 606,
+        "stars": 4623
+      }
+    ]
   }
 }
