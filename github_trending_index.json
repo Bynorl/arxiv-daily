@@ -14434,5 +14434,191 @@
         "stars": 105573
       }
     ]
+  },
+  "20260916": {
+    "total": 20,
+    "file": "github-trending/trending_20260916.html",
+    "top_repos": [
+      {
+        "full_name": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI &amp; Anthropic compatible.",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 3215,
+        "stars": 31229
+      },
+      {
+        "full_name": "cloudflare/security-audit-skill",
+        "url": "https://github.com/cloudflare/security-audit-skill",
+        "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 1249,
+        "stars": 6450
+      },
+      {
+        "full_name": "JustVugg/colibri",
+        "url": "https://github.com/JustVugg/colibri",
+        "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "description_zh": "",
+        "language": "C",
+        "stars_today": 1532,
+        "stars": 34817
+      },
+      {
+        "full_name": "abue-ammar/tinycast",
+        "url": "https://github.com/abue-ammar/tinycast",
+        "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+        "description_zh": "",
+        "language": "Swift",
+        "stars_today": 1136,
+        "stars": 5436
+      },
+      {
+        "full_name": "jamiepine/voicebox",
+        "url": "https://github.com/jamiepine/voicebox",
+        "description": "The open-source AI voice studio. Clone, dictate, create.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 409,
+        "stars": 54217
+      },
+      {
+        "full_name": "Lakr233/vphone-cli",
+        "url": "https://github.com/Lakr233/vphone-cli",
+        "description": "",
+        "description_zh": "",
+        "language": "Swift",
+        "stars_today": 444,
+        "stars": 13265
+      },
+      {
+        "full_name": "anthropics/knowledge-work-plugins",
+        "url": "https://github.com/anthropics/knowledge-work-plugins",
+        "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 96,
+        "stars": 24217
+      },
+      {
+        "full_name": "ever-co/ever-gauzy",
+        "url": "https://github.com/ever-co/ever-gauzy",
+        "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 771,
+        "stars": 7170
+      },
+      {
+        "full_name": "ankitects/anki",
+        "url": "https://github.com/ankitects/anki",
+        "description": "Anki is a smart spaced repetition flashcard program",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 50,
+        "stars": 30720
+      },
+      {
+        "full_name": "NationalSecurityAgency/ghidra",
+        "url": "https://github.com/NationalSecurityAgency/ghidra",
+        "description": "Ghidra is a software reverse engineering (SRE) framework",
+        "description_zh": "",
+        "language": "Java",
+        "stars_today": 1059,
+        "stars": 77578
+      },
+      {
+        "full_name": "anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code",
+        "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 155,
+        "stars": 145367
+      },
+      {
+        "full_name": "roboflow/supervision",
+        "url": "https://github.com/roboflow/supervision",
+        "description": "We write your reusable computer vision tools. 💜",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 292,
+        "stars": 50509
+      },
+      {
+        "full_name": "alphaXiv/OpenResearch",
+        "url": "https://github.com/alphaXiv/OpenResearch",
+        "description": "Turn your coding agents into research agents",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 1036,
+        "stars": 4169
+      },
+      {
+        "full_name": "supabase/supabase",
+        "url": "https://github.com/supabase/supabase",
+        "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 118,
+        "stars": 109527
+      },
+      {
+        "full_name": "rlaope/oh-my-hermes",
+        "url": "https://github.com/rlaope/oh-my-hermes",
+        "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 74,
+        "stars": 2476
+      },
+      {
+        "full_name": "Tencent/WeKnora",
+        "url": "https://github.com/Tencent/WeKnora",
+        "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 1201,
+        "stars": 25090
+      },
+      {
+        "full_name": "SnailSploit/Claude-Red",
+        "url": "https://github.com/SnailSploit/Claude-Red",
+        "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 383,
+        "stars": 5657
+      },
+      {
+        "full_name": "multimodal-art-projection/YuE",
+        "url": "https://github.com/multimodal-art-projection/YuE",
+        "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 370,
+        "stars": 9266
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 656,
+        "stars": 95250
+      },
+      {
+        "full_name": "cline/cline",
+        "url": "https://github.com/cline/cline",
+        "description": "Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 102,
+        "stars": 68241
+      }
+    ]
   }
 }
