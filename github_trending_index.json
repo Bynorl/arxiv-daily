@@ -14806,5 +14806,164 @@
         "stars": 204973
       }
     ]
+  },
+  "20260918": {
+    "total": 17,
+    "file": "github-trending/trending_20260918.html",
+    "top_repos": [
+      {
+        "full_name": "cloudflare/security-audit-skill",
+        "url": "https://github.com/cloudflare/security-audit-skill",
+        "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 3019,
+        "stars": 12854
+      },
+      {
+        "full_name": "anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code",
+        "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 442,
+        "stars": 146174
+      },
+      {
+        "full_name": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI &amp; Anthropic compatible.",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 2724,
+        "stars": 36444
+      },
+      {
+        "full_name": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 965,
+        "stars": 261770
+      },
+      {
+        "full_name": "Tencent/BrowserSkill",
+        "url": "https://github.com/Tencent/BrowserSkill",
+        "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 1319,
+        "stars": 5118
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 677,
+        "stars": 96254
+      },
+      {
+        "full_name": "TencentCloud/Octop",
+        "url": "https://github.com/TencentCloud/Octop",
+        "description": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 571,
+        "stars": 3877
+      },
+      {
+        "full_name": "Fission-AI/OpenSpec",
+        "url": "https://github.com/Fission-AI/OpenSpec",
+        "description": "Spec-driven development (SDD) for AI coding assistants.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 298,
+        "stars": 69213
+      },
+      {
+        "full_name": "ankitects/anki",
+        "url": "https://github.com/ankitects/anki",
+        "description": "Anki is a smart spaced repetition flashcard program",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 177,
+        "stars": 31141
+      },
+      {
+        "full_name": "anthropics/knowledge-work-plugins",
+        "url": "https://github.com/anthropics/knowledge-work-plugins",
+        "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 300,
+        "stars": 24797
+      },
+      {
+        "full_name": "supermemoryai/supermemory",
+        "url": "https://github.com/supermemoryai/supermemory",
+        "description": "Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 140,
+        "stars": 30159
+      },
+      {
+        "full_name": "tradesdontlie/tradingview-mcp",
+        "url": "https://github.com/tradesdontlie/tradingview-mcp",
+        "description": "AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 64,
+        "stars": 6400
+      },
+      {
+        "full_name": "rustfs/rustfs",
+        "url": "https://github.com/rustfs/rustfs",
+        "description": "RustFS is an open-source, S3-compatible high-performance object storage system supporting migration and coexistence with other S3-compatible platforms such as MinIO and Ceph.",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 298,
+        "stars": 33061
+      },
+      {
+        "full_name": "supabase/supabase",
+        "url": "https://github.com/supabase/supabase",
+        "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 128,
+        "stars": 110051
+      },
+      {
+        "full_name": "coder/coder",
+        "url": "https://github.com/coder/coder",
+        "description": "Secure environments for developers and their agents",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 478,
+        "stars": 15162
+      },
+      {
+        "full_name": "ahmedkhaleel2004/gitdiagram",
+        "url": "https://github.com/ahmedkhaleel2004/gitdiagram",
+        "description": "Free, simple, fast interactive diagrams for any GitHub repository",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 145,
+        "stars": 16364
+      },
+      {
+        "full_name": "asciimoo/hister",
+        "url": "https://github.com/asciimoo/hister",
+        "description": "Your own search engine",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 842,
+        "stars": 4839
+      }
+    ]
   }
 }
