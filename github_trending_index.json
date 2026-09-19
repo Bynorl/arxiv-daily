@@ -14965,5 +14965,146 @@
         "stars": 4839
       }
     ]
+  },
+  "20260919": {
+    "total": 15,
+    "file": "github-trending/trending_20260919.html",
+    "top_repos": [
+      {
+        "full_name": "cloudflare/security-audit-skill",
+        "url": "https://github.com/cloudflare/security-audit-skill",
+        "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 3162,
+        "stars": 15686
+      },
+      {
+        "full_name": "trycua/cua",
+        "url": "https://github.com/trycua/cua",
+        "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+        "description_zh": "",
+        "language": "HTML",
+        "stars_today": 383,
+        "stars": 24090
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 547,
+        "stars": 96837
+      },
+      {
+        "full_name": "coder/coder",
+        "url": "https://github.com/coder/coder",
+        "description": "Secure environments for developers and their agents",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 406,
+        "stars": 15525
+      },
+      {
+        "full_name": "anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code",
+        "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 482,
+        "stars": 146605
+      },
+      {
+        "full_name": "Open-Dev-Society/OpenStock",
+        "url": "https://github.com/Open-Dev-Society/OpenStock",
+        "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 477,
+        "stars": 15858
+      },
+      {
+        "full_name": "higgsfield-ai/higgsfield",
+        "url": "https://github.com/higgsfield-ai/higgsfield",
+        "description": "Fault-tolerant, highly scalable GPU orchestration, and a machine learning framework designed for training models with billions to trillions of parameters",
+        "description_zh": "",
+        "language": "Jupyter Notebook",
+        "stars_today": 325,
+        "stars": 4825
+      },
+      {
+        "full_name": "docling-project/docling",
+        "url": "https://github.com/docling-project/docling",
+        "description": "Get your documents ready for gen AI",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 94,
+        "stars": 66882
+      },
+      {
+        "full_name": "cloudflare/quiche",
+        "url": "https://github.com/cloudflare/quiche",
+        "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 84,
+        "stars": 11942
+      },
+      {
+        "full_name": "asciimoo/hister",
+        "url": "https://github.com/asciimoo/hister",
+        "description": "Your own search engine",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 430,
+        "stars": 5155
+      },
+      {
+        "full_name": "ruanyf/weekly",
+        "url": "https://github.com/ruanyf/weekly",
+        "description": "科技爱好者周刊，每周五发布",
+        "description_zh": "",
+        "language": "",
+        "stars_today": 151,
+        "stars": 103067
+      },
+      {
+        "full_name": "ZuodaoTech/everyone-can-use-english",
+        "url": "https://github.com/ZuodaoTech/everyone-can-use-english",
+        "description": "人人都能用英语",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 31,
+        "stars": 37740
+      },
+      {
+        "full_name": "anthropics/knowledge-work-plugins",
+        "url": "https://github.com/anthropics/knowledge-work-plugins",
+        "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 280,
+        "stars": 25044
+      },
+      {
+        "full_name": "cactus-compute/needle",
+        "url": "https://github.com/cactus-compute/needle",
+        "description": "Automation foundation model for tiny devices: 2-bit, 8-29 MB, tool calls, structured extraction and embeddings on phones, wearables, smart homes, robots, cars and microcontrollers.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 207,
+        "stars": 11508
+      },
+      {
+        "full_name": "yynxxxxx/Codex-X",
+        "url": "https://github.com/yynxxxxx/Codex-X",
+        "description": "OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 59,
+        "stars": 3358
+      }
+    ]
   }
 }
