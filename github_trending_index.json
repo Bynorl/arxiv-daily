@@ -15421,5 +15421,164 @@
         "stars": 25678
       }
     ]
+  },
+  "20260923": {
+    "total": 17,
+    "file": "github-trending/trending_20260923.html",
+    "top_repos": [
+      {
+        "full_name": "anthropics/financial-services",
+        "url": "https://github.com/anthropics/financial-services",
+        "description": "",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 665,
+        "stars": 36841
+      },
+      {
+        "full_name": "google/ax",
+        "url": "https://github.com/google/ax",
+        "description": "Google's open agentic orchestration runtime",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 1542,
+        "stars": 8777
+      },
+      {
+        "full_name": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates",
+        "description": "CLI tool for configuring and monitoring Claude Code",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 393,
+        "stars": 31415
+      },
+      {
+        "full_name": "BuilderIO/agent-native",
+        "url": "https://github.com/BuilderIO/agent-native",
+        "description": "A framework for building agentic apps",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 135,
+        "stars": 6461
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "",
+        "language": "Shell",
+        "stars_today": 485,
+        "stars": 290576
+      },
+      {
+        "full_name": "dream-num/univer",
+        "url": "https://github.com/dream-num/univer",
+        "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 1140,
+        "stars": 16204
+      },
+      {
+        "full_name": "Open-Dev-Society/OpenStock",
+        "url": "https://github.com/Open-Dev-Society/OpenStock",
+        "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 379,
+        "stars": 18695
+      },
+      {
+        "full_name": "agent-substrate/substrate",
+        "url": "https://github.com/agent-substrate/substrate",
+        "description": "Agent Substrate: the core system",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 560,
+        "stars": 3383
+      },
+      {
+        "full_name": "strands-agents/harness-sdk",
+        "url": "https://github.com/strands-agents/harness-sdk",
+        "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python &amp; TypeScript - any model, any cloud.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 96,
+        "stars": 7752
+      },
+      {
+        "full_name": "HKUDS/CLI-Anything",
+        "url": "https://github.com/HKUDS/CLI-Anything",
+        "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 41,
+        "stars": 49833
+      },
+      {
+        "full_name": "superdesigndev/treg",
+        "url": "https://github.com/superdesigndev/treg",
+        "description": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 502,
+        "stars": 2599
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "description": "The design language that makes your AI harness better at design.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 287,
+        "stars": 70219
+      },
+      {
+        "full_name": "mvt-project/mvt",
+        "url": "https://github.com/mvt-project/mvt",
+        "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 546,
+        "stars": 14406
+      },
+      {
+        "full_name": "DeusData/codebase-memory-mcp",
+        "url": "https://github.com/DeusData/codebase-memory-mcp",
+        "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+        "description_zh": "",
+        "language": "C",
+        "stars_today": 266,
+        "stars": 44436
+      },
+      {
+        "full_name": "harry7557558/spirula-studio",
+        "url": "https://github.com/harry7557558/spirula-studio",
+        "description": "Cross-vendor 3D Gaussian Splatting trainer - video to splat to mesh, Vulkan or CUDA.",
+        "description_zh": "",
+        "language": "C++",
+        "stars_today": 99,
+        "stars": 689
+      },
+      {
+        "full_name": "browser-use/video-use",
+        "url": "https://github.com/browser-use/video-use",
+        "description": "Edit videos with coding agents",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 745,
+        "stars": 26389
+      },
+      {
+        "full_name": "TNT-Likely/PanWatch",
+        "url": "https://github.com/TNT-Likely/PanWatch",
+        "description": "盯盘侠 PanWatch · 自托管 AI 盯盘助手，集成 TradingAgents 多 Agent 投资决策 | A股/港股/美股实时监控、持仓管理、智能分析、全渠道推送",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 142,
+        "stars": 1451
+      }
+    ]
   }
 }
