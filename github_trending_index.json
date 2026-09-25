@@ -15712,5 +15712,155 @@
         "stars": 7198
       }
     ]
+  },
+  "20260925": {
+    "total": 16,
+    "file": "github-trending/trending_20260925.html",
+    "top_repos": [
+      {
+        "full_name": "paperclipai/paperclip",
+        "url": "https://github.com/paperclipai/paperclip",
+        "description": "The open-source app everyone uses to manage agents at work",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 1853,
+        "stars": 84288
+      },
+      {
+        "full_name": "anthropics/claude-plugins-official",
+        "url": "https://github.com/anthropics/claude-plugins-official",
+        "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 62,
+        "stars": 36837
+      },
+      {
+        "full_name": "vectorize-io/hindsight",
+        "url": "https://github.com/vectorize-io/hindsight",
+        "description": "Hindsight: Agent Memory That Learns",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 1652,
+        "stars": 29587
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "",
+        "language": "Shell",
+        "stars_today": 465,
+        "stars": 291554
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .agents directory.",
+        "description_zh": "",
+        "language": "Shell",
+        "stars_today": 588,
+        "stars": 269589
+      },
+      {
+        "full_name": "dream-num/univer",
+        "url": "https://github.com/dream-num/univer",
+        "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 1048,
+        "stars": 18303
+      },
+      {
+        "full_name": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "description": "Public repository for Agent Skills",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 231,
+        "stars": 178195
+      },
+      {
+        "full_name": "androoAGI/starnet",
+        "url": "https://github.com/androoAGI/starnet",
+        "description": "A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 118,
+        "stars": 390
+      },
+      {
+        "full_name": "derv82/wifit3",
+        "url": "https://github.com/derv82/wifit3",
+        "description": "Wifite but USB-only &amp; cross-platform.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 168,
+        "stars": 812
+      },
+      {
+        "full_name": "kelseyhightower/kubernetes-the-hard-way",
+        "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way",
+        "description": "Bootstrap Kubernetes the hard way. No scripts.",
+        "description_zh": "",
+        "language": "",
+        "stars_today": 105,
+        "stars": 50077
+      },
+      {
+        "full_name": "rohitg00/ai-engineering-from-scratch",
+        "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+        "description": "Learn it. Build it. Ship it for others.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 1181,
+        "stars": 57314
+      },
+      {
+        "full_name": "shy3130/tick-stock-panel",
+        "url": "https://github.com/shy3130/tick-stock-panel",
+        "description": "TSP自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方数据源与个性化扩展数据 | 个人开源",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 31,
+        "stars": 5099
+      },
+      {
+        "full_name": "google/ax",
+        "url": "https://github.com/google/ax",
+        "description": "Google's open agentic orchestration runtime",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 1386,
+        "stars": 11319
+      },
+      {
+        "full_name": "NVIDIA/Model-Optimizer",
+        "url": "https://github.com/NVIDIA/Model-Optimizer",
+        "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 360,
+        "stars": 4367
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "description": "The design language that makes your AI harness better at design.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 326,
+        "stars": 71070
+      },
+      {
+        "full_name": "openbao/openbao",
+        "url": "https://github.com/openbao/openbao",
+        "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 16,
+        "stars": 7630
+      }
+    ]
   }
 }
