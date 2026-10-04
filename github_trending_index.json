@@ -16936,5 +16936,146 @@
         "stars": 91488
       }
     ]
+  },
+  "20261004": {
+    "total": 15,
+    "file": "github-trending/trending_20261004.html",
+    "top_repos": [
+      {
+        "full_name": "tester-army/e2e",
+        "url": "https://github.com/tester-army/e2e",
+        "description": "Next generation e2e testing framework for web and mobile apps.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 344,
+        "stars": 2786
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "description": "The design language that makes your AI harness better at design.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 1170,
+        "stars": 76073
+      },
+      {
+        "full_name": "coreyhaines31/marketingskills",
+        "url": "https://github.com/coreyhaines31/marketingskills",
+        "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 270,
+        "stars": 52930
+      },
+      {
+        "full_name": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 1894,
+        "stars": 154553
+      },
+      {
+        "full_name": "earthtojake/text-to-cad",
+        "url": "https://github.com/earthtojake/text-to-cad",
+        "description": "Give your agent CAD superpowers.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 75,
+        "stars": 16767
+      },
+      {
+        "full_name": "Panniantong/Agent-Reach",
+        "url": "https://github.com/Panniantong/Agent-Reach",
+        "description": "Give your AI agent eyes to see the entire internet. Read &amp; search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 979,
+        "stars": 90623
+      },
+      {
+        "full_name": "getsentry/sentry",
+        "url": "https://github.com/getsentry/sentry",
+        "description": "Developer-first error tracking and performance monitoring",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 152,
+        "stars": 45333
+      },
+      {
+        "full_name": "calesthio/OpenMontage",
+        "url": "https://github.com/calesthio/OpenMontage",
+        "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 361,
+        "stars": 63029
+      },
+      {
+        "full_name": "pingdotgg/t3code",
+        "url": "https://github.com/pingdotgg/t3code",
+        "description": "",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 492,
+        "stars": 25049
+      },
+      {
+        "full_name": "caddyserver/caddy",
+        "url": "https://github.com/caddyserver/caddy",
+        "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 31,
+        "stars": 76430
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 336,
+        "stars": 101115
+      },
+      {
+        "full_name": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 627,
+        "stars": 96005
+      },
+      {
+        "full_name": "garrytan/gstack",
+        "url": "https://github.com/garrytan/gstack",
+        "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 121,
+        "stars": 135084
+      },
+      {
+        "full_name": "OpenCut-app/OpenCut",
+        "url": "https://github.com/OpenCut-app/OpenCut",
+        "description": "The open-source CapCut alternative",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 512,
+        "stars": 91985
+      },
+      {
+        "full_name": "antirez/ds4",
+        "url": "https://github.com/antirez/ds4",
+        "description": "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+        "description_zh": "",
+        "language": "C",
+        "stars_today": 211,
+        "stars": 23362
+      }
+    ]
   }
 }
