@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub Trending · 2026年10月06日</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  background:#f6f8fa;color:#1f2328;font-size:15px;min-height:100vh;
+}
+
+/* ── 顶栏 ── */
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 24px;background:#fff;
+  border-bottom:1px solid #d0d7de;
+  position:sticky;top:0;z-index:99;
+}
+.nav-home{
+  color:#0969da;font-size:13px;text-decoration:none;font-weight:500;
+  padding:5px 12px;border-radius:6px;border:1px solid #d0d7de;
+  background:#fff;transition:background .15s,border-color .15s;
+}
+.nav-home:hover{background:#f3f4f6;border-color:#0969da;}
+.nav-date{font-size:12px;color:#656d76;}
+
+/* ── 页头 ── */
+.hd{
+  background:#fff;border-bottom:1px solid #d0d7de;
+  padding:40px 24px 30px;text-align:center;
+}
+.hd-title{
+  font-size:28px;font-weight:700;color:#1f2328;letter-spacing:.5px;
+}
+.hd-title em{font-style:normal;color:#0969da;}
+.hd-sub{margin-top:6px;font-size:12px;color:#656d76;letter-spacing:1.5px;}
+.hd-chip{
+  display:inline-block;margin-top:14px;
+  padding:4px 16px;border-radius:20px;
+  background:#ddf4ff;border:1px solid #54aeff;
+  color:#0969da;font-size:12px;font-weight:500;
+}
+.author{margin-top:10px;font-size:11px;color:#c6c6c6;letter-spacing:1px;}
+
+/* ── 搜索 ── */
+.search-wrap{max-width:760px;margin:20px auto 0;padding:0 20px;}
+.search{
+  width:100%;padding:9px 16px;
+  background:#fff;border:1px solid #d0d7de;border-radius:6px;
+  color:#1f2328;font-size:14px;outline:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+.search::placeholder{color:#9ba1aa;}
+.search:focus{border-color:#0969da;box-shadow:0 0 0 3px rgba(9,105,218,0.08);}
+
+/* ── 标签页 ── */
+.tabs-wrap{max-width:760px;margin:16px auto 0;padding:0 20px;}
+.tabs{
+  display:flex;gap:0;
+  border-bottom:2px solid #d0d7de;
+}
+.tab-btn{
+  padding:9px 24px;font-size:14px;font-weight:500;
+  background:transparent;border:none;cursor:pointer;
+  color:#656d76;border-bottom:2px solid transparent;margin-bottom:-2px;
+  transition:color .15s,border-color .15s;white-space:nowrap;
+}
+.tab-btn.active{color:#1f2328;border-bottom-color:#0969da;}
+.tab-btn:hover:not(.active){color:#1f2328;}
+
+/* ── 列表区 ── */
+.main{max-width:760px;margin:12px auto 0;padding:0 20px 60px;}
+.list-meta{
+  font-size:12px;color:#9ba1aa;margin-bottom:10px;
+  display:flex;justify-content:space-between;
+}
+
+/* ── 卡片 ── */
+.card{
+  display:flex;align-items:stretch;gap:0;
+  background:#fff;border:1px solid #d0d7de;border-radius:8px;
+  margin-bottom:8px;overflow:hidden;
+  transition:box-shadow .15s,border-color .15s;
+}
+.card:hover{
+  border-color:#0969da;
+  box-shadow:0 1px 6px rgba(9,105,218,0.12);
+}
+.card.hidden{display:none;}
+
+/* 序号竖条 */
+.rank-col{
+  flex-shrink:0;width:48px;
+  display:flex;align-items:center;justify-content:center;
+  background:#f6f8fa;border-right:1px solid #d0d7de;
+}
+.rank-num{
+  font-size:16px;font-weight:700;color:#b0b8c2;
+  font-variant-numeric:tabular-nums;
+}
+
+/* 内容区 */
+.card-body{flex:1;min-width:0;padding:15px 18px;}
+
+.repo-line{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:6px;}
+.repo-name{
+  font-size:15px;font-weight:600;text-decoration:none;color:#1f2328;
+  transition:color .15s;
+}
+.repo-name:hover{color:#0969da;}
+.repo-author{color:#656d76;font-weight:400;}
+.repo-sep{color:#c6c6c6;}
+.repo-title{color:#0969da;}
+
+.badge-today{
+  font-size:11px;font-weight:600;white-space:nowrap;
+  padding:2px 8px;border-radius:12px;
+  background:#fff8c5;border:1px solid #d4a72c;color:#9a6700;
+}
+
+.desc-en{font-size:13px;color:#656d76;line-height:1.65;margin-bottom:3px;}
+.desc-zh{font-size:13px;color:#1f2328;line-height:1.65;margin-bottom:10px;}
+.no-desc{color:#c6c6c6;font-style:italic;}
+
+/* 操作行 */
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px;}
+.btn{
+  padding:4px 12px;border-radius:6px;font-size:12px;font-weight:500;
+  text-decoration:none;border:1px solid;transition:all .15s;white-space:nowrap;
+}
+.btn-gh{background:#fff;color:#0969da;border-color:#0969da;}
+.btn-gh:hover{background:#0969da;color:#fff;}
+.btn-readme{background:#fff;color:#1a7f37;border-color:#1a7f37;}
+.btn-readme:hover{background:#1a7f37;color:#fff;}
+.btn-issues{background:#fff;color:#9a6700;border-color:#bf8700;}
+.btn-issues:hover{background:#9a6700;color:#fff;}
+.stat-sep{flex:1;}
+.stat-item{font-size:12px;color:#656d76;}
+.lang-chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#656d76;}
+.lang-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;display:inline-block;}
+.readme-preview{
+  margin:10px 0 6px;padding:10px 14px;
+  background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;
+}
+.readme-label{
+  display:inline-block;font-size:10px;font-weight:600;letter-spacing:.5px;
+  color:#9ba1aa;text-transform:uppercase;margin-bottom:5px;
+}
+.readme-text{font-size:13px;color:#1f2328;line-height:1.7;}
+.topics{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0;}
+.topic-tag{
+  font-size:11px;padding:2px 9px;border-radius:12px;
+  background:#ddf4ff;color:#0969da;text-decoration:none;
+  border:1px solid #54aeff4d;transition:background .15s;
+}
+.topic-tag:hover{background:#b6e3ff;}
+
+.no-result{text-align:center;padding:60px 20px;color:#9ba1aa;font-size:14px;display:none;}
+
+@media(max-width:600px){
+  .hd-title{font-size:22px;}
+  .nav{padding:10px 14px;}
+  .tab-btn{padding:8px 16px;font-size:13px;}
+  .rank-col{width:36px;}
+  .rank-num{font-size:13px;}
+  .card-body{padding:12px 13px;}
+  .repo-name{font-size:14px;}
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="../trending/" class="nav-home">← 返回归档</a>
+  <span class="nav-date">2026年10月06日 · 周二</span>
+</div>
+
+<div class="hd">
+  <div class="hd-title">GitHub <em>Trending</em></div>
+  <div class="hd-sub">MOST POPULAR OPEN SOURCE PROJECTS</div>
+  <div class="hd-chip">Top 20 · 2026年10月06日</div>
+  <div class="author">curated by binbinyang</div>
+</div>
+
+<div class="search-wrap">
+  <input class="search" type="text" placeholder="⌕  搜索项目名称或描述…" oninput="onSearch(this.value)">
+</div>
+
+<div class="tabs-wrap">
+  <div class="tabs">
+    <button class="tab-btn active" data-period="daily"   onclick="switchTab('daily')">日榜</button>
+    <button class="tab-btn"        data-period="weekly"  onclick="switchTab('weekly')">周榜</button>
+    <button class="tab-btn"        data-period="monthly" onclick="switchTab('monthly')">月榜</button>
+  </div>
+</div>
+
+<div class="main">
+  <div class="list-meta">
+    <span id="cnt">共 12 个项目</span>
+    <span id="period-label">今日热榜</span>
+  </div>
+
+  <div id="panel-daily"   class="panel"><div class="card">
+  <div class="rank-col"><span class="rank-num">01</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/tester-army/e2e" target="_blank">
+        <span class="repo-author">tester-army</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">e2e</span>
+      </a>
+      <span class="badge-today">▲ 1.7k stars today</span>
+    </div>
+    <p class="desc-en">Next generation e2e testing framework for web and mobile apps.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">e2e is an end-to-end testing framework for web and mobile apps. Describe a goal in natural language and an agent drives the app to reach it. Check the result with locators and assertions in the same test. An agent step that a later assertion verifies records its actions, and the next run replays them with no model calls until the app changes. Tests without agent steps need no model. Bring your own subscription, API key, or asks for an engine, web or mobile, and a model provider, then writes a config and an example test. The To see a finished setup in your stack, open Vite, Next.js, Expo, and SwiftUI, each a standalone project with a passing | | The SDK, runner, and CLI. | | | Browser engine: Chromium, Firefox, and WebKit through Playwright.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/tester-army/e2e" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/tester-army/e2e/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/tester-army/e2e/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 6.1k</span>
+      <span class="stat-item">⑂ 269</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">02</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/mattpocock/skills" target="_blank">
+        <span class="repo-author">mattpocock</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">skills</span>
+      </a>
+      <span class="badge-today">▲ 972 stars today</span>
+    </div>
+    <p class="desc-en">Skills for Real Engineers. Straight from my .agents directory.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy. If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter: Two ways in, two philosophies.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/mattpocock/skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/mattpocock/skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/mattpocock/skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 277.9k</span>
+      <span class="stat-item">⑂ 23.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#89e051"></span><span class="lang-name">Shell</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">03</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/earthtojake/text-to-cad" target="_blank">
+        <span class="repo-author">earthtojake</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">text-to-cad</span>
+      </a>
+      <span class="badge-today">▲ 620 stars today</span>
+    </div>
+    <p class="desc-en">Give your agent CAD superpowers.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Give your agent CAD superpowers. The text-to-cad plugin gives your agent local workflows for generating 3D models as STEP, GLB, STL or 3MF files. It also does design for manufacturing checks, generates engineering drawings, and connects to popular 3D printing, sheet metal It is supported by all popular agents that support plugins or the skills framework, including Claude Code, Codex, Cursor, Send this message to your agent and it will install text-to-cad for you. 1. CAD runs through uv: check that it is installed (), and if it is missing, install it with 2. Run the commands under your agent app's heading below, or under 3. Restart the app. Its first start downloads CAD's runtime, so it needs a network The plugin for your agent app brings the skills and CAD's viewer, a local server ().</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/earthtojake/text-to-cad" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/earthtojake/text-to-cad/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/earthtojake/text-to-cad/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 17.9k</span>
+      <span class="stat-item">⑂ 1.8k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">04</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/boykopovar/AnyPS5" target="_blank">
+        <span class="repo-author">boykopovar</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">AnyPS5</span>
+      </a>
+      <span class="badge-today">▲ 943 stars today</span>
+    </div>
+    <p class="desc-en">Tool for automatic PS5 executables porting to Linux and Windows</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Tool for automatic executables porting to Linux and Windows. Includes a relinker that converts executable to the target system's native format and implementations of system prx libraries suitable for dynamic linking. No emulation or separate runtime process. Usage, Build instructions, Technical debt of the project, code style conventions, contributing * System libraries: percentage of the functions known to the project so far (declared in core/libs/prx), not of every PS5 system function. The total grows as more functions are declared. Dreaming Sarah (2D platformer) runs at a stable 60 fps on a GTX 1050 Ti / i5-7500 3.4GHz. Unsupported or unexpected states strictly throw . is printed to stderr and the process terminates.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/boykopovar/AnyPS5" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/boykopovar/AnyPS5/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/boykopovar/AnyPS5/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 6.1k</span>
+      <span class="stat-item">⑂ 450</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f34b7d"></span><span class="lang-name">C++</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">05</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/pbakaus/impeccable" target="_blank">
+        <span class="repo-author">pbakaus</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">impeccable</span>
+      </a>
+      <span class="badge-today">▲ 609 stars today</span>
+    </div>
+    <p class="desc-en">The design language that makes your AI harness better at design.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Design guidance for AI coding agents. 1 skill, 24 commands, live browser iteration, and 60 deterministic detector rules for AI-generated frontend design. &gt; **Quick start:** From your project root, run , then run inside your AI coding tool. Full docs: impeccable.style. Anthropic's frontend-design was the first widely-used design skill for Claude. Impeccable started from there. Every model trained on the same SaaS templates. Skip the guidance and you get the same handful of tells on every project: Inter for everything, purple-to-blue gradients, cards nested in cards, gray text on colored backgrounds, the rounded-square icon tile above every heading.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/pbakaus/impeccable" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/pbakaus/impeccable/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/pbakaus/impeccable/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 77.6k</span>
+      <span class="stat-item">⑂ 4.6k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">06</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/thedotmack/claude-mem" target="_blank">
+        <span class="repo-author">thedotmack</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">claude-mem</span>
+      </a>
+      <span class="badge-today">▲ 536 stars today</span>
+    </div>
+    <p class="desc-en">Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Persistent memory compression system built for Claude Code . Claude-Mem seamlessly preserves context across sessions by automatically capturing tool usage observations, generating semantic summaries, and making them available to future sessions. This enables Claude to maintain continuity of knowledge about projects even after sessions end or reconnect. Install claude-mem for Grok Bot: Grok Bot has no host hooks, so we watch the chat log files. Default is CMEM Pro, the hosted memory. Local observer is opt-in: . Installing this plugin does not install Cursor. **Awareness push pilot (LFG + Orifice):** needle observations (, , , ) are appended as dated lines into that bot's . Grok Bot already re-reads the log from disk. This does not write , user-memory, or project memory. Disable with .</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/thedotmack/claude-mem" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/thedotmack/claude-mem/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/thedotmack/claude-mem/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 97.0k</span>
+      <span class="stat-item">⑂ 8.6k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">07</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/ayghri/i-have-adhd" target="_blank">
+        <span class="repo-author">ayghri</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">i-have-adhd</span>
+      </a>
+      <span class="badge-today">▲ 318 stars today</span>
+    </div>
+    <p class="desc-en">A skill to stop your coding agent from burying the answer. ADHD-friendly output.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">ADHD-friendly outputs. No ADHD diagnosis needed! Copy/paste into your CLI prompt: Or 🔗 check the installation instructions. A skill for your coding assistant that stops it from burying the answer. Action first. Steps numbered. No &quot;Hope this helps!&quot; Kacper Rutkiewicz | AI Made Simple has made a good breakdown of an earlier version of the skill. &gt; Great question! Let me think about this. Your auth flow has a few moving pieces: the middleware, the token verification, and the cookie handling. Looking at , the function (around lines 42-58) seems to be using an older API. One approach would be to update the package and rewrite that function. After making the change, you'd want to run the auth tests to confirm nothing breaks.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/ayghri/i-have-adhd" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/ayghri/i-have-adhd/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/ayghri/i-have-adhd/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 54.3k</span>
+      <span class="stat-item">⑂ 3.1k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">08</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/morluto/rea" target="_blank">
+        <span class="repo-author">morluto</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">rea</span>
+      </a>
+      <span class="badge-today">▲ 3.0k stars today</span>
+    </div>
+    <p class="desc-en">Reverse engineer anything with agents, from app behavior down to native binaries.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**English** · 简体中文 · 日本語 · 한국어 · العربية One MCP for reverse engineering across binaries, applications, and runtime behavior. **See a feature you like. Understand how it works, down to the binary level.** Quick start · Current status · Investigation model · Tool catalog · Roadmap · How it works Join the Reverse Engineering Community Discord · Q&amp;amp;A · Show and Tell See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project. REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/morluto/rea" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/morluto/rea/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/morluto/rea/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 8.3k</span>
+      <span class="stat-item">⑂ 906</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">09</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/deepseek-ai/DeepGEMM" target="_blank">
+        <span class="repo-author">deepseek-ai</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">DeepGEMM</span>
+      </a>
+      <span class="badge-today">▲ 363 stars today</span>
+    </div>
+    <p class="desc-en">DeepGEMM: clean and efficient BLAS kernel library on GPU</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">DeepGEMM is a unified, high-performance tensor core kernel library that brings together the key computation primitives of modern large language models — GEMMs (FP8, FP4, BF16), fused MoE with overlapped communication (Mega MoE), MQA scoring for the lightning indexer, HyperConnection (HC), and more — into a single, cohesive CUDA codebase. All kernels are compiled at runtime through DeepJIT, requiring no CUDA compilation during installation. DeepGEMM leverages some concepts from CUTLASS and CuTe, but avoids heavy reliance on their templates or algebras. The library is designed for simplicity, with only a limited number of core kernel functions, making it a clean and accessible resource for learning NVIDIA GPU kernel optimization techniques.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/deepseek-ai/DeepGEMM" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/deepseek-ai/DeepGEMM/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/deepseek-ai/DeepGEMM/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 8.6k</span>
+      <span class="stat-item">⑂ 1.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3A4E3A"></span><span class="lang-name">Cuda</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">10</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/msitarzewski/agency-agents" target="_blank">
+        <span class="repo-author">msitarzewski</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">agency-agents</span>
+      </a>
+      <span class="badge-today">▲ 621 stars today</span>
+    </div>
+    <p class="desc-en">A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">🎭 The Agency: AI Specialists Ready to Transform Your Workflow &gt; **A complete AI agency at your fingertips** - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables. &gt; **Agency Agents** is a native app for **macOS, Linux &amp; Windows** that browses the entire roster and installs it into Claude Code, Cursor, Codex, Gemini, Osaurus, and more — with a click. No clone, no scripts, and it auto-updates. &gt; **→ Download the latest release · agencyagents.app** Born from a Reddit thread and months of iteration, **The Agency** is a growing collection of meticulously crafted AI agent personalities.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/msitarzewski/agency-agents" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/msitarzewski/agency-agents/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/msitarzewski/agency-agents/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 157.7k</span>
+      <span class="stat-item">⑂ 25.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#89e051"></span><span class="lang-name">Shell</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">11</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/DuarteSantos8/openGym" target="_blank">
+        <span class="repo-author">DuarteSantos8</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">openGym</span>
+      </a>
+      <span class="badge-today">▲ 1.4k stars today</span>
+    </div>
+    <p class="desc-en">Self-hosted gym &amp;amp; body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**A self-hosted gym and body-weight tracker you actually own.** Plan your week, run guided workouts, log every set and your body weight — on your phone, synced across your devices, behind your own passkey login. Home · today's workout and weight Guided workout · demos and sets Stats · heatmap, charts and PRs Most workout apps keep your data on their servers, push you towards a subscription, or vanish when the company does. openGym runs on your own box, keeps your data in a folder you control, and is yours to fork. It still behaves like a modern app: installable on the home screen, passkey sign-in, works offline, syncs between your phone and your laptop. No account on someone else's server, no subscription, no ads, no telemetry.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/DuarteSantos8/openGym" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/DuarteSantos8/openGym/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/DuarteSantos8/openGym/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 5.4k</span>
+      <span class="stat-item">⑂ 756</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">12</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/cathrynlavery/diagram-design" target="_blank">
+        <span class="repo-author">cathrynlavery</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">diagram-design</span>
+      </a>
+      <span class="badge-today">▲ 227 stars today</span>
+    </div>
+    <p class="desc-en">Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">*New in 2.0 — the Loop: flywheels with a shared-memory hub. The dashed lines are the write-backs.* *New in 2.3: semantic system patterns and optional accessible motion, while static output stays the default.* *New in 2.5.10: ten more layout grammars — Sankey, fishbone, Wardley map, kanban, user journey, deployment, dependency graph, UML class, story map, and database schema.* Editorial diagram types for Claude Code, Codex, Factory Droid, Pi, and Agent Skills-compatible hosts. Self-contained HTML + SVG. No shadows. No Mermaid slop. Semantic patterns describe behavior separately from layout, so a queue, policy trace, or trust boundary can use the nearest existing type without expanding the type count. Static HTML remains the default; optional motion is available for ordered explanations.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/cathrynlavery/diagram-design" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/cathrynlavery/diagram-design/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/cathrynlavery/diagram-design/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 43.9k</span>
+      <span class="stat-item">⑂ 2.8k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#e34c26"></span><span class="lang-name">HTML</span></span>
+    </div>
+  </div>
+</div></div>
+  <div id="panel-weekly"  class="panel" style="display:none"><div class="card">
+  <div class="rank-col"><span class="rank-num">01</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/mvschwarz/openrig" target="_blank">
+        <span class="repo-author">mvschwarz</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">openrig</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">A harness wraps a model. A rig wraps your harnesses. Define your agent team in YAML, boot it with one command. Claude Code and Codex in the same rig, managed as one system. OpenRig is open-source software for building and running your own network of agents. It turns AI coding agents from a pile of terminal sessions into a persistent, organized team. Talk to a lead agent about the outcome you want; it can coordinate specialists across teams and bring you results and decisions that need your attention. Start with a repository and one useful change, then keep the team's work and context at the same addresses. It's the open-source system behind my AI civilization experiments.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/mvschwarz/openrig" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/mvschwarz/openrig/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/mvschwarz/openrig/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 5.5k</span>
+      <span class="stat-item">⑂ 399</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">02</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/heygen-com/hyperframes" target="_blank">
+        <span class="repo-author">heygen-com</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">hyperframes</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Write HTML. Render video. Built for agents.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Write HTML. Render video. Built for agents. HyperFrames is an open-source framework for turning HTML, CSS, media, and seekable animations into deterministic MP4 videos. Use it locally with the CLI, from AI coding agents with skills, or as the rendering core behind hosted authoring workflows. For Claude Code, install the versioned plugin: Enable auto-update for the **hyperframes** marketplace in → **Marketplaces**, then use . See the plugin guide for Copilot, VS Code, Cursor, Gemini CLI, updates, and migration. For standalone skills (including OpenCode), use: &gt; The picker opens with nothing pre-selected — the **Core Skills** group is all you need: the router installs each creation workflow on demand.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/heygen-com/hyperframes" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/heygen-com/hyperframes/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/heygen-com/hyperframes/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 57.8k</span>
+      <span class="stat-item">⑂ 5.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">03</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/cursor/plugins" target="_blank">
+        <span class="repo-author">cursor</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">plugins</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Cursor plugin specification and official plugins</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Official Cursor plugins for popular developer tools, frameworks, and SaaS products. Each plugin is a standalone directory at the repository root with its own manifest. | | Plugin | Author | Category | (from marketplace) | |:-------|:-------|:-------|:---------|:-------------------------------------| | | Teaching | Cursor | Utilities | Skill mapping, practice plans, and learning retrospectives. | | | Continual Learning | Eric Zakariasson | Developer Tools | Incremental transcript-driven memory updates for AGENTS.md using high-signal bullet points only. | | | Cursor Team Kit | Eric Zakariasson | Developer Tools | Internal team workflows for CI, code review, shipping, local automation, and verification.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/cursor/plugins" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/cursor/plugins/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/cursor/plugins/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 10.1k</span>
+      <span class="stat-item">⑂ 955</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">04</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/NVIDIA/OpenShell" target="_blank">
+        <span class="repo-author">NVIDIA</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">OpenShell</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">OpenShell is the safe, private runtime for autonomous AI agents.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">&gt; **New in OpenShell 0.1.x:** a stable release cadence, new isolation primitives, an expanded extension surface, and new APIs. Read the 0.1.0 upgrade guide. OpenShell is the safe, private runtime for fleets of autonomous AI agents. Agents are most useful when they can read files, install packages, call APIs, and use credentials. OpenShell gives them that capability without giving them unrestricted access to your data, secrets, or network. You declare what each agent can touch in a policy, and OpenShell enforces it. OpenShell governs what agents can do in two ways: it instruments the kernel to enforce policy on every file access, system call, and network connection at runtime, and it uses formal verification to check what a policy change would allow before it is applied.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/NVIDIA/OpenShell" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/NVIDIA/OpenShell/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/NVIDIA/OpenShell/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 15.1k</span>
+      <span class="stat-item">⑂ 1.7k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#dea584"></span><span class="lang-name">Rust</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">05</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/VectifyAI/PageIndex" target="_blank">
+        <span class="repo-author">VectifyAI</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">PageIndex</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">PageIndex: Vectorless, Reasoning-based RAG Reasoning-based RAG&amp;nbsp; ◦ &amp;nbsp;No Vector DB, No Chunking&amp;nbsp; ◦ &amp;nbsp;Context-Aware Retrieval&amp;nbsp; ◦ &amp;nbsp;Reads Like a Human - [Aug '26] 🔥 **PageIndex SDK**: now ships **local mode**: index, retrieve, and chat entirely on your machine with your own LLM key, or point the same client at PageIndex Cloud with an API key. - [Aug '26] ⚡ **PageIndex Flash**: fast tree index generation for text-based PDFs, now the default indexing method in PageIndex SDK local mode. - Scale PageIndex to Millions of Documents: *PageIndex File System* is a file-level tree indexing layer that lets PageIndex reason over an entire corpus, not just a single document. - PageIndex App: a human-like document analysis agent for long professional documents.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/VectifyAI/PageIndex" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/VectifyAI/PageIndex/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/VectifyAI/PageIndex/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 38.8k</span>
+      <span class="stat-item">⑂ 3.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">06</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/thedotmack/claude-mem" target="_blank">
+        <span class="repo-author">thedotmack</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">claude-mem</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Persistent memory compression system built for Claude Code . Claude-Mem seamlessly preserves context across sessions by automatically capturing tool usage observations, generating semantic summaries, and making them available to future sessions. This enables Claude to maintain continuity of knowledge about projects even after sessions end or reconnect. Install claude-mem for Grok Bot: Grok Bot has no host hooks, so we watch the chat log files. Default is CMEM Pro, the hosted memory. Local observer is opt-in: . Installing this plugin does not install Cursor. **Awareness push pilot (LFG + Orifice):** needle observations (, , , ) are appended as dated lines into that bot's . Grok Bot already re-reads the log from disk. This does not write , user-memory, or project memory. Disable with .</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/thedotmack/claude-mem" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/thedotmack/claude-mem/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/thedotmack/claude-mem/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 97.0k</span>
+      <span class="stat-item">⑂ 8.6k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">07</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/pablostanley/yoinks" target="_blank">
+        <span class="repo-author">pablostanley</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">yoinks</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">yoink any video from your terminal. no shady ads.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">yoink any video. paste. yoink. done. Download videos from YouTube, X/Twitter, Instagram, Threads, TikTok and 1,800+ other sites — right from your terminal. Paste a url, pick a resolution (or audio-only mp3), done. No popups, no fake download buttons, Or try it without installing anything: Requires Node 18+. Everything else (yt-dlp, ffmpeg) is fetched or bundled yoinks takes over the terminal (full-screen, centered — and restores your scrollback on exit). Pick a format with ↑/↓ (or j/k, or number keys) and hit enter. goes back, quits. Or just use the mouse — the yoink button, the format list and the footer hints are all clickable, and clicking the logo takes you back home. Files are saved to , and the file path is printed to your terminal when you're done.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/pablostanley/yoinks" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/pablostanley/yoinks/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/pablostanley/yoinks/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 4.8k</span>
+      <span class="stat-item">⑂ 419</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">08</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/HunxByts/GhostTrack" target="_blank">
+        <span class="repo-author">HunxByts</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">GhostTrack</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Useful tool to track location or mobile number</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Useful tool to track location or mobile number, so this tool can be called osint or also information gathering on the IP Track menu, you can combo with the seeker tool to get the target IP on this menu you can search for information from the target phone number on this menu you can search for information from the target username on social media</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/HunxByts/GhostTrack" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/HunxByts/GhostTrack/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/HunxByts/GhostTrack/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 17.2k</span>
+      <span class="stat-item">⑂ 2.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">09</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/DuarteSantos8/openGym" target="_blank">
+        <span class="repo-author">DuarteSantos8</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">openGym</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Self-hosted gym &amp;amp; body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**A self-hosted gym and body-weight tracker you actually own.** Plan your week, run guided workouts, log every set and your body weight — on your phone, synced across your devices, behind your own passkey login. Home · today's workout and weight Guided workout · demos and sets Stats · heatmap, charts and PRs Most workout apps keep your data on their servers, push you towards a subscription, or vanish when the company does. openGym runs on your own box, keeps your data in a folder you control, and is yours to fork. It still behaves like a modern app: installable on the home screen, passkey sign-in, works offline, syncs between your phone and your laptop. No account on someone else's server, no subscription, no ads, no telemetry.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/DuarteSantos8/openGym" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/DuarteSantos8/openGym/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/DuarteSantos8/openGym/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 5.4k</span>
+      <span class="stat-item">⑂ 756</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">10</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/boykopovar/AnyPS5" target="_blank">
+        <span class="repo-author">boykopovar</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">AnyPS5</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Tool for automatic PS5 executables porting to Linux and Windows</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Tool for automatic executables porting to Linux and Windows. Includes a relinker that converts executable to the target system's native format and implementations of system prx libraries suitable for dynamic linking. No emulation or separate runtime process. Usage, Build instructions, Technical debt of the project, code style conventions, contributing * System libraries: percentage of the functions known to the project so far (declared in core/libs/prx), not of every PS5 system function. The total grows as more functions are declared. Dreaming Sarah (2D platformer) runs at a stable 60 fps on a GTX 1050 Ti / i5-7500 3.4GHz. Unsupported or unexpected states strictly throw . is printed to stderr and the process terminates.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/boykopovar/AnyPS5" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/boykopovar/AnyPS5/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/boykopovar/AnyPS5/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 6.1k</span>
+      <span class="stat-item">⑂ 450</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f34b7d"></span><span class="lang-name">C++</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">11</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/Panniantong/Agent-Reach" target="_blank">
+        <span class="repo-author">Panniantong</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">Agent-Reach</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Give your AI agent eyes to see the entire internet. Read &amp;amp; search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">当下最稳的接入方式，替你选好、装好、体检好——接入方式会换代，你不用操心 快速开始 · English · 日本語 · 한국어 · 支持平台 · 设计理念 BrowserAct 支持从 Amazon、LinkedIn、X、Google Maps 等复杂网站提取你需要的任意数据。你只需用自然语言描述抓取需求，Agent 就会基于真实浏览器自动探索并测试页面流程，生成可靠、可复用的数据采集 Bot，并返回结构化结果。无需手动构建爬虫，无需编写代码。BrowserAct 内置隐身浏览、验证码处理和高质量住宅代理，帮助你更稳定地完成复杂网页数据采集。新用户注册即送 1000 积分， 立即免费试用 。 在腾讯云 Lighthouse 秒级部署 OpenClaw 全能助手，可通过对话丝滑接入 Agent Reach，给你的 OpenClaw 一键装上互联网能力。 CoreClaw | 网页抓取平台与现成数据采集工具，CoreClaw 提供 100+ 现成数据采集工具，支持 Amazon、TikTok、Google Maps、Instagram、Facebook、YouTube 等平台，无需代码，支持 JSON/CSV 导出，仅对成功结果计费。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/Panniantong/Agent-Reach" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/Panniantong/Agent-Reach/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/Panniantong/Agent-Reach/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 92.5k</span>
+      <span class="stat-item">⑂ 8.1k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">12</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/byoungd/up" target="_blank">
+        <span class="repo-author">byoungd</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">up</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">中英双语终身学习指南：英语学习、AI 协作、真实项目与成长证据。A bilingual guide to English learning and AI-era growth.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">description: 《人生进阶指南》帮助普通人在 AI 时代持续学习、完成真实项目、穿越人生低谷并留下成长证据。 副标题：**AI 时代终身学习指南**。这是一份持续更新的书稿，从英语这扇具体的门出发，写到 AI 学习、真实项目、创业失败、身体恢复，以及一个普通人怎样把生活一点点交还给自己。 第一次来不用读完整本。按今天的需要选一个入口，完成一个小动作，结果会告诉你下一页该去哪里。 我还不知道从哪里开始 用阅读指南按问题选择入口，知道何时留下证据、何时回来复查。 我想在今天做成一件事 先用五分钟写下真实问题、已有证据、最小动作和边界，再决定是否需要完整记录。 我想先测一项英语能力 从一个真实场景开始，保存首版，再选择听、说、读、写中的一条训练线。 AI 正在让答案变得前所未有地廉价。几秒钟里，我们可以得到一份解释、一段代码、一张计划表，甚至一个看似笃定的人生建议。可真正稀缺的东西并没有因此消失：**知道什么问题值得追问，辨别什么证据可以相信，把建议变成真实作品，并为最后的判断承担责任。** 这是一份面向普通人的终身学习指南。它不要求你先成为天才、专家或意志坚定的人，也不许诺某个工具会替你改变命运。它想做的，是陪你在变化加速的时代里，一次次重新学习：面对陌生问题，借助 AI，也保留自己的判断；完成一件真实的事，再把经验带到下一段路。 项目在 2017 年从《离谱的英语学习指南》开始。英语曾是全部地图，如今它成为地图上的一条基础路径。我们继续向外走，进入 AI 学习、项目开发、资源层创业、人生复盘与恢复。不是因为过去不再重要，而是因为所有训练最终都指向同一个问题：**当世界不断改变，我还能不能继续学习、继续创造、继续成为生活的参与者？** 我是韩先凯，也叫离谱，现任中国词元云计算有限公司董事长。我把这里的方法放进学习、开发、企业服务和真实生活中检验。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/byoungd/up" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/byoungd/up/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/byoungd/up/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 67.5k</span>
+      <span class="stat-item">⑂ 6.7k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div></div>
+  <div id="panel-monthly" class="panel" style="display:none"><div class="card">
+  <div class="rank-col"><span class="rank-num">01</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/alibaba/open-code-review" target="_blank">
+        <span class="repo-author">alibaba</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">open-code-review</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI &amp;amp; Anthropic compatible.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">English | 简体中文 | 日本語 | 한국어 | Русский Open Code Review is an AI-powered code review CLI tool. It originated as Alibaba Group's internal official AI code review assistant — over the past two years, it has served tens of thousands of developers and identified millions of code defects. After thorough validation at massive scale, we incubated it into an open source project for the community. Simply configure a model endpoint to get started. It reads Git diffs, sends changed files to a configurable LLM via an agent with tool-use capabilities, and generates structured review comments with line-level precision. The agent can read full file contents, search the codebase, inspect other changed files for context, and produce deep reviews — not just surface-level diff feedback.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/alibaba/open-code-review" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/alibaba/open-code-review/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/alibaba/open-code-review/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 44.0k</span>
+      <span class="stat-item">⑂ 3.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#00ADD8"></span><span class="lang-name">Go</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">02</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank">
+        <span class="repo-author">bilawalsidhu</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">gods-eye-view</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">A spy-satellite simulator in your browser — then you realize the sources are public and the data is real. Photorealistic 3D globe. Live aircraft, ships, satellites, earthquakes, traffic, and public cameras. Hands-free voice control powered by a realtime AI agent. ▶️ **From the project behind the viral God's Eye View series** _(formerly WorldView)_ — 5M+ on YouTube · 25M+ across socials 🏆 **Reached #1 on GitHub Trending, daily and weekly · August 2026** **#8 Product of the Day** · Hunted by Chris Messina, creator of the hashtag _“pretty cool”_ — Brendan Eich, creator of JavaScript and co-founder of Mozilla and Brave · Featured on **Pinokio** ⚡ **Start without API keys.** Install with Pinokio or run locally from the terminal. Add optional keys inside the app.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/bilawalsidhu/gods-eye-view/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/bilawalsidhu/gods-eye-view/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 48.3k</span>
+      <span class="stat-item">⑂ 9.8k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">03</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/affaan-m/ECC" target="_blank">
+        <span class="repo-author">affaan-m</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">ECC</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">&gt; **Official sources only.** Install ECC only from verified channels: the GitHub repository github.com/affaan-m/ECC, the npm packages and , the GitHub App, the plugin slug , and the project website ecc.tools. Third-party re-uploads and unofficial mirrors are not maintained or reviewed by the project and may contain malware. Use the guided setup or native plugin commands. Both install the same plugin. Choose one and do not stack a full manual Claude install on top. Install free · Private repos from $19/seat/mo Discord · Q&amp;amp;A · Show and Tell **OSS stays free.** This repo is MIT-licensed forever. ECC Pro is the hosted GitHub App for private repos. Sponsors and Pro subscribers fund the work. That's why a single maintainer ships weekly across 7 harnesses.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/affaan-m/ECC" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/affaan-m/ECC/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/affaan-m/ECC/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 274.2k</span>
+      <span class="stat-item">⑂ 40.9k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">04</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/ayghri/i-have-adhd" target="_blank">
+        <span class="repo-author">ayghri</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">i-have-adhd</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">A skill to stop your coding agent from burying the answer. ADHD-friendly output.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">ADHD-friendly outputs. No ADHD diagnosis needed! Copy/paste into your CLI prompt: Or 🔗 check the installation instructions. A skill for your coding assistant that stops it from burying the answer. Action first. Steps numbered. No &quot;Hope this helps!&quot; Kacper Rutkiewicz | AI Made Simple has made a good breakdown of an earlier version of the skill. &gt; Great question! Let me think about this. Your auth flow has a few moving pieces: the middleware, the token verification, and the cookie handling. Looking at , the function (around lines 42-58) seems to be using an older API. One approach would be to update the package and rewrite that function. After making the change, you'd want to run the auth tests to confirm nothing breaks.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/ayghri/i-have-adhd" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/ayghri/i-have-adhd/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/ayghri/i-have-adhd/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 54.3k</span>
+      <span class="stat-item">⑂ 3.1k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">05</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/anthropics/financial-services" target="_blank">
+        <span class="repo-author">anthropics</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">financial-services</span>
+      </a>
+      
+    </div>
+    <p class="desc-en"><span class="no-desc">暂无描述</span></p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Reference agents, skills, and data connectors for the financial-services workflows we see most — investment banking, equity research, private equity, and wealth management. Everything here is available **two ways from one source**: install it as a Claude Cowork plugin, or deploy it through the Claude Managed Agents API behind your own workflow engine. Same system prompt, same skills — you choose where it runs. &gt; Nothing in this repository constitutes investment, legal, tax, or accounting advice. These agents draft analyst work product — models, memos, research notes, reconciliations — for review by a qualified professional. They do not make investment recommendations, execute transactions, bind risk, post to a ledger, or approve onboarding; every output is staged for human sign-off.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/anthropics/financial-services" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/anthropics/financial-services/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/anthropics/financial-services/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 38.9k</span>
+      <span class="stat-item">⑂ 5.6k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">06</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/paperclipai/paperclip" target="_blank">
+        <span class="repo-author">paperclipai</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">paperclip</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">The open-source app everyone uses to manage agents at work</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Sign up for the Paperclip Cloud waitlist → Paperclip is the app people use to manage AI agents for work. Open-source orchestration for teams of AI agents. **If OpenClaw is an _employee_, Paperclip is the _company_.** Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track work and costs from one dashboard. Choose models and harnesses per agent while keeping your team's tasks, skills, permissions, and history in one place. It looks like a task manager. Under the hood: org charts, budgets, governance, goal alignment, and agent coordination.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/paperclipai/paperclip" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/paperclipai/paperclip/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/paperclipai/paperclip/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 98.0k</span>
+      <span class="stat-item">⑂ 16.6k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">07</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/Tencent/WeKnora" target="_blank">
+        <span class="repo-author">Tencent</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">WeKnora</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">WeKnora is an open-source, LLM-powered knowledge framework for enterprise document understanding, semantic retrieval and reasoning. It brings a team's documents together so they can be searched, reasoned over and kept up to date. https://github.com/user-attachments/assets/5722b10d-d04d-49ed-a6cc-635a8c77d91f 1:52 · 1080p · No narration, English on-screen text Use RAG to look things up, the agent for multi-step tasks, and the wiki to organize knowledge. All three work on the same knowledge bases. **The agent's toolbox.** Skills installed from ClawHub / SkillHub / Git / ZIP run in session-persistent Docker / E2B / Cube sandboxes, with an interactive terminal and graphical desktop beside the chat.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/Tencent/WeKnora" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/Tencent/WeKnora/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/Tencent/WeKnora/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 32.3k</span>
+      <span class="stat-item">⑂ 4.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#00ADD8"></span><span class="lang-name">Go</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">08</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/vectorize-io/hindsight" target="_blank">
+        <span class="repo-author">vectorize-io</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">hindsight</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Hindsight: Agent Memory That Learns</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Documentation • Integrations • Cookbook • Benchmarks • Paper • Hindsight Cloud Hindsight™ is an agent memory system built to create smarter agents that learn over time. Most agent memory systems focus on recalling conversation history. Hindsight is focused on making agents that learn, not just remember. It eliminates the shortcomings of alternative techniques such as RAG and knowledge graph and delivers state-of-the-art performance on long term memory tasks. - Memory Performance &amp; Accuracy - Quick Start — server · clients · platforms · embedded - Adding Hindsight to Your Agent — LLM Wrapper · integrations · coding agents · MCP - Core Concepts — memory types · retain / recall / reflect · observations · mental models &amp; knowledge pages · banks Hindsight is the most accurate agent memory syste</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/vectorize-io/hindsight" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/vectorize-io/hindsight/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/vectorize-io/hindsight/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 46.3k</span>
+      <span class="stat-item">⑂ 5.9k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">09</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/anthropics/claude-code" target="_blank">
+        <span class="repo-author">anthropics</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">claude-code</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows -- all through natural language commands. Use it in your terminal, IDE, or tag @claude on Github. **Learn more in the official documentation**. &gt; Installation via npm is deprecated. Use one of the recommended methods below. For more installation options, uninstall steps, and troubleshooting, see the setup documentation. 2. Navigate to your project directory and run . This repository includes several Claude Code plugins that extend functionality with custom commands and agents. See the plugins directory for detailed documentation on available plugins. We welcome your feedback.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/anthropics/claude-code" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/anthropics/claude-code/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/anthropics/claude-code/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 149.6k</span>
+      <span class="stat-item">⑂ 25.6k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">10</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/mksglu/context-mode" target="_blank">
+        <span class="repo-author">mksglu</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">context-mode</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**The other half of the context problem.** Every MCP tool call dumps raw data into your context window. A Playwright snapshot costs 56 KB. Twenty GitHub issues cost 59 KB. One access log — 45 KB. After 30 minutes, 40% of your context is gone. And when the agent compacts the conversation to free space, it forgets which files it was editing, what tasks are in progress, and what you last asked for. On top of that, the agent wastes output tokens on filler, pleasantries, and verbose explanations — burning context from both sides. Context Mode is an MCP server that solves all four sides of this problem: 1. **Context Saving** — Sandbox tools keep raw data out of the context window. 315 KB becomes 5.4 KB. 98% reduction. 2.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/mksglu/context-mode" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/mksglu/context-mode/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/mksglu/context-mode/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 25.5k</span>
+      <span class="stat-item">⑂ 1.8k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">11</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/heygen-com/hyperframes" target="_blank">
+        <span class="repo-author">heygen-com</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">hyperframes</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Write HTML. Render video. Built for agents.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Write HTML. Render video. Built for agents. HyperFrames is an open-source framework for turning HTML, CSS, media, and seekable animations into deterministic MP4 videos. Use it locally with the CLI, from AI coding agents with skills, or as the rendering core behind hosted authoring workflows. For Claude Code, install the versioned plugin: Enable auto-update for the **hyperframes** marketplace in → **Marketplaces**, then use . See the plugin guide for Copilot, VS Code, Cursor, Gemini CLI, updates, and migration. For standalone skills (including OpenCode), use: &gt; The picker opens with nothing pre-selected — the **Core Skills** group is all you need: the router installs each creation workflow on demand.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/heygen-com/hyperframes" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/heygen-com/hyperframes/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/heygen-com/hyperframes/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 57.8k</span>
+      <span class="stat-item">⑂ 5.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">12</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/TencentCloud/Octop" target="_blank">
+        <span class="repo-author">TencentCloud</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">Octop</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">A smarter, self-hosted AI assistant — multi-user, multi-agent.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">A smarter, self-hosted AI assistant — multi-user, multi-agent. **Octop** is an open-source, self-hosted AI assistant. It's not just a tool — it's a digital life form that can operate in parallel. Through its multi-agent architecture, it builds an intelligent environment that is both independent and collaborative for teams, families, and individuals. Best of all, it runs entirely on your machine — the fully self-hosted design means privacy is never a compromise, while single-process startup makes the powerful web console, CLI, and IM integrations readily accessible. Chat through the Web Dashboard, Feishu, DingTalk, QQ, WeChat, Telegram, Discord, WeCom, or programmatic HTTP/SSE/WebSocket.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/TencentCloud/Octop" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/TencentCloud/Octop/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/TencentCloud/Octop/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 7.4k</span>
+      <span class="stat-item">⑂ 903</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">13</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/tt-a1i/archify" target="_blank">
+        <span class="repo-author">tt-a1i</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">archify</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Turn anything you want to understand, plan, or share into an interactive visual. Start with an idea, a question, or a plan. Describe it to your AI agent, and Archify turns it into an interactive HTML you can explore, customize, and share. From travel itineraries and learning maps to complex systems—make it your own. See what the community is creating—and imagine what you could make next. ❤️ Partners &amp; sponsors: Kimi Work · Supercode · OpenLux https://github.com/user-attachments/assets/78570807-ba1d-4737-953f-55504a378a87 **One sentence. Your repo, mapped.** Watch the 35-second demo: explore the diagram, follow source links, and trace a path. Try the interactive examples ↗ Install, then describe your idea Works with Cursor, Claude Code, Codex CLI, and OpenCode.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/tt-a1i/archify" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/tt-a1i/archify/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/tt-a1i/archify/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 78.6k</span>
+      <span class="stat-item">⑂ 5.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">14</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/NVIDIA/OpenShell" target="_blank">
+        <span class="repo-author">NVIDIA</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">OpenShell</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">OpenShell is the safe, private runtime for autonomous AI agents.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">&gt; **New in OpenShell 0.1.x:** a stable release cadence, new isolation primitives, an expanded extension surface, and new APIs. Read the 0.1.0 upgrade guide. OpenShell is the safe, private runtime for fleets of autonomous AI agents. Agents are most useful when they can read files, install packages, call APIs, and use credentials. OpenShell gives them that capability without giving them unrestricted access to your data, secrets, or network. You declare what each agent can touch in a policy, and OpenShell enforces it. OpenShell governs what agents can do in two ways: it instruments the kernel to enforce policy on every file access, system call, and network connection at runtime, and it uses formal verification to check what a policy change would allow before it is applied.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/NVIDIA/OpenShell" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/NVIDIA/OpenShell/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/NVIDIA/OpenShell/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 15.1k</span>
+      <span class="stat-item">⑂ 1.7k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#dea584"></span><span class="lang-name">Rust</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">15</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/agent-substrate/substrate" target="_blank">
+        <span class="repo-author">agent-substrate</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">substrate</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Agent Substrate: the core system</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**A secure-by-default runtime for running millions of agent sandboxes on Kubernetes.** Quickstart · Architecture · Roadmap · Contributing Agent Substrate is a secure-by-default agent execution runtime engineered to run millions of sandboxes with 10x higher density than standard container runtimes. Purpose-built for the era of autonomous agents, Substrate delivers sub-500ms resume operations at over 500 suspend/resume activations per second with native zero-trust kernel and network isolation. It supports multiple sandbox technologies including microVMs and gVisor, enabling consistent lifecycle operations for all sandbox types.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/agent-substrate/substrate" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/agent-substrate/substrate/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/agent-substrate/substrate/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 4.4k</span>
+      <span class="stat-item">⑂ 517</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#00ADD8"></span><span class="lang-name">Go</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">16</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/DietrichGebert/ponytail" target="_blank">
+        <span class="repo-author">DietrichGebert</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">ponytail</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">He says nothing. He writes one line. It works. ~54% less code (up to 94%) &amp;middot; ~20% cheaper &amp;middot; ~27% faster &amp;middot; 100% safe Real Claude Code sessions editing a real FastAPI + React repo, the same agent with and without the skill (12 feature tasks, Haiku 4.5, n=4). Details . Español &amp;middot; 한국어 &amp;middot; 简体中文 &amp;middot; 日本語 You know him. Long ponytail. Oval glasses. Has been at the company longer than the version control. You show him fifty lines; he looks at them, says nothing, and replaces them with one. Ponytail puts him inside your AI agent. Ponytail is one prompt: . The compact version, for agents that read a rules file, is . Everything else in this repo loads that prompt into different agents.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/DietrichGebert/ponytail" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/DietrichGebert/ponytail/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/DietrichGebert/ponytail/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 156.7k</span>
+      <span class="stat-item">⑂ 8.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">17</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/cursor/plugins" target="_blank">
+        <span class="repo-author">cursor</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">plugins</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Cursor plugin specification and official plugins</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Official Cursor plugins for popular developer tools, frameworks, and SaaS products. Each plugin is a standalone directory at the repository root with its own manifest. | | Plugin | Author | Category | (from marketplace) | |:-------|:-------|:-------|:---------|:-------------------------------------| | | Teaching | Cursor | Utilities | Skill mapping, practice plans, and learning retrospectives. | | | Continual Learning | Eric Zakariasson | Developer Tools | Incremental transcript-driven memory updates for AGENTS.md using high-signal bullet points only. | | | Cursor Team Kit | Eric Zakariasson | Developer Tools | Internal team workflows for CI, code review, shipping, local automation, and verification.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/cursor/plugins" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/cursor/plugins/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/cursor/plugins/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 10.1k</span>
+      <span class="stat-item">⑂ 955</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">18</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/trycua/cua" target="_blank">
+        <span class="repo-author">trycua</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">cua</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Give AI agents computers they can use. Cua Spaces gives your agents full desktops on your Mac and on machines you own. This repository also holds Cua Driver for desktop automation, Lume for local VMs, CUA-S1 decision models and Cua Bench for evaluating computer-use agents. - **Cua Spaces:** Install the app and run your first Space. - **Cua Driver:** Operate Calculator and verify its result. - **Lume:** Create a Tahoe VM and connect over SSH. - **Cua SDK and CLI:** Install and create a local sandbox. - **CUA-S1:** Explore small, specialized models for computer-use decisions. - **Cua Bench:** Create and verify a simulated task. Bring your own agent and model, or explore CUA-S1 for specialized decisions. Cua provides the computer and automation tools.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/trycua/cua" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/trycua/cua/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/trycua/cua/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 28.4k</span>
+      <span class="stat-item">⑂ 2.0k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#dea584"></span><span class="lang-name">Rust</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">19</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/anthropics/knowledge-work-plugins" target="_blank">
+        <span class="repo-author">anthropics</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">knowledge-work-plugins</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Plugins that turn Claude into a specialist for your role, team, and company. Built for Claude Cowork, also compatible with Claude Code. Cowork lets you set the goal and Claude delivers finished, professional work. Plugins let you go further: tell Claude how you like work done, which tools and data to pull from, how to handle critical workflows, and what slash commands to expose — so your team gets better and more consistent outcomes. Each plugin bundles the skills, connectors, slash commands, and sub-agents for a specific job function. Out of the box, they give Claude a strong starting point for helping anyone in that role. The real power comes when you customize them for your company — your tools, your terminology, your processes — so Claude works like it was built for your team.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/anthropics/knowledge-work-plugins/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/anthropics/knowledge-work-plugins/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 26.3k</span>
+      <span class="stat-item">⑂ 3.1k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">20</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/tashfeenahmed/freellmapi" target="_blank">
+        <span class="repo-author">tashfeenahmed</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">freellmapi</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. One OpenAI-compatible endpoint.** Aggregate free tiers from dozens of providers, plus custom OpenAI-compatible chat, embedding, image, and audio endpoints, behind a single API. Keys are stored encrypted. A router picks the best available model for each request, falls over to the next provider when one is rate-limited, and tracks per-key usage so you stay under every free-tier cap. **freellmapi.co** · browse the full catalog: 474 model families, 635 free endpoints Your router updates its own model catalog from a signed feed: new free models, quota changes, and compatibility fixes land without a .</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/tashfeenahmed/freellmapi" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/tashfeenahmed/freellmapi/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/tashfeenahmed/freellmapi/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 31.2k</span>
+      <span class="stat-item">⑂ 4.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div></div>
+
+  <div class="no-result" id="empty">没有找到匹配的项目</div>
+</div>
+
+<script>
+var COUNTS={"daily":12,"weekly":12,"monthly":20};
+var LABELS={"daily":"今日热榜","weekly":"本周热榜","monthly":"本月热榜"};
+var currentPeriod="daily";
+
+function switchTab(period){
+  if(period===currentPeriod)return;
+  currentPeriod=period;
+  ["daily","weekly","monthly"].forEach(function(p){
+    document.getElementById("panel-"+p).style.display=p===period?"":"none";
+    document.querySelector("[data-period="+p+"]").classList.toggle("active",p===period);
+  });
+  var inp=document.querySelector(".search");
+  inp.value="";
+  document.getElementById("cnt").textContent="共 "+COUNTS[period]+" 个项目";
+  document.getElementById("period-label").textContent=LABELS[period];
+  document.getElementById("empty").style.display="none";
+  document.querySelectorAll("#panel-"+period+" .card").forEach(function(c){c.classList.remove("hidden");});
+}
+
+function onSearch(q){
+  q=q.trim().toLowerCase();
+  var cards=document.querySelectorAll("#panel-"+currentPeriod+" .card"),shown=0;
+  cards.forEach(function(c){
+    var show=!q||c.textContent.toLowerCase().indexOf(q)>=0;
+    c.classList.toggle("hidden",!show);
+    if(show)shown++;
+  });
+  document.getElementById("cnt").textContent="共 "+shown+" 个项目";
+  document.getElementById("empty").style.display=shown?"none":"block";
+}
+</script>
+</body>
+</html>
