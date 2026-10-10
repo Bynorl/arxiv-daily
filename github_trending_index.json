@@ -17629,5 +17629,128 @@
         "stars": 5356
       }
     ]
+  },
+  "20261010": {
+    "total": 13,
+    "file": "github-trending/trending_20261010.html",
+    "top_repos": [
+      {
+        "full_name": "morluto/rea",
+        "url": "https://github.com/morluto/rea",
+        "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 25784,
+        "stars": 67258
+      },
+      {
+        "full_name": "boykopovar/AnyPS5",
+        "url": "https://github.com/boykopovar/AnyPS5",
+        "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+        "description_zh": "",
+        "language": "C++",
+        "stars_today": 5831,
+        "stars": 25770
+      },
+      {
+        "full_name": "storytold/artcraft",
+        "url": "https://github.com/storytold/artcraft",
+        "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 3217,
+        "stars": 13736
+      },
+      {
+        "full_name": "cathrynlavery/diagram-design",
+        "url": "https://github.com/cathrynlavery/diagram-design",
+        "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "description_zh": "",
+        "language": "HTML",
+        "stars_today": 1189,
+        "stars": 48713
+      },
+      {
+        "full_name": "mksglu/context-mode",
+        "url": "https://github.com/mksglu/context-mode",
+        "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 178,
+        "stars": 26187
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .agents directory.",
+        "description_zh": "",
+        "language": "Shell",
+        "stars_today": 1737,
+        "stars": 284090
+      },
+      {
+        "full_name": "flutter/flutter",
+        "url": "https://github.com/flutter/flutter",
+        "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+        "description_zh": "",
+        "language": "Dart",
+        "stars_today": 164,
+        "stars": 179394
+      },
+      {
+        "full_name": "tensorflow/tensorflow",
+        "url": "https://github.com/tensorflow/tensorflow",
+        "description": "An Open Source Machine Learning Framework for Everyone",
+        "description_zh": "",
+        "language": "C++",
+        "stars_today": 24,
+        "stars": 200667
+      },
+      {
+        "full_name": "hugohe3/ppt-master",
+        "url": "https://github.com/hugohe3/ppt-master",
+        "description": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 515,
+        "stars": 59242
+      },
+      {
+        "full_name": "pytorch/pytorch",
+        "url": "https://github.com/pytorch/pytorch",
+        "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 81,
+        "stars": 104089
+      },
+      {
+        "full_name": "huggingface/transformers",
+        "url": "https://github.com/huggingface/transformers",
+        "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 94,
+        "stars": 167123
+      },
+      {
+        "full_name": "anthropics/knowledge-work-plugins",
+        "url": "https://github.com/anthropics/knowledge-work-plugins",
+        "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 626,
+        "stars": 28689
+      },
+      {
+        "full_name": "multica-ai/andrej-karpathy-skills",
+        "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+        "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+        "description_zh": "",
+        "language": "",
+        "stars_today": 279,
+        "stars": 218062
+      }
+    ]
   }
 }
