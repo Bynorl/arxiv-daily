@@ -17830,5 +17830,92 @@
         "stars": 74081
       }
     ]
+  },
+  "20261012": {
+    "total": 9,
+    "file": "github-trending/trending_20261012.html",
+    "top_repos": [
+      {
+        "full_name": "morluto/rea",
+        "url": "https://github.com/morluto/rea",
+        "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 45495,
+        "stars": 152742
+      },
+      {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "url": "https://github.com/bilawalsidhu/gods-eye-view",
+        "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 1903,
+        "stars": 53493
+      },
+      {
+        "full_name": "mksglu/context-mode",
+        "url": "https://github.com/mksglu/context-mode",
+        "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 394,
+        "stars": 27212
+      },
+      {
+        "full_name": "storytold/artcraft",
+        "url": "https://github.com/storytold/artcraft",
+        "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 4106,
+        "stars": 21642
+      },
+      {
+        "full_name": "open-webui/open-webui",
+        "url": "https://github.com/open-webui/open-webui",
+        "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 142,
+        "stars": 154886
+      },
+      {
+        "full_name": "cathrynlavery/diagram-design",
+        "url": "https://github.com/cathrynlavery/diagram-design",
+        "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+        "description_zh": "",
+        "language": "HTML",
+        "stars_today": 2100,
+        "stars": 52451
+      },
+      {
+        "full_name": "lyogavin/airllm",
+        "url": "https://github.com/lyogavin/airllm",
+        "description": "AirLLM 70B inference with single 4GB GPU",
+        "description_zh": "",
+        "language": "Jupyter Notebook",
+        "stars_today": 886,
+        "stars": 37453
+      },
+      {
+        "full_name": "microsoft/BitNet",
+        "url": "https://github.com/microsoft/BitNet",
+        "description": "Official inference framework for 1-bit LLMs",
+        "description_zh": "",
+        "language": "C++",
+        "stars_today": 134,
+        "stars": 40877
+      },
+      {
+        "full_name": "Alishahryar1/free-claude-code",
+        "url": "https://github.com/Alishahryar1/free-claude-code",
+        "description": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 705,
+        "stars": 58987
+      }
+    ]
   }
 }
