@@ -20347,5 +20347,128 @@
         "stars": 38042
       }
     ]
+  },
+  "20261103": {
+    "total": 13,
+    "file": "github-trending/trending_20261103.html",
+    "top_repos": [
+      {
+        "full_name": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 1138,
+        "stars": 111722
+      },
+      {
+        "full_name": "vercel-labs/agent-desktop",
+        "url": "https://github.com/vercel-labs/agent-desktop",
+        "description": "Computer use CLI for AI agents",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 3792,
+        "stars": 12390
+      },
+      {
+        "full_name": "max-sixty/worktrunk",
+        "url": "https://github.com/max-sixty/worktrunk",
+        "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 437,
+        "stars": 10410
+      },
+      {
+        "full_name": "JustVugg/colibri",
+        "url": "https://github.com/JustVugg/colibri",
+        "description": "A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Written in C, runs on the hardware you already own.",
+        "description_zh": "",
+        "language": "C",
+        "stars_today": 803,
+        "stars": 47166
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .agents directory.",
+        "description_zh": "",
+        "language": "Shell",
+        "stars_today": 1164,
+        "stars": 311268
+      },
+      {
+        "full_name": "p-e-w/heretic",
+        "url": "https://github.com/p-e-w/heretic",
+        "description": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 699,
+        "stars": 38682
+      },
+      {
+        "full_name": "spotify/portal-ai-plugins",
+        "url": "https://github.com/spotify/portal-ai-plugins",
+        "description": "",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 94,
+        "stars": 3005
+      },
+      {
+        "full_name": "floci-io/floci",
+        "url": "https://github.com/floci-io/floci",
+        "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+        "description_zh": "",
+        "language": "Java",
+        "stars_today": 679,
+        "stars": 28608
+      },
+      {
+        "full_name": "Usagi-org/ai-goofish-monitor",
+        "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+        "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 204,
+        "stars": 16313
+      },
+      {
+        "full_name": "anomalyco/hex",
+        "url": "https://github.com/anomalyco/hex",
+        "description": "Local voice dictation for mac, windows and linux",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 410,
+        "stars": 4469
+      },
+      {
+        "full_name": "D4Vinci/Scrapling",
+        "url": "https://github.com/D4Vinci/Scrapling",
+        "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 1658,
+        "stars": 94480
+      },
+      {
+        "full_name": "shiyu-coder/Kronos",
+        "url": "https://github.com/shiyu-coder/Kronos",
+        "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 503,
+        "stars": 46444
+      },
+      {
+        "full_name": "Donchitos/Claude-Code-Game-Studios",
+        "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+        "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+        "description_zh": "",
+        "language": "Shell",
+        "stars_today": 1181,
+        "stars": 34521
+      }
+    ]
   }
 }
