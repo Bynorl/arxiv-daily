@@ -21070,5 +21070,92 @@
         "stars": 466
       }
     ]
+  },
+  "20261108": {
+    "total": 9,
+    "file": "github-trending/trending_20261108.html",
+    "top_repos": [
+      {
+        "full_name": "sherlock-project/sherlock",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "description": "Hunt down social media accounts by username across social networks",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 2372,
+        "stars": 102864
+      },
+      {
+        "full_name": "dsx-ai-factory/nvke",
+        "url": "https://github.com/dsx-ai-factory/nvke",
+        "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 345,
+        "stars": 773
+      },
+      {
+        "full_name": "milind-soni/OpenMausBot",
+        "url": "https://github.com/milind-soni/OpenMausBot",
+        "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 1437,
+        "stars": 18016
+      },
+      {
+        "full_name": "anthropics/claude-quickstarts",
+        "url": "https://github.com/anthropics/claude-quickstarts",
+        "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 28,
+        "stars": 19312
+      },
+      {
+        "full_name": "vercel-labs/agent-browser",
+        "url": "https://github.com/vercel-labs/agent-browser",
+        "description": "Browser automation CLI for AI agents",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 812,
+        "stars": 47432
+      },
+      {
+        "full_name": "meta/astryx",
+        "url": "https://github.com/meta/astryx",
+        "description": "An open source design system that's fully customizable and agent ready",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 863,
+        "stars": 16067
+      },
+      {
+        "full_name": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "description": "Public repository for Agent Skills",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 793,
+        "stars": 189403
+      },
+      {
+        "full_name": "google-deepmind/mujoco",
+        "url": "https://github.com/google-deepmind/mujoco",
+        "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+        "description_zh": "",
+        "language": "C++",
+        "stars_today": 26,
+        "stars": 16296
+      },
+      {
+        "full_name": "ranxianglei/billion-context",
+        "url": "https://github.com/ranxianglei/billion-context",
+        "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 460,
+        "stars": 5025
+      }
+    ]
   }
 }
