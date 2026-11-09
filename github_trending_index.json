@@ -21157,5 +21157,110 @@
         "stars": 5025
       }
     ]
+  },
+  "20261109": {
+    "total": 11,
+    "file": "github-trending/trending_20261109.html",
+    "top_repos": [
+      {
+        "full_name": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "description": "Public repository for Agent Skills",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 1052,
+        "stars": 190893
+      },
+      {
+        "full_name": "meta/astryx",
+        "url": "https://github.com/meta/astryx",
+        "description": "An open source design system that's fully customizable and agent ready",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 3324,
+        "stars": 19876
+      },
+      {
+        "full_name": "sherlock-project/sherlock",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "description": "Hunt down social media accounts by username across social networks",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 4294,
+        "stars": 106926
+      },
+      {
+        "full_name": "google-deepmind/mujoco",
+        "url": "https://github.com/google-deepmind/mujoco",
+        "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+        "description_zh": "",
+        "language": "C++",
+        "stars_today": 579,
+        "stars": 16886
+      },
+      {
+        "full_name": "anthropics/claude-quickstarts",
+        "url": "https://github.com/anthropics/claude-quickstarts",
+        "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 560,
+        "stars": 19986
+      },
+      {
+        "full_name": "garrytan/gbrain",
+        "url": "https://github.com/garrytan/gbrain",
+        "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 215,
+        "stars": 32112
+      },
+      {
+        "full_name": "vercel-labs/agent-browser",
+        "url": "https://github.com/vercel-labs/agent-browser",
+        "description": "Browser automation CLI for AI agents",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 914,
+        "stars": 48424
+      },
+      {
+        "full_name": "ruvnet/RuView",
+        "url": "https://github.com/ruvnet/RuView",
+        "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 245,
+        "stars": 103408
+      },
+      {
+        "full_name": "ZhuLinsen/daily_stock_analysis",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+        "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 505,
+        "stars": 68797
+      },
+      {
+        "full_name": "homeassistant-ai/ha-mcp",
+        "url": "https://github.com/homeassistant-ai/ha-mcp",
+        "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 31,
+        "stars": 5922
+      },
+      {
+        "full_name": "milind-soni/OpenMausBot",
+        "url": "https://github.com/milind-soni/OpenMausBot",
+        "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 1589,
+        "stars": 19615
+      }
+    ]
   }
 }
