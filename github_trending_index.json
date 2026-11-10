@@ -21262,5 +21262,119 @@
         "stars": 19615
       }
     ]
+  },
+  "20261110": {
+    "total": 12,
+    "file": "github-trending/trending_20261110.html",
+    "top_repos": [
+      {
+        "full_name": "meta/astryx",
+        "url": "https://github.com/meta/astryx",
+        "description": "An open source design system that's fully customizable and agent ready",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 3111,
+        "stars": 22470
+      },
+      {
+        "full_name": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "description": "Public repository for Agent Skills",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 1676,
+        "stars": 192165
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 465,
+        "stars": 115050
+      },
+      {
+        "full_name": "anthropics/claude-quickstarts",
+        "url": "https://github.com/anthropics/claude-quickstarts",
+        "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 530,
+        "stars": 20420
+      },
+      {
+        "full_name": "google-deepmind/mujoco",
+        "url": "https://github.com/google-deepmind/mujoco",
+        "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+        "description_zh": "",
+        "language": "C++",
+        "stars_today": 453,
+        "stars": 17293
+      },
+      {
+        "full_name": "we-promise/sure",
+        "url": "https://github.com/we-promise/sure",
+        "description": "The personal finance app for everyone (by everyone)",
+        "description_zh": "",
+        "language": "Ruby",
+        "stars_today": 184,
+        "stars": 11802
+      },
+      {
+        "full_name": "homeassistant-ai/ha-mcp",
+        "url": "https://github.com/homeassistant-ai/ha-mcp",
+        "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 792,
+        "stars": 6550
+      },
+      {
+        "full_name": "vercel-labs/agent-browser",
+        "url": "https://github.com/vercel-labs/agent-browser",
+        "description": "Browser automation CLI for AI agents",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 775,
+        "stars": 49119
+      },
+      {
+        "full_name": "sherlock-project/sherlock",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "description": "Hunt down social media accounts by username across social networks",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 2387,
+        "stars": 108788
+      },
+      {
+        "full_name": "tokio-rs/topcoat",
+        "url": "https://github.com/tokio-rs/topcoat",
+        "description": "A batteries-included framework for building web apps",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 192,
+        "stars": 6733
+      },
+      {
+        "full_name": "ranxianglei/billion-context",
+        "url": "https://github.com/ranxianglei/billion-context",
+        "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 374,
+        "stars": 6217
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .agents directory.",
+        "description_zh": "",
+        "language": "Shell",
+        "stars_today": 1223,
+        "stars": 320772
+      }
+    ]
   }
 }
