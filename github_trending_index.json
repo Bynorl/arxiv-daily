@@ -21472,5 +21472,128 @@
         "stars": 66970
       }
     ]
+  },
+  "20261112": {
+    "total": 13,
+    "file": "github-trending/trending_20261112.html",
+    "top_repos": [
+      {
+        "full_name": "GoogleChrome/modern-web-guidance-src",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+        "description": "Keep your coding agent up to date with the latest web best practices",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 799,
+        "stars": 2733
+      },
+      {
+        "full_name": "openai/codex-security",
+        "url": "https://github.com/openai/codex-security",
+        "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 663,
+        "stars": 12328
+      },
+      {
+        "full_name": "nvm-sh/nvm",
+        "url": "https://github.com/nvm-sh/nvm",
+        "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+        "description_zh": "",
+        "language": "Shell",
+        "stars_today": 107,
+        "stars": 95988
+      },
+      {
+        "full_name": "pookjw/HermesEnabler",
+        "url": "https://github.com/pookjw/HermesEnabler",
+        "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+        "description_zh": "",
+        "language": "Objective-C",
+        "stars_today": 300,
+        "stars": 1495
+      },
+      {
+        "full_name": "we-promise/sure",
+        "url": "https://github.com/we-promise/sure",
+        "description": "The personal finance app for everyone (by everyone)",
+        "description_zh": "",
+        "language": "Ruby",
+        "stars_today": 974,
+        "stars": 13800
+      },
+      {
+        "full_name": "QwenLM/qwen-code",
+        "url": "https://github.com/QwenLM/qwen-code",
+        "description": "An open-source AI coding agent that lives in your terminal.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 151,
+        "stars": 29744
+      },
+      {
+        "full_name": "ashhart/TensorFold",
+        "url": "https://github.com/ashhart/TensorFold",
+        "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+        "description_zh": "",
+        "language": "Zig",
+        "stars_today": 94,
+        "stars": 1913
+      },
+      {
+        "full_name": "nodejs/node",
+        "url": "https://github.com/nodejs/node",
+        "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 133,
+        "stars": 123572
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 812,
+        "stars": 116601
+      },
+      {
+        "full_name": "meta/astryx",
+        "url": "https://github.com/meta/astryx",
+        "description": "An open source design system that's fully customizable and agent ready",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 1789,
+        "stars": 26387
+      },
+      {
+        "full_name": "CopilotKit/OpenBot",
+        "url": "https://github.com/CopilotKit/OpenBot",
+        "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 291,
+        "stars": 11504
+      },
+      {
+        "full_name": "Alishahryar1/free-claude-code",
+        "url": "https://github.com/Alishahryar1/free-claude-code",
+        "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 461,
+        "stars": 69187
+      },
+      {
+        "full_name": "ggml-org/llama.cpp",
+        "url": "https://github.com/ggml-org/llama.cpp",
+        "description": "LLM inference in C/C++",
+        "description_zh": "",
+        "language": "C++",
+        "stars_today": 287,
+        "stars": 134481
+      }
+    ]
   }
 }
