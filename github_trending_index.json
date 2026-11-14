@@ -21709,5 +21709,146 @@
         "stars": 55390
       }
     ]
+  },
+  "20261114": {
+    "total": 15,
+    "file": "github-trending/trending_20261114.html",
+    "top_repos": [
+      {
+        "full_name": "backnotprop/plannotator",
+        "url": "https://github.com/backnotprop/plannotator",
+        "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 412,
+        "stars": 10928
+      },
+      {
+        "full_name": "GoogleChrome/modern-web-guidance-src",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+        "description": "Keep your coding agent up to date with the latest web best practices",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 1225,
+        "stars": 5741
+      },
+      {
+        "full_name": "tradermonty/claude-trading-skills",
+        "url": "https://github.com/tradermonty/claude-trading-skills",
+        "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 556,
+        "stars": 4646
+      },
+      {
+        "full_name": "ChromeDevTools/chrome-devtools-mcp",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "description": "Chrome DevTools for coding agents",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 673,
+        "stars": 56180
+      },
+      {
+        "full_name": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI &amp; Anthropic compatible.",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 897,
+        "stars": 51285
+      },
+      {
+        "full_name": "QwenLM/qwen-code",
+        "url": "https://github.com/QwenLM/qwen-code",
+        "description": "An open-source AI coding agent that lives in your terminal.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 116,
+        "stars": 30254
+      },
+      {
+        "full_name": "dream-num/univer",
+        "url": "https://github.com/dream-num/univer",
+        "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 495,
+        "stars": 24371
+      },
+      {
+        "full_name": "ag-ui-protocol/ag-ui",
+        "url": "https://github.com/ag-ui-protocol/ag-ui",
+        "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 9,
+        "stars": 17278
+      },
+      {
+        "full_name": "ashhart/TensorFold",
+        "url": "https://github.com/ashhart/TensorFold",
+        "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+        "description_zh": "",
+        "language": "Zig",
+        "stars_today": 53,
+        "stars": 2126
+      },
+      {
+        "full_name": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 227,
+        "stars": 119950
+      },
+      {
+        "full_name": "louislam/uptime-kuma",
+        "url": "https://github.com/louislam/uptime-kuma",
+        "description": "A fancy self-hosted monitoring tool",
+        "description_zh": "",
+        "language": "JavaScript",
+        "stars_today": 432,
+        "stars": 94161
+      },
+      {
+        "full_name": "we-promise/sure",
+        "url": "https://github.com/we-promise/sure",
+        "description": "The personal finance app for everyone (by everyone)",
+        "description_zh": "",
+        "language": "Ruby",
+        "stars_today": 659,
+        "stars": 15178
+      },
+      {
+        "full_name": "Tencent/LoopForge",
+        "url": "https://github.com/Tencent/LoopForge",
+        "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+        "description_zh": "",
+        "language": "Go",
+        "stars_today": 101,
+        "stars": 811
+      },
+      {
+        "full_name": "Likely7/Veyra-NRVideo",
+        "url": "https://github.com/Likely7/Veyra-NRVideo",
+        "description": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+        "description_zh": "",
+        "language": "C++",
+        "stars_today": 423,
+        "stars": 2039
+      },
+      {
+        "full_name": "martin-olivier/airgorah",
+        "url": "https://github.com/martin-olivier/airgorah",
+        "description": "A WiFi security auditing software",
+        "description_zh": "",
+        "language": "Rust",
+        "stars_today": 269,
+        "stars": 5699
+      }
+    ]
   }
 }
